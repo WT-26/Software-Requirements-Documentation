@@ -16,7 +16,7 @@ Table of Contents
 * 1 [Introduction](#1-introduction)
   * 1.1 [Document Purpose](#11-document-purpose)
   * 1.2 [Product Scope](#12-product-scope)
-  * 1.3 [Definitions, Acronyms and Abbreviations](#13-definitions-acronyms-and-abbreviations)
+  * 1.3 [Product overview](#13-product-overview)
   * 1.4 [References](#14-references)
   * 1.5 [Document Overview](#15-document-overview)
 * 2 [Product Overview](#2-product-overview)
