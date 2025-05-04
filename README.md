@@ -73,21 +73,41 @@ Identify the product whose software requirements are specified in this document,
 
 ### 1.3 Product Overview
 #### 1.3.4 Limitations
-Scope of Features: Due to time constraints within an academic semester, advanced functionalities such as automated analytics, AI-based recommendations, or full mobile-native applications are not included in this version.
+1. Scope of Features: The system gives priority to essential features including user identification, club management, event scheduling, and budget approval workflows because of its short development period—one academic semester. Intelligent budget optimization tools, machine learning for event recommendations, and comprehensive analytics dashboards are examples of advanced technologies that have been left out. Although this choice guarantees on-time delivery, it restricts future-proofing and intelligent capabilities.
 
-Budget Constraints: The system relies exclusively on open-source tools and frameworks. This limits integration with commercial software or premium third-party APIs.
+2. Budget Constraints: The development is limited to open-source and free tools like Bootstrap/Tailwind CSS, Django, and PostgreSQL.  Funding is not available for enterprise services, premium plugins, or commercial APIs.  Options like premium alerting systems, powerful cloud services, or complex calendar integrations are thus not available.  This could restrict performance improvements, scalability, and some user conveniences.
 
-User Base Access: Only university-affiliated users (students, staff, and faculty) can access the system. External users, including non-campus club collaborators, are not supported.
+User Base Access: The application only supports authenticated users from the university domain. Students, club directors and administrators are all included in this. Even if they participate in club activities, guest users, alumni, and outside collaborators are unable to use the portal. This restricts collaborations and community outreach that could improve club involvement.
 
-Internet Dependency: The system is designed as a web application and requires a stable internet connection. Offline functionality is minimal or nonexistent.
+Internet Dependency: Since the program is web-based and hosted on-campus or on a cloud server, users need to have a steady and reliable internet connection. As a result, tasks like creating an event, submitting a budget, or editing a profile cannot be completed without an offline connection. This might be problematic in isolated locations or when there are network failures.
 
-Mobile Limitations: While the platform supports responsive design, it is not a native mobile application and may lack features optimized for mobile-specific experiences.
+Mobile Limitations: Even though the system has responsive design support for mobile use on tablets and smartphones, it is not a native smartphone application. Its performance might be slower, and the loading process could be slower compared to the totally optimized smartphone applications. Further, mobile-related features like native calendar syncing, push notifications, or biometric login are unsupported.
 
-Technical Integration: Integration is limited to approved systems such as the university’s SSO (OAuth2/LDAP) and select APIs (e.g., Google Calendar). Broader API compatibility is constrained by university data and security policies.
+Technical Integration: All integrations must comply with university IT policy and security procedures. For example, Single Sign-On (SSO) integration must integrate via OAuth2 or LDAP, and external APIs like Google Calendar must comply with campus data governance. That constrains integration flexibility with third-party applications and will prevent or delay some features when APIs do not fit institution criteria.
 
-Resource Availability: Development and maintenance are handled by students or part-time contributors, which can affect feature completeness and issue response time.
+Resource Availability: The project is largely sustained and created by student, who may possess varying availability and technical abilities. This can cause delayed fixes of bugs, decreased testing coverage, and uneven development cycles. Feature requests or enhancements may be postponed due to school responsibilities.
 
-Hosting Environment: The system must be deployable on the university’s Linux-based infrastructure, restricting certain hosting or deployment configurations.
+Hosting Environment: The deployment must take place on Linux-based servers from the institution or authorized cloud infrastructure.  This limits the use of some server technologies (like Windows hosting) and the potential for deployment automation.  Creating environments with restricted access or compliance requirements can also present administrative challenges for developers.
+
+#### 1.3.4 Definitions
+| **Term**                  | **Definition**                                                                                                                                       |
+|---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Application**           | The web-based Club and Event Management System designed to support university students and staff in organizing, managing, and approving club events. |
+| **User**                  | Any individual interacting with the system, including students, club leaders, faculty advisors, and administrators.                                 |
+| **Club Leader**           | A student with administrative rights over a club, responsible for event planning, budget submission, and activity management.                        |
+| **Administrator**         | A university staff user with full access to manage clubs, events, budgets, and system-wide settings.                                                 |
+| **Event Proposal**        | A structured digital request submitted by a club leader to organize an event, including logistics and financial needs.                              |
+| **Budget Approval Workflow** | A step-by-step process for reviewing and approving club-submitted budgets before funds are allocated.                                                 |
+| **Single Sign-On (SSO)**  | A secure login method allowing users to access the system using existing university credentials.                                                     |
+| **Dashboard**             | The main interface displaying a summary of club activities, pending tasks, and budget status for the user.                                           |
+| **Responsive Design**     | UI/UX design approach ensuring the application functions well on desktops, tablets, and smartphones.                                                 |
+| **Django**                | A high-level, open-source Python web framework used to build the backend of the application.                                                         |
+| **PostgreSQL**            | An open-source relational database management system used to store and retrieve the application's data.                                              |
+| **API (Application Programming Interface)** | A set of protocols that allow software components to communicate, such as with Google Calendar or email notifications.                      |
+| **Open Source**           | Software with publicly accessible code that can be freely used, modified, and distributed.                                                           |
+| **Authentication**        | The process of verifying a user’s identity through credentials like usernames and passwords.                                                         |
+| **Authorization**         | The process of granting a user specific system permissions based on their role (e.g., student, advisor, admin).                                     |
+| **Hosting Server**        | The server environment where the system is deployed, typically a Linux-based or cloud infrastructure approved by the university.                     |
 
 ### 1.4 References
 List any other documents or Web addresses to which this SRS refers. These may include user interface style guides, contracts, standards, system requirements specifications, use case documents, or a vision and scope document. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.
