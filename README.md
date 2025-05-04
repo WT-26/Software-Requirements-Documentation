@@ -72,6 +72,22 @@ Describe the purpose of the SRS and its intended audience.
 Identify the product whose software requirements are specified in this document, including the revision or release number. Explain what the product that is covered by this SRS will do, particularly if this SRS describes only part of the system or a single subsystem. Provide a short description of the software being specified and its purpose, including relevant benefits, objectives, and goals. Relate the software to corporate goals or business strategies. If a separate vision and scope document is available, refer to it rather than duplicating its contents here.
 
 ### 1.3 Product Overview
+#### 1.3.4 Limitations
+Scope of Features: Due to time constraints within an academic semester, advanced functionalities such as automated analytics, AI-based recommendations, or full mobile-native applications are not included in this version.
+
+Budget Constraints: The system relies exclusively on open-source tools and frameworks. This limits integration with commercial software or premium third-party APIs.
+
+User Base Access: Only university-affiliated users (students, staff, and faculty) can access the system. External users, including non-campus club collaborators, are not supported.
+
+Internet Dependency: The system is designed as a web application and requires a stable internet connection. Offline functionality is minimal or nonexistent.
+
+Mobile Limitations: While the platform supports responsive design, it is not a native mobile application and may lack features optimized for mobile-specific experiences.
+
+Technical Integration: Integration is limited to approved systems such as the university’s SSO (OAuth2/LDAP) and select APIs (e.g., Google Calendar). Broader API compatibility is constrained by university data and security policies.
+
+Resource Availability: Development and maintenance are handled by students or part-time contributors, which can affect feature completeness and issue response time.
+
+Hosting Environment: The system must be deployable on the university’s Linux-based infrastructure, restricting certain hosting or deployment configurations.
 
 ### 1.4 References
 List any other documents or Web addresses to which this SRS refers. These may include user interface style guides, contracts, standards, system requirements specifications, use case documents, or a vision and scope document. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.
