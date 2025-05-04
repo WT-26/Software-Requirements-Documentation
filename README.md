@@ -89,7 +89,7 @@ Resource Availability: The project is largely sustained and created by student, 
 
 Hosting Environment: The deployment must take place on Linux-based servers from the institution or authorized cloud infrastructure.  This limits the use of some server technologies (like Windows hosting) and the potential for deployment automation.  Creating environments with restricted access or compliance requirements can also present administrative challenges for developers.
 
-#### 1.3.4 Definitions
+### 1.4 Definitions
 | **Term**                  | **Definition**                                                                                                                                       |
 |---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Application**           | The web-based Club and Event Management System designed to support university students and staff in organizing, managing, and approving club events. |
