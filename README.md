@@ -66,7 +66,7 @@ Describe the purpose of the SRS and its intended audience.
 ### 1.2 Product Scope
 Identify the product whose software requirements are specified in this document, including the revision or release number. Explain what the product that is covered by this SRS will do, particularly if this SRS describes only part of the system or a single subsystem. Provide a short description of the software being specified and its purpose, including relevant benefits, objectives, and goals. Relate the software to corporate goals or business strategies. If a separate vision and scope document is available, refer to it rather than duplicating its contents here.
 
-### 1.3 Definitions, Acronyms and Abbreviations
+### 1.3 Project Overview
 
 ### 1.4 References
 List any other documents or Web addresses to which this SRS refers. These may include user interface style guides, contracts, standards, system requirements specifications, use case documents, or a vision and scope document. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.
