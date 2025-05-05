@@ -31,9 +31,24 @@ Table of Contents
   * 2.6 [Apportioning of Requirements](#26-apportioning-of-requirements)
 * 3 [Requirements](#3-requirements)
   * 3.1 [Product Functions](#31-product-functions)
-    * 3.1.1 [User Interfaces](#311-user-interfaces)
-    * 3.1.2 [Hardware Interfaces](#312-hardware-interfaces)
-    * 3.1.3 [Software Interfaces](#313-software-interfaces)
+     * 3.1.1 [Register User](#311-register-user)
+     * 3.1.2 [Login User](#312-login-user)
+     * 3.1.3 [Log out User](#313-log-out-user)
+     * 3.1.4 [Reset Password](#314-reset-password)
+     * 3.1.5 [Update Profile](#315-update-profile)
+     * 3.1.6 [Change Role](#316-change-role)
+     * 3.1.7 [Request Create Club](#317-request-create-club)
+     * 3.1.8 [Club Approval](#318-club-approval)
+     * 3.1.9 [Create Club](#319-create-club)
+     * 3.1.28 [Notify User](#3128-notify-user)
+     * 3.1.29 [View All Clubs](#3129-view-all-user)
+     * 3.1.30 [Generate System Report](#3130-generate-system-report)
+     * 3.1.31 [Search Clubs](#3131-search-clubs)
+     * 3.1.32 [Filter Events](#3132-filter-events)
+     * 3.1.33 [Sort Budget Requests](#3133-sort-budget-requests)
+     * 3.1.34 [Log Activity](#3134-log-activity)
+     * 3.1.35 [View Audit Log](#3135-view-audit-log)
+     * 3.1.36 [Set Permissions](#3136-set-permissions)
   * 3.2 [Performance Requirements](#32-performance-requirements)
   * 3.3 [Usability Requirements](#33-usability-requirements)
     * 3.3.1 [Performance](#331-performance)
@@ -41,6 +56,9 @@ Table of Contents
     * 3.3.3 [Reliability](#333-reliability)
     * 3.3.4 [Availability](#334-availability)
   * 3.4 [Interface Requirements](#34-interface-requirements)
+    * 3.4.1 [User Interfaces](#341-user-interfaces)
+    * 3.4.2 [Hardware Interfaces](#342-hardware-interfaces)
+    * 3.4.3 [Software Interfaces](#343-software-interfaces)
   * 3.5 [Logical Datacse Requirements](#35-logical-database-requirements)
     * 3.5.1 [Installation](#351-installation)
     * 3.5.2 [Distribution](#352-distribution)
@@ -158,30 +176,20 @@ Identify requirements that may be delayed until future versions of the system (e
 * Be verifiable (e.g., the requirement realization can be proven to the customer's satisfaction)
 * Conform to agreed upon syntax, keywords, and terms.
 
-### 3.1 External Interfaces
-> This subsection defines all the inputs into and outputs requirements of the software system. Each interface defined may include the following content:
-* Name of item
-* Source of input or destination of output
-* Valid range, accuracy, and/or tolerance
-* Units of measure
-* Timing
-* Relationships to other inputs/outputs
-* Screen formats/organization
-* Window formats/organization
-* Data formats
-* Command formats
-* End messages
+### 3.1.28 Notify User
+| **Field**          | **Description**                                                                                                                                       |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **ID**             | UC-COMM-02                                                                                                                                            |
+| **Feature**        | Communication & Notifications                                                                                                                         |
+| **Purpose**        | To send automated system notifications to specific users when key events occur (e.g., approval, update, rejection).                                  |
+| **Actors**         | - System (automated trigger)<br>- System Admin (for monitoring and config)                                                                            |
+| **Precondition**   | - User exists in the system<br>- User is active and eligible to receive notifications<br>- System services are operational                            |
+| **Postcondition**  | - Notification is stored in the system<br>- User is alerted through UI/email/push depending on configuration                                          |
+| **Main Flow**      | 1. System detects event requiring notification<br>2. Calls `notify_user(user_id, message, type)`<br>3. Validates user ID and type<br>4. Logs message<br>5. Sends via configured channel (dashboard/email/push) |
+| **Alternate Flow** | - A1: Invalid user ID → Log error, skip notification<br>- A2: Notification service down → Retry or store as unsent<br>- A3: Invalid type → Use default type (e.g., "info") |
 
-#### 3.1.1 User interfaces
-Define the software components for which a user interface is needed. Describe the logical characteristics of each interface between the software product and the users. This may include sample screen images, any GUI standards or product family style guides that are to be followed, screen layout constraints, standard buttons and functions (e.g., help) that will appear on every screen, keyboard shortcuts, error message display standards, and so on. Details of the user interface design should be documented in a separate user interface specification.
 
-Could be further divided into Usability and Convenience requirements.
 
-#### 3.1.2 Hardware interfaces
-Describe the logical and physical characteristics of each interface between the software product and the hardware components of the system. This may include the supported device types, the nature of the data and control interactions between the software and the hardware, and communication protocols to be used.
-
-#### 3.1.3 Software interfaces
-Describe the connections between this product and other specific software components (name and version), including databases, operating systems, tools, libraries, and integrated commercial components. Identify the data items or messages coming into the system and going out and describe the purpose of each. Describe the services needed and the nature of communications. Refer to documents that describe detailed application programming interface protocols. Identify data that will be shared across software components. If the data sharing mechanism must be implemented in a specific way (for example, use of a global data area in a multitasking operating system), specify this as an implementation constraint.
 
 ### 3.2 Functional
 > This section specifies the requirements of functional effects that the software-to-be is to have on its environment.
@@ -201,14 +209,32 @@ Specify the factors required to establish the required reliability of the softwa
 #### 3.3.4 Availability
 Specify the factors required to guarantee a defined availability level for the entire system such as checkpoint, recovery, and restart.
 
-### 3.4 Compliance
-Specify the requirements derived from existing standards or regulations, including:  
-* Report format
-* Data naming
-* Accounting procedures
-* Audit tracing
+### 3.4 Interface Requirements
 
-For example, this could specify the requirement for software to trace processing activity. Such traces are needed for some applications to meet minimum regulatory or financial standards. An audit trace requirement may, for example, state that all changes to a payroll database shall be recorded in a trace file with before and after values.
+### 3.4.1 External Interfaces
+> This subsection defines all the inputs into and outputs requirements of the software system. Each interface defined may include the following content:
+* Name of item
+* Source of input or destination of output
+* Valid range, accuracy, and/or tolerance
+* Units of measure
+* Timing
+* Relationships to other inputs/outputs
+* Screen formats/organization
+* Window formats/organization
+* Data formats
+* Command formats
+* End messages
+
+#### 3.4.1 User interfaces
+Define the software components for which a user interface is needed. Describe the logical characteristics of each interface between the software product and the users. This may include sample screen images, any GUI standards or product family style guides that are to be followed, screen layout constraints, standard buttons and functions (e.g., help) that will appear on every screen, keyboard shortcuts, error message display standards, and so on. Details of the user interface design should be documented in a separate user interface specification.
+
+Could be further divided into Usability and Convenience requirements.
+
+#### 3.4.2 Hardware interfaces
+Describe the logical and physical characteristics of each interface between the software product and the hardware components of the system. This may include the supported device types, the nature of the data and control interactions between the software and the hardware, and communication protocols to be used.
+
+#### 3.4.3 Software interfaces
+Describe the connections between this product and other specific software components (name and version), including databases, operating systems, tools, libraries, and integrated commercial components. Identify the data items or messages coming into the system and going out and describe the purpose of each. Describe the services needed and the nature of communications. Refer to documents that describe detailed application programming interface protocols. Identify data that will be shared across software components. If the data sharing mechanism must be implemented in a specific way (for example, use of a global data area in a multitasking operating system), specify this as an implementation constraint.
 
 ### 3.5 Design and Implementation
 
