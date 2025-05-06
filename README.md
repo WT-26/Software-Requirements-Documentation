@@ -40,6 +40,15 @@ Table of Contents
      * 3.1.7 [Request Create Club](#317-request-create-club)
      * 3.1.8 [Club Approval](#318-club-approval)
      * 3.1.9 [Create Club](#319-create-club)
+     * 3.1.19 [Approve Event](#3119-approve-event)
+     * 3.1.20 [Request Venue](#3120-request-venue)
+     * 3.1.21 [Approve Venue Request](#3121-approve-venue-request)
+     * 3.1.22 [View Calendar](#3122-view-calendar)
+     * 3.1.23 [Submit Budget Request](#3123-submit-budget-request)
+     * 3.1.24 [Approve Budget](#3124-approve-budget)
+     * 3.1.25 [View Club Budget](#3125-view-club-budget)
+     * 3.1.26 [Generate Financial Report](#3126-generate-financial-report)
+     * 3.1.27 [Send Announcement](#3127-send-announcement)
      * 3.1.28 [Notify User](#3128-notify-user)
      * 3.1.29 [View All Clubs](#3129-view-all-user)
      * 3.1.30 [Generate System Report](#3130-generate-system-report)
@@ -94,6 +103,63 @@ The program will enable club leaders to organise club activities efficiently, su
 The system's primary goals are to eliminate manual administrative work, improve operational transparency, and encourage student participation. This software supports institutional objectives to update student services and increase co-curricular involvement by integrating with the university's overall aims of digital transformation, operational efficiency, and improved student experience.
 
 ### 1.3 Product Overview
+#### 1.3.2 Product Functions
+
+The following table features an overview of the list of features in the system along with a brief description, categorized by accessible actors.
+
+| **Function ID** | **Function Name**            | **Description**                                                  | **Accessible Actor(s)**                |
+|------------------|-------------------------------|------------------------------------------------------------------|----------------------------------------|
+| F-001            | User Registration             | Allows users (e.g., students) to register an account             | Student                                |
+| F-002            | User Login                    | Authenticates user credentials to access the system              | All users                              |
+| F-003            | User Logout                   | Ends the current user session                                    | All users                              |
+| F-004            | Password Reset                | Sends reset link and allows users to update password             | All users                              |
+| F-005            | Edit Profile                  | Users can update their profile information                       | All users                              |
+| F-006            | Role Management               | Allows admins to promote or demote user roles                    | System Admin                           |
+| F-007            | Request Club Creation         | Submit a request to form a new club                              | Student                                |
+| F-008            | Approve Club Request          | Review and approve club creation requests                        | System Admin                           |
+| F-009            | Create Club                   | Create a new club in the system                                  | System Admin                           |
+| F-010            | Update Club Details           | Edit information about an existing club                          | President                              |
+| F-011            | Delete Club                   | Remove an existing club from the system                          | System Admin                           |
+| F-012            | Request Club Membership       | Submit request to join a club                                    | Student                                |
+| F-013            | Approve Membership            | Approve membership requests for a club                           | President, System Admin                |
+| F-014            | Remove Club Member            | Remove a student from the club                                   | President                              |
+| F-015            | View Clubs                    | List and filter clubs based on criteria                          | Student                                |
+| F-016            | Propose Event                 | Submit a proposal to organize an event                           | President                              |
+| F-017            | Update Event Details          | Modify information about a scheduled event                       | President, Committee                   |
+| F-018            | Cancel Event                  | Cancel a planned or ongoing event                                | President                              |
+| F-019            | Approve Event                 | Approve or reject proposed events                                | Event Admin                            |
+| F-020            | Request Venue Booking         | Submit request for venue use                                     | President                              |
+| F-021            | Approve Venue Booking         | Review and approve venue booking requests                        | Event Admin                            |
+| F-022            | View Event Calendar           | Browse upcoming and scheduled events                             | All users                              |
+| F-023            | Submit Budget Proposal        | Propose a budget for an event or club activity                   | President                              |
+| F-024            | Approve Budget Proposal       | Review and approve or reject budget requests                     | Event Admin                            |
+| F-025            | View Club Budget              | Monitor club budget, usage history, and balances                 | President, Event Admin                 |
+| F-026            | Generate Financial Report     | Produce detailed budget reports in PDF/CSV format                | President, Member, Event Admin         |
+| F-027            | Send Announcement             | Notify club members with announcements or updates                | President, Committee                   |
+| F-028            | System Notification           | Send alerts or notifications within the system                   | System (automated)                     |
+| F-029            | View All Clubs                | View a list of all clubs in the system                           | Event Admin, System Admin              |
+| F-030            | Generate System Reports       | Create reports on system usage and activities                    | Event Admin, System Admin              |
+| F-031            | Search Clubs                  | Search clubs by name, category, or tags                          | All users                              |
+| F-032            | Filter Events                 | Filter events by date, venue, or club                            | All users                              |
+| F-033            | Sort Budget Requests          | Organize budget requests based on certain criteria               | Event Admin                            |
+| F-034            | Record System Activity        | Automatically log important user/system actions                  | System (automated), Admin              |
+| F-035            | View Audit Logs               | Review logged system activities                                  | System Admin                           |
+| F-036            | Configure Permissions         | Assign or modify access rights for each user role                | System Admin                           |
+
+---
+
+#### 1.3.3 User Characteristics
+
+The general characteristics of the intended groups of users are as follows:
+
+| **User Group**        | **Expected Role in System**                            | **Educational Level**     | **Technical Expertise**             | **Notes on Usability Needs**                       |
+|------------------------|---------------------------------------------------------|----------------------------|--------------------------------------|----------------------------------------------------|
+| Students               | Register, join clubs, view events, participate          | Undergraduate/Diploma      | Basic (form filling, navigation)     | Needs intuitive UI, simple navigation              |
+| Club Presidents        | Manage clubs, create events, send announcements         | Undergraduate               | Moderate (forms, content editing)    | Require dashboard with clear controls              |
+| Committee Members      | Assist presidents, help manage events                   | Undergraduate               | Moderate                             | Similar needs as presidents                        |
+| Event Administrators   | Approve events/venues, manage finance requests          | Staff/Faculty               | Moderate to Advanced                 | Require admin panels, data filtering               |
+| System Administrators  | Manage roles, security, audit, clubs                    | IT Staff/Admin              | Advanced                             | Need access to logs, system configurations         |
+
 #### 1.3.4 Limitations
 1. Scope of Features: The system gives priority to essential features including user identification, club management, event scheduling, and budget approval workflows because of its short development period—one academic semester. Intelligent budget optimization tools, machine learning for event recommendations, and comprehensive analytics dashboards are examples of advanced technologies that have been left out. Although this choice guarantees on-time delivery, it restricts future-proofing and intelligent capabilities.
 
@@ -180,6 +246,140 @@ Identify requirements that may be delayed until future versions of the system (e
 * Be verifiable (e.g., the requirement realization can be proven to the customer's satisfaction)
 * Conform to agreed upon syntax, keywords, and terms.
 
+### 3.1.19 Approve Event
+
+| **Field**           | **Details**                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| **ID**              | UC-EVENT-04                                                                      |
+| **Feature**         | Approve Event                                                                |
+| **Purpose**         | To allow event administrators to review and approve club event proposals.   |
+| **Actors**          | Event Admin                                                                  |
+| **Precondition**    | Admin is logged in and event is in a "Pending Approval" status.              |
+| **Postcondition**   | Event is marked as approved and scheduled in the system.                     |
+| **Main Flow**       | 1. Admin logs in.<br>2. Navigates to event approvals.<br>3. Selects event.<br>4. Reviews details.<br>5. Clicks "Approve".<br>6. System updates status. |
+| **Alternate Scenario** | If event details are incomplete, the admin may reject or request revision. |
+
+---
+
+### 3.1.20 Request Venue Booking
+
+| **Field**           | **Details**                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| **ID**              | UC-EVENT-05                                                                     |
+| **Feature**         | Request Venue Booking                                                        |
+| **Purpose**         | To allow club presidents to request available venues for events.             |
+| **Actors**          | President                                                                    |
+| **Precondition**    | Event must be created; president must be authenticated.                      |
+| **Postcondition**   | Venue booking request is submitted and pending admin approval.               |
+| **Main Flow**       | 1. President logs in.<br>2. Selects an event.<br>3. Chooses venue and timeslot.<br>4. Submits request.<br>5. System logs request. |
+| **Alternate Scenario** | If the venue is unavailable, the system shows a conflict warning.          |
+
+---
+
+### 3.1.21 Approve Venue Request
+
+| **Field**           | **Details**                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| **ID**              | UC-EVENT-06                                                                     |
+| **Feature**         | Approve Venue Request                                                        |
+| **Purpose**         | To enable event admins to approve or reject venue booking requests.          |
+| **Actors**          | Event Admin                                                                  |
+| **Precondition**    | Venue request exists and admin is logged in.                                 |
+| **Postcondition**   | Booking status is updated and the venue is reserved.                         |
+| **Main Flow**       | 1. Admin logs in.<br>2. Views pending venue requests.<br>3. Reviews request.<br>4. Clicks "Approve".<br>5. System updates status. |
+| **Alternate Scenario** | If schedule conflict exists, admin rejects with comments.                 |
+
+---
+
+### 3.1.22 View Event Calendar
+
+| **Field**           | **Details**                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| **ID**              | UC-EVENT-07                                                                 |
+| **Feature**         | View Event Calendar                                                          |
+| **Purpose**         | To allow users to browse upcoming events on campus or by club.               |
+| **Actors**          | Student, President, Committee                                                |
+| **Precondition**    | User is logged in.                                                           |
+| **Postcondition**   | Events are displayed in calendar format.                                     |
+| **Main Flow**       | 1. User logs in.<br>2. Navigates to event calendar.<br>3. Optionally filters by club/date.<br>4. Views events. |
+| **Alternate Scenario** | If no events are available, display "No events scheduled".               |
+
+---
+
+### 3.1.23 Submit Budget Request
+
+| **Field**           | **Details**                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| **ID**              | UC-BUDGET-01                                                                   |
+| **Feature**         | Submit Budget Request                                                        |
+| **Purpose**         | To allow presidents to request funds for event or club operation.            |
+| **Actors**          | President                                                                    |
+| **Precondition**    | Club and event must exist, president is authenticated.                      |
+| **Postcondition**   | Budget request is submitted for review.                                      |
+| **Main Flow**       | 1. President logs in.<br>2. Navigates to finance section.<br>3. Fills in amount and justification.<br>4. Submits form.<br>5. System logs request. |
+| **Alternate Scenario** | If required fields are missing, show error and prompt correction.         |
+
+---
+
+### 3.1.24 Approve Budget Request
+
+| **Field**           | **Details**                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| **ID**              | UC-BUDGET-02                                                                      |
+| **Feature**         | Approve Budget Request                                                       |
+| **Purpose**         | To enable event admins to approve or reject submitted budget requests.       |
+| **Actors**          | Event Admin                                                                  |
+| **Precondition**    | Budget request is submitted and pending.                                    |
+| **Postcondition**   | Budget request is marked approved or rejected with remarks.                  |
+| **Main Flow**       | 1. Admin logs in.<br>2. Opens finance dashboard.<br>3. Selects request.<br>4. Reviews.<br>5. Approves or rejects. |
+| **Alternate Scenario** | If data is unclear, admin may request clarification from club.           |
+
+---
+
+### 3.1.25 View Club Budget
+
+| **Field**           | **Details**                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| **ID**              | UC-BUDGET-03                                                                     |
+| **Feature**         | View Club Budget                                                             |
+| **Purpose**         | To allow clubs and admins to monitor financial balance and transaction logs. |
+| **Actors**          | President, Event Admin                                                       |
+| **Precondition**    | User is authenticated and authorized.                                       |
+| **Postcondition**   | Budget data is displayed.                                                    |
+| **Main Flow**       | 1. User logs in.<br>2. Navigates to budget section.<br>3. Views summary and breakdown. |
+| **Alternate Scenario** | If no data, show “No transactions available”.                            |
+
+---
+
+### 3.1.26 Generate Financial Report
+
+| **Field**           | **Details**                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| **ID**              | UC-BUDGET-04                                                                      |
+| **Feature**         | Generate Financial Report                                                    |
+| **Purpose**         | To generate downloadable reports of club financial activity.                 |
+| **Actors**          | Member, President, Event Admin                                               |
+| **Precondition**    | Club exists, user is authorized.                                            |
+| **Postcondition**   | Report file (PDF/CSV) is generated and downloadable.                         |
+| **Main Flow**       | 1. User logs in.<br>2. Goes to report section.<br>3. Selects club and time period.<br>4. Clicks generate.<br>5. System provides file. |
+| **Alternate Scenario** | If no financial data for the period, show a message and skip file generation. |
+
+---
+
+### 3.1.27 Send Club Announcement
+
+| **Field**           | **Details**                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| **ID**              | UC-COMM-01                                                                   |
+| **Feature**         | Send Club Announcement                                                       |
+| **Purpose**         | To allow club leaders to notify members of updates or events.                |
+| **Actors**          | President, Committee                                                         |
+| **Precondition**    | User is authorized and part of the club committee.                           |
+| **Postcondition**   | Message is delivered to all members via system notification or email.        |
+| **Main Flow**       | 1. President/committee logs in.<br>2. Opens communication panel.<br>3. Composes message.<br>4. Sends to club. |
+| **Alternate Scenario** | If no members exist, system warns “No recipients available”.              |
+
+
 ### 3.1.28 Notify User
 | **Field**          | **Description**                                                                                                                                       |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -221,7 +421,7 @@ Identify requirements that may be delayed until future versions of the system (e
 ### 3.1.31 Search Clubs
 | **Field**          | **Description**                                                                                                                                                 |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **ID**             | UC-CLUB-02                                                                                                                                                      |
+| **ID**             | UC-SEARCH-01                                                                                                                                                      |
 | **Feature**        | Club Discovery / Search                                                                                                                                         |
 | **Purpose**        | To allow all users to search for clubs using keywords that match names, categories, or tags.                                                                    |
 | **Actors**         | - All users (guests, students, admins)                                                                                                                           |
@@ -234,7 +434,7 @@ Identify requirements that may be delayed until future versions of the system (e
 
 | **Field**          | **Description**                                                                                                                                                       |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **ID**             | UC-EVENT-01                                                                                                                                                           |
+| **ID**             | UC-SEARCH-02                                                                                                                                                           |
 | **Feature**        | Event Discovery / Filtering                                                                                                                                           |
 | **Purpose**        | To allow users to filter upcoming events based on selected criteria such as date, venue, or hosting club.                                                             |
 | **Actors**         | - All users (guests, students, admins)                                                                                                                                |
@@ -246,7 +446,7 @@ Identify requirements that may be delayed until future versions of the system (e
 ### 3.1.33 Sort Budget Requests
 | **Field**        | **Details**                                                                 |
 |------------------|------------------------------------------------------------------------------|
-| **ID**           | FTR-037                                                                      |
+| **ID**           | UC-SEARCH-03                                                                    |
 | **Feature**      | sort_budget_requests(by='date')                                              |
 | **Purpose**      | To allow event admins to organize and view budget requests by a chosen field (e.g., date, amount) for easier processing and review. |
 | **Actors**       | Event Admin                                                                  |
@@ -258,7 +458,7 @@ Identify requirements that may be delayed until future versions of the system (e
 ### 3.1.34 Log Activities
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
-| **ID**            | FTR-039                                                                      |
+| **ID**            | UC-AUDIT-01                                                                      |
 | **Feature**       | log_activity(user_id, action)                                                |
 | **Purpose**       | To automatically track and record significant actions performed by users in the system for audit and security purposes. |
 | **Actors**        | System (automated), System Admin (viewer)                                    |
@@ -270,7 +470,7 @@ Identify requirements that may be delayed until future versions of the system (e
 ### 3.1.35 View Audit Log
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
-| **ID**            | FTR-040                                                                      |
+| **ID**            | UC-AUDIT-02                                                                     |
 | **Feature**       | view_audit_log()                                                             |
 | **Purpose**       | To allow system administrators to access and review system activity logs for monitoring, security audits, and issue investigation. |
 | **Actors**        | System Admin                                                                 |
@@ -282,7 +482,7 @@ Identify requirements that may be delayed until future versions of the system (e
 ### 3.1.36 Set Permissions
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
-| **ID**            | FTR-041                                                                      |
+| **ID**            | UC-AUDIT-03                                                                        |
 | **Feature**       | set_permissions(role, permissions)                                           |
 | **Purpose**       | To allow system administrators to define or update the actions that each user role is authorized to perform within the system. |
 | **Actors**        | System Admin                                                                 |
