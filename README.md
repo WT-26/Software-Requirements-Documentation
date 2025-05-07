@@ -14,8 +14,8 @@ Table of Contents
 =================
 * [Revision History](#revision-history)
 * 1 [Introduction](#1-introduction)
-  * 1.1 [Document Purpose](#11-document-purpose)
-  * 1.2 [Product Scope](#12-product-scope)
+  * 1.1 [Purpose](#11-purpose)
+  * 1.2 [Scope](#12-scope)
   * 1.3 [Product overview](#13-product-overview)
     * 1.3.1 [Product Perspective](#131-product-perspective)
     * 1.3.2 [Product Functions](#132-product-functions)
@@ -92,10 +92,10 @@ Table of Contents
 ## 1. Introduction
 > This section should provide an overview of the entire document
 
-### 1.1 Document Purpose
+### 1.1 Purpose
 The purpose of the "Student Club Management System with Budget and Venue Integration" is to provide a comprehensive digital solution that centralizes and simplifies the management of student clubs within the university. The goal of this system is to solve common problems that student organisations face, like inadequate communication, manual membership and financial tracking, and trouble organising event logistics and venue reservations. The software integrates with current university financial systems and space reservation tools, allowing clubs to manage their budgets, submit funding requests, and reserve spaces with minimal administrative friction. Along with offering a user-friendly interface for students to take part in club activities, attend events, and stay informed, it also promotes transparency in financial management and decision-making processes. Lastly, the system aims to promote a more active and organised student life environment, lessen administrative burdens for university staff and student leaders, and support the development and success of student-driven projects. 
 
-### 1.2 Product Scope
+### 1.2 Scope
 This Software Requirements Specification (SRS) document defines the software requirements for the Student Club Management System with Budget and Venue Integration, Release 1.0. The system is a centralized web-based platform designed to support and streamline the operations of student clubs within a university setting. It focuses on automating and integrating core club management functions, including member registration, event planning, budget tracking, fund requests, and venue reservations.
 
 The program will enable club leaders to organise club activities efficiently, submit and monitor budget requests in conjunction with the university's financial system, and schedule event spaces via connectivity with the campus venue booking system.  Additionally, it provides members with access to club events and information, encouraging more active participation. While this SRS describes the entire system, future updates could include improved analytics, mobile support, and greater integration capabilities.
@@ -103,6 +103,8 @@ The program will enable club leaders to organise club activities efficiently, su
 The system's primary goals are to eliminate manual administrative work, improve operational transparency, and encourage student participation. This software supports institutional objectives to update student services and increase co-curricular involvement by integrating with the university's overall aims of digital transformation, operational efficiency, and improved student experience.
 
 ### 1.3 Product Overview
+
+#### 1.3.1 Product Perspective
 #### 1.3.2 Product Functions
 
 The following table features an overview of the list of features in the system along with a brief description, categorized by accessible actors.
