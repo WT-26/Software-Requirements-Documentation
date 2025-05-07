@@ -255,7 +255,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Feature**         | Approve Venue Request                                                        |
 | **Purpose**         | To enable event admins to approve or reject venue booking requests.          |
 | **Actors**          | Event Admin                                                                  |
-| **Precondition**    | Venue request exists and admin is logged in.                                 |
+| **Precondition**    | 1. Event is approved<br>2. Venue request exists and admin is logged in.                                 |
 | **Postcondition**   | Booking status is updated and the venue is reserved.                         |
 | **Main Flow**       | 1. Admin logs in.<br>2. Views pending venue requests.<br>3. Reviews request.<br>4. Clicks "Approve".<br>5. System updates status. |
 | **Alternate Scenario** | If schedule conflict exists, admin rejects with comments.                 |
