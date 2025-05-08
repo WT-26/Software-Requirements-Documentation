@@ -363,6 +363,8 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**      | 1. System detects event requiring notification<br>2. Calls `notify_user(user_id, message, type)`<br>3. Validates user ID and type<br>4. Logs message<br>5. Sends via configured channel (dashboard/email/push) |
 | **Alternate Flow** | - A1: Invalid user ID → Log error, skip notification<br>- A2: Notification service down → Retry or store as unsent<br>- A3: Invalid type → Use default type (e.g., "info") |
 
+![My Image](Function 28(1).png)
+
 ### 3.1.29 View All Clubs
 | **Field**          | **Description**                                                                                                                                             |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -376,8 +378,6 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Flow** | - A1: No clubs are registered → Show message: "No clubs found"<br>- A2: Database error → Show error message and log issue                                   |
 
 ### 3.1.30 Generate System Report
-## 📊 Use Case: generate_system_report()
-
 | **Field**          | **Description**                                                                                                                                                      |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-REPORT-01                                                                                                                                                         |
