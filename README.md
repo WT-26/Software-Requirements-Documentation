@@ -363,7 +363,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**      | 1. System detects event requiring notification<br>2. Calls `notify_user(user_id, message, type)`<br>3. Validates user ID and type<br>4. Logs message<br>5. Sends via configured channel (dashboard/email/push) |
 | **Alternate Flow** | - A1: Invalid user ID → Log error, skip notification<br>- A2: Notification service down → Retry or store as unsent<br>- A3: Invalid type → Use default type (e.g., "info") |
 
-![My Image](Function 28(1).png)
+![My Image](Function_28.png)
 
 ### 3.1.29 View All Clubs
 | **Field**          | **Description**                                                                                                                                             |
