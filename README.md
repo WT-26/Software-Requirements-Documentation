@@ -48,16 +48,17 @@ Table of Contents
      * 3.1.24 [Approve Budget](#3124-approve-budget)
      * 3.1.25 [View Club Budget](#3125-view-club-budget)
      * 3.1.26 [Generate Financial Report](#3126-generate-financial-report)
-     * 3.1.27 [Send Announcement](#3127-send-announcement)
-     * 3.1.28 [Notify User](#3128-notify-user)
-     * 3.1.29 [View All Clubs](#3129-view-all-user)
-     * 3.1.30 [Generate System Report](#3130-generate-system-report)
-     * 3.1.31 [Search Clubs](#3131-search-clubs)
-     * 3.1.32 [Filter Events](#3132-filter-events)
-     * 3.1.33 [Sort Budget Requests](#3133-sort-budget-requests)
-     * 3.1.34 [Log Activity](#3134-log-activity)
-     * 3.1.35 [View Audit Log](#3135-view-audit-log)
-     * 3.1.36 [Set Permissions](#3136-set-permissions)
+     * 3.1.27 [View Financial Report](#3127-send-announcement)
+     * 3.1.28 [Send Announcement](#3128-send-announcement)
+     * 3.1.29 [Notify User](#3129-notify-user)
+     * 3.1.30 [View All Clubs](#3130-view-all-user)
+     * 3.1.31 [Generate System Report](#3131-generate-system-report)
+     * 3.1.32 [Search Clubs](#3132-search-clubs)
+     * 3.1.33 [Filter Events](#3133-filter-events)
+     * 3.1.34 [Sort Budget Requests](#3134-sort-budget-requests)
+     * 3.1.35 [Log Activity](#3135-log-activity)
+     * 3.1.36 [View Audit Log](#3136-view-audit-log)
+     * 3.1.37 [Set Permissions](#3137-set-permissions)
   * 3.2 [Performance Requirements](#32-performance-requirements)
   * 3.3 [Usability Requirements](#33-usability-requirements)
     * 3.3.1 [Performance](#331-performance)
@@ -352,22 +353,22 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.27 Send Club Announcement
+### 3.1.28 Send Club Announcement
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
 | **ID**              | UC-COMM-01                                                                   |
 | **Feature**         | Send Club Announcement                                                       |
-| **Purpose**         | To allow club leaders to notify members of updates or events.                |
+| **Purpose**         | To allow president or committee to notify club members of updates or events. |
 | **Actors**          | President, Committee                                                         |
-| **Precondition**    | User is authorized and part of the club committee.                           |
-| **Postcondition**   | Message is delivered to all members via system notification or email.        |
+| **Precondition**    | President or committe is logged in.                           |
+| **Postcondition**   | Message is delivered to all club members via system notification or email. |
 | **Main Flow**       | 1. President/committee logs in.<br>2. Opens communication panel.<br>3. Composes message.<br>4. Sends to club. |
 | **Alternate Scenario** | If no members exist, system warns “No recipients available”.              |
 
 ---
 
-### 3.1.28 Notify User
+### 3.1.29 Notify User
 | **Field**          | **Description**                                                                                                                                       |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-COMM-02                                                                                                                                            |
@@ -383,7 +384,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.29 View All Clubs
+### 3.1.30 View All Clubs
 | **Field**          | **Description**                                                                                                                                             |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-CLUB-01                                                                                                                                                  |
@@ -397,7 +398,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.30 Generate System Report
+### 3.1.31 Generate System Report
 | **Field**          | **Description**                                                                                                                                                      |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-REPORT-01                                                                                                                                                         |
@@ -411,7 +412,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.31 Search Clubs
+### 3.1.32 Search Clubs
 | **Field**          | **Description**                                                                                                                                                 |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-SEARCH-01                                                                                                                                                      |
@@ -425,7 +426,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.32 Filter Events
+### 3.1.33 Filter Events
 
 | **Field**          | **Description**                                                                                                                                                       |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -438,7 +439,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**      | 1. User selects filters: date, venue, or club<br>2. System calls `filter_events(date, venue, club)`<br>3. Events matching the criteria are retrieved<br>4. Results are displayed |
 | **Alternate Flow** | - A1: No events match criteria → Show message: “No events found”<br>- A2: Filtering input is invalid → Show validation error or fallback to default view              |
 
-### 3.1.33 Sort Budget Requests
+### 3.1.34 Sort Budget Requests
 | **Field**        | **Details**                                                                 |
 |------------------|------------------------------------------------------------------------------|
 | **ID**           | UC-SEARCH-03                                                                    |
@@ -450,7 +451,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**    | 1. Event admin logs in.  <br> 2. Navigates to the budget requests section. <br> 3. Chooses a sort parameter (e.g., date). <br> 4. System retrieves and displays sorted requests. |
 | **Alternate Scenario** | If no sort parameter is provided, the system defaults to sorting by date. If no budget requests exist, an empty list is shown. |
 
-### 3.1.34 Log Activities
+### 3.1.35 Log Activities
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
 | **ID**            | UC-AUDIT-01                                                                      |
@@ -462,7 +463,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**     | 1. User performs a key action in the system. <br> 2. System captures user ID and action. <br> 3. System records the activity in the audit log automatically. |
 | **Alternate Scenario** | If logging fails due to a system error, the system retries or reports the failure to the system admin. |
 
-### 3.1.35 View Audit Log
+### 3.1.36 View Audit Log
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
 | **ID**            | UC-AUDIT-02                                                                     |
@@ -474,7 +475,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**     | 1. Admin logs in to the system. <br> 2. Navigates to the audit log section. <br> 3. System retrieves and displays activity logs. |
 | **Alternate Scenario** | If no logs are available, a message is shown indicating “No audit logs found.” If access is unauthorized, an error message is displayed. |
 
-### 3.1.36 Set Permissions
+### 3.1.37 Set Permissions
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
 | **ID**            | UC-AUDIT-03                                                                        |
