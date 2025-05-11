@@ -217,14 +217,14 @@ The general characteristics of the intended groups of users are as follows:
 * Be verifiable (e.g., the requirement realization can be proven to the customer's satisfaction)
 * Conform to agreed upon syntax, keywords, and terms.
 
-### 3.1.19 Approve Event
+### 3.1.19 Approve Event Request
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
 | **ID**              | UC-EVENT-04                                                                      |
 | **Feature**         | Approve Event                                                                |
-| **Purpose**         | To allow event administrators to review and approve club event proposals.   |
-| **Actors**          | Event Admin                                                                  |
+| **Purpose**         | To allow event administrator to review and approve club event proposals.   |
+| **Actors**          | Admin                                                                 |
 | **Precondition**    | Admin is logged in and event is in a "Pending Approval" status.              |
 | **Postcondition**   | Event is marked as approved and scheduled in the system.                     |
 | **Main Flow**       | 1. Admin logs in.<br>2. Navigates to event approvals.<br>3. Selects event.<br>4. Reviews details.<br>5. Clicks "Approve".<br>6. System updates status. |
@@ -239,11 +239,11 @@ The general characteristics of the intended groups of users are as follows:
 | **ID**              | UC-EVENT-05                                                                     |
 | **Feature**         | Request Venue Booking                                                        |
 | **Purpose**         | To allow club presidents to request available venues for events.             |
-| **Actors**          | President                                                                    |
-| **Precondition**    | Event must be created; president must be authenticated.                      |
+| **Actors**          | President, Campus Space Reservation System (external)                        |
+| **Precondition**    | 1. Event must be created. <br> 2. President must be authenticated.                      |
 | **Postcondition**   | Venue booking request is submitted and pending admin approval.               |
-| **Main Flow**       | 1. President logs in.<br>2. Selects an event.<br>3. Chooses venue and timeslot.<br>4. Submits request.<br>5. System logs request. |
-| **Alternate Scenario** | If the venue is unavailable, the system shows a conflict warning.          |
+| **Main Flow**       | 1. President logs in.<br>2. Selects an event.<br>3. Chooses venue and timeslot.<br>4. Submits request.<br>5. System logs the request with status "Pending". |
+| **Alternate Scenario** | If the venue is already reserved, system notifies unavailability or suggests alternatives.        |
 
 ---
 
@@ -253,12 +253,12 @@ The general characteristics of the intended groups of users are as follows:
 |---------------------|------------------------------------------------------------------------------|
 | **ID**              | UC-EVENT-06                                                                     |
 | **Feature**         | Approve Venue Request                                                        |
-| **Purpose**         | To enable event admins to approve or reject venue booking requests.          |
-| **Actors**          | **Event Admin **                                                                 |
-| **Precondition**    | 1. Event is approved and exists.<br>2. Budget proposal is approved and exists. <br>3. Venue request exists.                              |
-| **Postcondition**   | Booking status is updated and the venue is reserved.                         |
-| **Main Flow**       | 1. Admin logs in.<br>2. Views pending venue requests.<br>3. Reviews request.<br>4. Clicks "Approve".<br>5. System updates status. |
-| **Alternate Scenario** | If schedule conflict exists, admin rejects with comments.                 |
+| **Purpose**         | To enable admin to approve or reject venue booking requests, and trigger booking in the Campus Space Reservation System.         |
+| **Actors**          | 	Admin, Campus Space Reservation System (external)                                                                |
+| **Precondition**    | 1. Admin is logged in. <br> 2. Event must be created.<br> 3. Venue request exists with "Pending Approval" status. <br> 3. Campus Reservation System is reachable.                       |
+| **Postcondition**   | 	The booking status is updated in the system and the venue is reserved in the Campus Space Reservation System.                         |
+| **Main Flow**       | 1. Admin logs in.<br>2. Views pending venue requests.<br>3. Reviews request.<br>4. Clicks "Approve".<br>5. System communicates with the Campus Reservation System to finalize booking. <br> 6. Status is updated to "Approved & Reserved".
+| **Alternate Scenario** | 		If the schedule conflicts during final booking, system returns an error and status remains pending or marked for resubmission.              |
 
 ---
 
@@ -268,11 +268,11 @@ The general characteristics of the intended groups of users are as follows:
 |---------------------|------------------------------------------------------------------------------|
 | **ID**              | UC-EVENT-07                                                                 |
 | **Feature**         | View Event Calendar                                                          |
-| **Purpose**         | To allow users to browse upcoming events on campus or by club.               |
-| **Actors**          | Student, President, Committee                                                |
-| **Precondition**    | User is logged in.                                                           |
+| **Purpose**         | To allow students to browse upcoming events on campus or by club.               |
+| **Actors**          | Student                                              |
+| **Precondition**    | Student is logged in.                                                           |
 | **Postcondition**   | Events are displayed in calendar format.                                     |
-| **Main Flow**       | 1. User logs in.<br>2. Navigates to event calendar.<br>3. Optionally filters by club/date.<br>4. Views events. |
+| **Main Flow**       | 1. Student logs in.<br>2. Navigates to event calendar.<br>3. Optionally filters by club/date.<br>4. Views events. |
 | **Alternate Scenario** | If no events are available, display "No events scheduled".               |
 
 ---
@@ -285,7 +285,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Feature**         | Submit Budget Request                                                        |
 | **Purpose**         | To allow presidents to request funds for event or club operation.            |
 | **Actors**          | President                                                                    |
-| **Precondition**    | Club and event must exist, president is authenticated.                      |
+| **Precondition**    | 1. Club and event must exist. <br> 2. President is authenticated.                      |
 | **Postcondition**   | Budget request is submitted for review.                                      |
 | **Main Flow**       | 1. President logs in.<br>2. Navigates to finance section.<br>3. Fills in amount and justification.<br>4. Submits form.<br>5. System logs request. |
 | **Alternate Scenario** | If required fields are missing, show error and prompt correction.         |
@@ -297,12 +297,12 @@ The general characteristics of the intended groups of users are as follows:
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
 | **ID**              | UC-BUDGET-02                                                                      |
-| **Feature**         | Approve Budget Request                                                       |
-| **Purpose**         | To enable event admins to approve or reject submitted budget requests.       |
-| **Actors**          | Event Admin                                                                  |
-| **Precondition**    | Budget request is submitted and pending.                                    |
-| **Postcondition**   | Budget request is marked approved or rejected with remarks.                  |
-| **Main Flow**       | 1. Admin logs in.<br>2. Opens finance dashboard.<br>3. Selects request.<br>4. Reviews.<br>5. Approves or rejects. |
+| **Feature**         | Approve Budget Proposal                                                       |
+| **Purpose**         | To enable admin to approve or reject submitted budget requests.       |
+| **Actors**          | Admin, Financial Management System (external)                                |
+| **Precondition**    | 1. Budget proposal is submitted and pending approval. <br> 2. Admin is authenticated and has access to finance dashboard.                                   |
+| **Postcondition**   | Budget proposal is marked as approved or rejected. If approved, the details are forwarded to the Financial Management System for allocation and record.                  |
+| **Main Flow**       | 1. Admin logs in.<br>2. Opens finance dashboard.<br>3. Selects request.<br>4. Reviews the details and justification.<br>5. Approves or rejects.<br> 6. If approved, system syncs approval and budget details to the Financial Management System. |
 | **Alternate Scenario** | If data is unclear, admin may request clarification from club.           |
 
 ---
@@ -313,11 +313,11 @@ The general characteristics of the intended groups of users are as follows:
 |---------------------|------------------------------------------------------------------------------|
 | **ID**              | UC-BUDGET-03                                                                     |
 | **Feature**         | View Club Budget                                                             |
-| **Purpose**         | To allow clubs and admins to monitor financial balance and transaction logs. |
-| **Actors**          | President, Event Admin                                                       |
-| **Precondition**    | User is authenticated and authorized.                                       |
+| **Purpose**         | To allow club member and admin to monitor financial balance and transaction logs. |
+| **Actors**          | Member, Admin                                                       |
+| **Precondition**    | Member or admin is logged in.                                     |
 | **Postcondition**   | Budget data is displayed.                                                    |
-| **Main Flow**       | 1. User logs in.<br>2. Navigates to budget section.<br>3. Views summary and breakdown. |
+| **Main Flow**       | 1. Member or admin logs in.<br>2. Navigates to budget section.<br>3. Views summary and breakdown. |
 | **Alternate Scenario** | If no data, show “No transactions available”.                            |
 
 ---
@@ -328,12 +328,27 @@ The general characteristics of the intended groups of users are as follows:
 |---------------------|------------------------------------------------------------------------------|
 | **ID**              | UC-BUDGET-04                                                                      |
 | **Feature**         | Generate Financial Report                                                    |
-| **Purpose**         | To generate downloadable reports of club financial activity.                 |
-| **Actors**          | Member, President, Event Admin                                               |
-| **Precondition**    | Club exists, user is authorized.                                            |
+| **Purpose**         | 	To allow the Financial Management System to generate downloadable reports of club financial activity.      |
+| **Actors**          | Financial Management System (external)                                               |
+| **Precondition**    | Club financial data exists and report generation is requested by an authorized module/user.                                            |
 | **Postcondition**   | Report file (PDF/CSV) is generated and downloadable.                         |
-| **Main Flow**       | 1. User logs in.<br>2. Goes to report section.<br>3. Selects club and time period.<br>4. Clicks generate.<br>5. System provides file. |
-| **Alternate Scenario** | If no financial data for the period, show a message and skip file generation. |
+| **Main Flow**       | 1. A report generation request is received.<br>2. Financial Management System (FMS) processes the request. <br>3. FMS retrieves relevant club financial data. <br>4. FMS compiles data into selected format (PDF/CSV).<br>5. Report is made available for download. |
+| **Alternate Scenario** | 	If no data is available for the selected period, FMS returns an error or "No data found" message.|
+
+---
+
+### 3.1.27 View Financial Report
+
+| **Field**           | **Details**                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| **ID**              | UC-BUDGET-05                                                                      |
+| **Feature**         | View Financial Report                                                   |
+| **Purpose**         | To allow members to view or download previously generated financial reports for their club.     |
+| **Actors**          | Member                                              |
+| **Precondition**    | 1. Member is authenticated. <br> 2. Club financial reports have been generated and stored.   |
+| **Postcondition**   | Member views or downloads the selected financial report.                         |
+| **Main Flow**       | 1. Member logs in. <br>2. Navigates to the financial reports section. <br>3. Selects club and reporting period. <br>4. Clicks to view or download the report.<br>5. System provides access to the report. |
+| **Alternate Scenario** | 	If no report is available for the selected period, the system displays a "No reports found" message.|
 
 ---
 
@@ -350,6 +365,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**       | 1. President/committee logs in.<br>2. Opens communication panel.<br>3. Composes message.<br>4. Sends to club. |
 | **Alternate Scenario** | If no members exist, system warns “No recipients available”.              |
 
+---
 
 ### 3.1.28 Notify User
 | **Field**          | **Description**                                                                                                                                       |
@@ -365,6 +381,8 @@ The general characteristics of the intended groups of users are as follows:
 
 ![My Image](Function_28.png)
 
+---
+
 ### 3.1.29 View All Clubs
 | **Field**          | **Description**                                                                                                                                             |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -376,6 +394,8 @@ The general characteristics of the intended groups of users are as follows:
 | **Postcondition**  | - List of all clubs is displayed to the admin<br>- Admin can access club details for further actions (edit, review, approve, etc.)                         |
 | **Main Flow**      | 1. Admin logs into the system<br>2. Navigates to the club management section<br>3. System calls `view_all_clubs()`<br>4. System retrieves and displays club list |
 | **Alternate Flow** | - A1: No clubs are registered → Show message: "No clubs found"<br>- A2: Database error → Show error message and log issue                                   |
+
+---
 
 ### 3.1.30 Generate System Report
 | **Field**          | **Description**                                                                                                                                                      |
@@ -389,6 +409,8 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**      | 1. Admin accesses the report section<br>2. Clicks “Generate Report”<br>3. System compiles data: usage logs, club activities, budget stats<br>4. Report is displayed or exported |
 | **Alternate Flow** | - A1: No data available → Show message: “No data to report”<br>- A2: Report generation fails due to server error → Show error message and log the issue              |
 
+---
+
 ### 3.1.31 Search Clubs
 | **Field**          | **Description**                                                                                                                                                 |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -400,6 +422,8 @@ The general characteristics of the intended groups of users are as follows:
 | **Postcondition**  | - A filtered list of clubs matching the keyword is shown<br>- User can view details or take further action (e.g., request to join, view events)                |
 | **Main Flow**      | 1. User enters a keyword into the search bar<br>2. System calls `search_clubs(keyword)`<br>3. Matches club name, category, and tags<br>4. Displays results list |
 | **Alternate Flow** | - A1: No matches found → Show message: “No clubs found for that keyword”<br>- A2: Search service down → Show error and log issue                                |
+
+---
 
 ### 3.1.32 Filter Events
 
