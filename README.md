@@ -48,7 +48,7 @@ Table of Contents
      * 3.1.24 [Approve Budget](#3124-approve-budget)
      * 3.1.25 [View Club Budget](#3125-view-club-budget)
      * 3.1.26 [Generate Financial Report](#3126-generate-financial-report)
-     * 3.1.27 [View Financial Report](#3127-send-announcement)
+     * 3.1.27 [View Financial Report](#3127-view-financial-report)
      * 3.1.28 [Send Announcement](#3128-send-announcement)
      * 3.1.29 [Notify User](#3129-notify-user)
      * 3.1.30 [View All Clubs](#3130-view-all-user)
