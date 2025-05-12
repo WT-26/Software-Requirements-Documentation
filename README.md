@@ -304,7 +304,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Actors**          | Admin, Financial Management System (external)                                |
 | **Precondition**    | - Event must be created. <br> - Budget proposal is submitted and pending approval. <br> - Admin is authenticated and has access to finance dashboard.                                   |
 | **Postcondition**   | Budget proposal is marked as approved or rejected. If approved, the details are forwarded to the Financial Management System for allocation and record.                  |
-| **Main Flow**       | 1. Admin logs in.<br>2. Opens finance dashboard.<br>3. Selects request.<br>4. Reviews the details and justification.<br>5. Approves or rejects.<br> 6. If approved, system syncs approval and budget details to the Financial Management System. |
+| **Main Flow**       | 1. Admin logs in.<br>2. Navigate to budget approvals.<br>3. Selects request.<br>4. Reviews the details and justification.<br>5. Approves or rejects.<br> 6. If approved, system syncs approval and budget details to the Financial Management System. |
 | **Alternate Scenario** | If data is unclear, admin may request clarification from club.           |
 
 ---
