@@ -243,7 +243,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Actors**          | President, Campus Space Reservation System (external)                        |
 | **Precondition**    | - Event must be created. <br> - President must be authenticated.                      |
 | **Postcondition**   | Venue booking request is submitted and pending admin approval.               |
-| **Main Flow**       | 1. President logs in.<br>2. Selects an event.<br>3. Chooses venue and timeslot.<br>4. Submits request.<br>5. System logs the request with status "Pending". |
+| **Main Flow**       | 1. President logs in.<br>2. Navigate to event management section. <br> 3. Selects an event.<br>4. Chooses venue and timeslot.<br>5. Submits request.<br>6. System logs the request with status "Pending". |
 | **Alternate Scenario** | If the venue is already reserved, system notifies unavailability or suggests alternatives.        |
 
 ---
@@ -288,7 +288,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Actors**          | President                                                                    |
 | **Precondition**    | - Club and event must exist. <br> - President is authenticated.                      |
 | **Postcondition**   | Budget proposal is submitted for review.                                      |
-| **Main Flow**       | 1. President logs in.<br>2. Navigates to finance section.<br>3. Fills in amount and justification.<br>4. Submits proposal.<br>5. System logs request. |
+| **Main Flow**       | 1. President logs in.<br>2. Navigates to event management section.<br>3. Selects an event <br> 4. Fills in amount and justification.<br>5. Submits proposal.<br>6. System logs request. |
 | **Alternate Scenario** | If required fields are missing, show error and prompt correction.         |
 
 ---
