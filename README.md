@@ -44,8 +44,8 @@ Table of Contents
      * 3.1.20 [Request Venue Booking](#3120-request-venue-booking)
      * 3.1.21 [Approve Venue Request](#3121-approve-venue-request)
      * 3.1.22 [View Event Calendar](#3122-view-event-calendar)
-     * 3.1.23 [Submit Budget Request](#3123-submit-budget-request)
-     * 3.1.24 [Approve Budget Request](#3124-approve-budget-request)
+     * 3.1.23 [Submit Budget Proposal](#3123-submit-budget-proposal)
+     * 3.1.24 [Approve Budget Proposal](#3124-approve-budget-proposal)
      * 3.1.25 [View Club Budget](#3125-view-club-budget)
      * 3.1.26 [Generate Financial Report](#3126-generate-financial-report)
      * 3.1.27 [View Financial Report](#3127-view-financial-report)
@@ -278,22 +278,22 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.23 Submit Budget Request
+### 3.1.23 Submit Budget Proposal
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
 | **ID**              | UC-BUDGET-01                                                                   |
-| **Feature**         | Submit Budget Request                                                        |
+| **Feature**         | Submit Budget Proposal                                                        |
 | **Purpose**         | To allow presidents to request funds for event or club operation.            |
 | **Actors**          | President                                                                    |
 | **Precondition**    | - Club and event must exist. <br> - President is authenticated.                      |
-| **Postcondition**   | Budget request is submitted for review.                                      |
-| **Main Flow**       | 1. President logs in.<br>2. Navigates to finance section.<br>3. Fills in amount and justification.<br>4. Submits form.<br>5. System logs request. |
+| **Postcondition**   | Budget proposal is submitted for review.                                      |
+| **Main Flow**       | 1. President logs in.<br>2. Navigates to finance section.<br>3. Fills in amount and justification.<br>4. Submits proposal.<br>5. System logs request. |
 | **Alternate Scenario** | If required fields are missing, show error and prompt correction.         |
 
 ---
 
-### 3.1.24 Approve Budget Request
+### 3.1.24 Approve Budget Proposal
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
