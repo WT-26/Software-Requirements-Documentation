@@ -228,7 +228,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Actors**          | Admin                                                                 |
 | **Precondition**    | Admin is logged in and event is in a "Pending Approval" status.              |
 | **Postcondition**   | Event is marked as approved and scheduled in the system.                     |
-| **Main Flow**       | 1. Admin logs in.<br>2. Navigates to event approvals.<br>3. Selects event.<br>4. Reviews details.<br>5. Clicks "Approve".<br>6. System updates status. |
+| **Main Flow**       | 1. Admin logs in.<br>2. Navigates to event approvals.<br>3. View pending event requests <br> 4. Selects event.<br>5. Reviews details.<br>6. Clicks "Approve".<br>7. System updates status. |
 | **Alternate Scenario** | If event details are incomplete, the admin may reject or request revision. |
 
 ---
@@ -241,7 +241,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Feature**         | Request Venue Booking                                                        |
 | **Purpose**         | To allow club presidents to request available venues for events.             |
 | **Actors**          | President, Campus Space Reservation System (external)                        |
-| **Precondition**    | 1. Event must be created. <br> 2. President must be authenticated.                      |
+| **Precondition**    | -Event must be created. <br> - President must be authenticated.                      |
 | **Postcondition**   | Venue booking request is submitted and pending admin approval.               |
 | **Main Flow**       | 1. President logs in.<br>2. Selects an event.<br>3. Chooses venue and timeslot.<br>4. Submits request.<br>5. System logs the request with status "Pending". |
 | **Alternate Scenario** | If the venue is already reserved, system notifies unavailability or suggests alternatives.        |
@@ -256,7 +256,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Feature**         | Approve Venue Request                                                        |
 | **Purpose**         | To enable admin to approve or reject venue booking requests, and trigger booking in the Campus Space Reservation System.         |
 | **Actors**          | 	Admin, Campus Space Reservation System (external)                                                                |
-| **Precondition**    | 1. Admin is logged in. <br> 2. Event must be created.<br> 3. Venue request exists with "Pending Approval" status. <br> 3. Campus Reservation System is reachable.                       |
+| **Precondition**    | - Admin is logged in. <br> - Event must be created.<br> - Venue request exists with "Pending Approval" status. <br> - Campus Reservation System is reachable.                       |
 | **Postcondition**   | 	The booking status is updated in the system and the venue is reserved in the Campus Space Reservation System.                         |
 | **Main Flow**       | 1. Admin logs in.<br>2. Views pending venue requests.<br>3. Reviews request.<br>4. Clicks "Approve".<br>5. System communicates with the Campus Reservation System to finalize booking. <br> 6. Status is updated to "Approved & Reserved".
 | **Alternate Scenario** | 		If the schedule conflicts during final booking, system returns an error and status remains pending or marked for resubmission.              |
@@ -286,7 +286,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Feature**         | Submit Budget Request                                                        |
 | **Purpose**         | To allow presidents to request funds for event or club operation.            |
 | **Actors**          | President                                                                    |
-| **Precondition**    | 1. Club and event must exist. <br> 2. President is authenticated.                      |
+| **Precondition**    | - Club and event must exist. <br> - President is authenticated.                      |
 | **Postcondition**   | Budget request is submitted for review.                                      |
 | **Main Flow**       | 1. President logs in.<br>2. Navigates to finance section.<br>3. Fills in amount and justification.<br>4. Submits form.<br>5. System logs request. |
 | **Alternate Scenario** | If required fields are missing, show error and prompt correction.         |
@@ -301,7 +301,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Feature**         | Approve Budget Proposal                                                       |
 | **Purpose**         | To enable admin to approve or reject submitted budget requests.       |
 | **Actors**          | Admin, Financial Management System (external)                                |
-| **Precondition**    | 1. Budget proposal is submitted and pending approval. <br> 2. Admin is authenticated and has access to finance dashboard.                                   |
+| **Precondition**    | - Budget proposal is submitted and pending approval. <br> - Admin is authenticated and has access to finance dashboard.                                   |
 | **Postcondition**   | Budget proposal is marked as approved or rejected. If approved, the details are forwarded to the Financial Management System for allocation and record.                  |
 | **Main Flow**       | 1. Admin logs in.<br>2. Opens finance dashboard.<br>3. Selects request.<br>4. Reviews the details and justification.<br>5. Approves or rejects.<br> 6. If approved, system syncs approval and budget details to the Financial Management System. |
 | **Alternate Scenario** | If data is unclear, admin may request clarification from club.           |
@@ -346,7 +346,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Feature**         | View Financial Report                                                   |
 | **Purpose**         | To allow members to view or download previously generated financial reports for their club.     |
 | **Actors**          | Member                                              |
-| **Precondition**    | 1. Member is authenticated. <br> 2. Club financial reports have been generated and stored.   |
+| **Precondition**    | - Member is authenticated. <br> - Club financial reports have been generated and stored.   |
 | **Postcondition**   | Member views or downloads the selected financial report.                         |
 | **Main Flow**       | 1. Member logs in. <br>2. Navigates to the financial reports section. <br>3. Selects club and reporting period. <br>4. Clicks to view or download the report.<br>5. System provides access to the report. |
 | **Alternate Scenario** | 	If no report is available for the selected period, the system displays a "No reports found" message.|
