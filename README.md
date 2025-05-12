@@ -228,7 +228,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Actors**          | Admin                                                                 |
 | **Precondition**    | Admin is logged in and event is in a "Pending Approval" status.              |
 | **Postcondition**   | Event is marked as approved and scheduled in the system.                     |
-| **Main Flow**       | 1. Admin logs in.<br>2. Navigates to event approvals.<br>3. View pending event requests <br> 4. Selects event.<br>5. Reviews details.<br>6. Clicks "Approve".<br>7. System updates status. |
+| **Main Flow**       | 1. Admin logs in.<br>2. Navigates to event approvals.<br>3. View pending event requests <br> 4. Selects event.<br>5. Reviews details.<br>6. Clicks "Approve".<br>7. System updates event status. |
 | **Alternate Scenario** | If event details are incomplete, the admin may reject or request revision. |
 
 ---
@@ -241,7 +241,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Feature**         | Request Venue Booking                                                        |
 | **Purpose**         | To allow club presidents to request available venues for events.             |
 | **Actors**          | President, Campus Space Reservation System (external)                        |
-| **Precondition**    | -Event must be created. <br> - President must be authenticated.                      |
+| **Precondition**    | - Event must be created. <br> - President must be authenticated.                      |
 | **Postcondition**   | Venue booking request is submitted and pending admin approval.               |
 | **Main Flow**       | 1. President logs in.<br>2. Selects an event.<br>3. Chooses venue and timeslot.<br>4. Submits request.<br>5. System logs the request with status "Pending". |
 | **Alternate Scenario** | If the venue is already reserved, system notifies unavailability or suggests alternatives.        |
@@ -258,8 +258,8 @@ The general characteristics of the intended groups of users are as follows:
 | **Actors**          | 	Admin, Campus Space Reservation System (external)                                                                |
 | **Precondition**    | - Admin is logged in. <br> - Event must be created.<br> - Venue request exists with "Pending Approval" status. <br> - Campus Reservation System is reachable.                       |
 | **Postcondition**   | 	The booking status is updated in the system and the venue is reserved in the Campus Space Reservation System.                         |
-| **Main Flow**       | 1. Admin logs in.<br>2. Views pending venue requests.<br>3. Reviews request.<br>4. Clicks "Approve".<br>5. System communicates with the Campus Reservation System to finalize booking. <br> 6. Status is updated to "Approved & Reserved".
-| **Alternate Scenario** | 		If the schedule conflicts during final booking, system returns an error and status remains pending or marked for resubmission.              |
+| **Main Flow**       | 1. Admin logs in.<br>2. Navigate to venue approvals. <br> 3. View pending venue requests.<br>4. Select venue request. <br> 5. Review venue request.<br>6. System check venue availability  with Campus Space Reservation System (CSRS). <br>7. If the venue is available, Admin clicks "Approve". <br> 8. System updates the reservation in the CSRS. <br> 9. Booking status in the main system is updated to "Approved & Reserved".
+| **Alternate Scenario** | 		If the schedule conflicts during final booking, system returns an error and status is set to rejected or marked for resubmission with a comment.              |
 
 ---
 
