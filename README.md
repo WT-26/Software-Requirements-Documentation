@@ -35,11 +35,11 @@ Table of Contents
      * 3.1.2 [Login User](#312-login-user)
      * 3.1.3 [Log out User](#313-log-out-user)
      * 3.1.4 [Reset Password](#314-reset-password)
-     * 3.1.5 [Update Profile](#315-update-profile)
-     * 3.1.6 [Change Role](#316-change-role)
+     * 3.1.5 [View Profile](#315-view-profile)
+     * 3.1.6 [Update Profile](#316-update-profile)
      * 3.1.7 [Request Create Club](#317-request-create-club)
      * 3.1.8 [Club Approval](#318-club-approval)
-     * 3.1.9 [Create Club](#319-create-club)
+     * 3.1.9 
      * 3.1.19 [Approve Event Request](#3119-approve-event-request)
      * 3.1.20 [Request Venue Booking](#3120-request-venue-booking)
      * 3.1.21 [Approve Venue Request](#3121-approve-venue-request)
@@ -51,14 +51,15 @@ Table of Contents
      * 3.1.27 [View Financial Report](#3127-view-financial-report)
      * 3.1.28 [Send club Announcement](#3128-send-club-announcement)
      * 3.1.29 [Notify User](#3129-notify-user)
-     * 3.1.30 [View All Clubs](#3130-view-all-user)
-     * 3.1.31 [Generate System Report](#3131-generate-system-report)
-     * 3.1.32 [Search Clubs](#3132-search-clubs)
-     * 3.1.33 [Filter Events](#3133-filter-events)
-     * 3.1.34 [Sort Budget Requests](#3134-sort-budget-requests)
-     * 3.1.35 [Log Activity](#3135-log-activity)
-     * 3.1.36 [View Audit Log](#3136-view-audit-log)
-     * 3.1.37 [Set Permissions](#3137-set-permissions)
+     * 3.1.30 [View All Club](#3130-view-all-user)
+     * 3.1.31 [Search Club](#3131-search-club)
+     * 3.1.32 [Filter Event](#3132-filter-event)
+     * 3.1.33 [Filter Budget Request](#3133-filter-budget-request)
+     * 3.1.34 [Log Activity](#3134-log-activity)
+     * 3.1.35 [View Audit Log](#3135-view-audit-log)
+     * 3.1.36 [Set Permission](#3136-set-permission)
+     * 3.1.37 [Generate Venue Status](#3137-generate-venue-status).
+     * 3.1.38 [View Venue Status](#3138-view-venue-status).
   * 3.2 [Performance Requirements](#32-performance-requirements)
   * 3.3 [Usability Requirements](#33-usability-requirements)
     * 3.3.1 [Performance](#331-performance)
@@ -373,89 +374,75 @@ The general characteristics of the intended groups of users are as follows:
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-COMM-02                                                                                                                                            |
 | **Feature**        | Communication & Notifications                                                                                                                         |
-| **Purpose**        | To send automated system notifications to specific users when key events occur (e.g., approval, update, rejection).                                  |
+| **Purpose**        | To send automated system notifications to specific users when key events occur                              |
 | **Actors**         | - System (automated trigger)<br>- System Admin (for monitoring and config)                                                                            |
 | **Precondition**   | - User exists in the system<br>- User is active and eligible to receive notifications<br>- System services are operational                            |
-| **Postcondition**  | - Notification is stored in the system<br>- User is alerted through UI/email/push depending on configuration                                          |
-| **Main Flow**      | 1. System detects event requiring notification<br>2. Calls `notify_user(user_id, message, type)`<br>3. Validates user ID and type<br>4. Logs message<br>5. Sends via configured channel (dashboard/email/push) |
+| **Postcondition**  | - Notification is stored in the system<br>- User is alerted through email depending on configuration                                          |
+| **Main Flow**      | 1. System detects event requiring notification<br>2. Calls `notify_user(user_id, message, type)`<br>3. Validates user ID<br>4. Logs message<br>5. Sends via configured channel (dashboard/email/push) |
 | **Alternate Flow** | - A1: Invalid user ID → Log error, skip notification<br>- A2: Notification service down → Retry or store as unsent<br>- A3: Invalid type → Use default type (e.g., "info") |
 
 ![My Image](Function_28.png)
 
 ---
 
-### 3.1.30 View All Clubs
+### 3.1.30 View All Club
 | **Field**          | **Description**                                                                                                                                             |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-CLUB-01                                                                                                                                                  |
-| **Feature**        | Club Management                                                                                                                                            |
-| **Purpose**        | To allow system and event administrators to view a list of all registered clubs in the system.                                                              |
-| **Actors**         | - Event Admin<br>- System Admin                                                                                                                             |
-| **Precondition**   | - Admin user is authenticated<br>- User has appropriate admin privileges (event or system admin)<br>- Clubs exist in the system                            |
-| **Postcondition**  | - List of all clubs is displayed to the admin<br>- Admin can access club details for further actions (edit, review, approve, etc.)                         |
+| **Feature**        | View All Club                                                                                                                                         |
+| **Purpose**        | To allow system admin view a list of all registered clubs in the system.                                                              |
+| **Actors**         | <br> System Admin                                                                                                                             |
+| **Precondition**   | - Admin user is authenticated<br>- User has appropriate admin privileges <br>- Clubs exist in the system                            |
+| **Postcondition**  | - List of all clubs is displayed to the admin<br>- Admin can view the club's info                      |
 | **Main Flow**      | 1. Admin logs into the system<br>2. Navigates to the club management section<br>3. System calls `view_all_clubs()`<br>4. System retrieves and displays club list |
 | **Alternate Flow** | - A1: No clubs are registered → Show message: "No clubs found"<br>- A2: Database error → Show error message and log issue                                   |
 
 ---
 
-### 3.1.31 Generate System Report
-| **Field**          | **Description**                                                                                                                                                      |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **ID**             | UC-REPORT-01                                                                                                                                                         |
-| **Feature**        | Reporting & Analytics                                                                                                                                                |
-| **Purpose**        | To allow admins to generate system-wide reports covering usage statistics, club activity, and budget performance.                                                    |
-| **Actors**         | - Event Admin<br>- System Admin                                                                                                                                      |
-| **Precondition**   | - Admin is authenticated and authorized<br>- Relevant data (usage logs, club activity, budgets) exist in the system                                                  |
-| **Postcondition**  | - A report is generated and displayed or downloaded<br>- May be stored for historical reference                                                                      |
-| **Main Flow**      | 1. Admin accesses the report section<br>2. Clicks “Generate Report”<br>3. System compiles data: usage logs, club activities, budget stats<br>4. Report is displayed or exported |
-| **Alternate Flow** | - A1: No data available → Show message: “No data to report”<br>- A2: Report generation fails due to server error → Show error message and log the issue              |
-
----
-
-### 3.1.32 Search Clubs
+### 3.1.31 Search Club
 | **Field**          | **Description**                                                                                                                                                 |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-SEARCH-01                                                                                                                                                      |
-| **Feature**        | Club Discovery / Search                                                                                                                                         |
+| **Feature**        | Search Club                                                                                                                                         |
 | **Purpose**        | To allow all users to search for clubs using keywords that match names, categories, or tags.                                                                    |
-| **Actors**         | - All users (guests, students, admins)                                                                                                                           |
-| **Precondition**   | - Clubs exist in the system<br>- User has access to the search interface (public or authenticated view)                                                         |
-| **Postcondition**  | - A filtered list of clubs matching the keyword is shown<br>- User can view details or take further action (e.g., request to join, view events)                |
+| **Actors**         | - All users such as student and admin                                                                                                                         |
+| **Precondition**   | - Clubs exist in the system<br>- User has access to the search interface                                                  |
+| **Postcondition**  | - A filtered list of clubs matching the keyword is shown<br>- User can view details or take further action like join club               |
 | **Main Flow**      | 1. User enters a keyword into the search bar<br>2. System calls `search_clubs(keyword)`<br>3. Matches club name, category, and tags<br>4. Displays results list |
 | **Alternate Flow** | - A1: No matches found → Show message: “No clubs found for that keyword”<br>- A2: Search service down → Show error and log issue                                |
 
 ---
 
-### 3.1.33 Filter Events
+### 3.1.32 Filter Event
 
 | **Field**          | **Description**                                                                                                                                                       |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-SEARCH-02                                                                                                                                                           |
-| **Feature**        | Event Discovery / Filtering                                                                                                                                           |
+| **Feature**        | Filter event                                                                                                                                       |
 | **Purpose**        | To allow users to filter upcoming events based on selected criteria such as date, venue, or hosting club.                                                             |
-| **Actors**         | - All users (guests, students, admins)                                                                                                                                |
+| **Actors**         | - Student                                                                                                                            |
 | **Precondition**   | - Events are available in the system<br>- User is on the event listing page or has access to filters                                                                  |
 | **Postcondition**  | - A filtered list of events is displayed to the user based on chosen criteria                                                                                         |
 | **Main Flow**      | 1. User selects filters: date, venue, or club<br>2. System calls `filter_events(date, venue, club)`<br>3. Events matching the criteria are retrieved<br>4. Results are displayed |
 | **Alternate Flow** | - A1: No events match criteria → Show message: “No events found”<br>- A2: Filtering input is invalid → Show validation error or fallback to default view              |
 
-### 3.1.34 Sort Budget Requests
-| **Field**        | **Details**                                                                 |
-|------------------|------------------------------------------------------------------------------|
-| **ID**           | UC-SEARCH-03                                                                    |
-| **Feature**      | sort_budget_requests(by='date')                                              |
-| **Purpose**      | To allow event admins to organize and view budget requests by a chosen field (e.g., date, amount) for easier processing and review. |
-| **Actors**       | Event Admin                                                                  |
-| **Precondition** | Event admin is authenticated and has access to the budget management dashboard. |
-| **Postcondition**| Budget requests are displayed in sorted order according to the specified field (default: date). |
-| **Main Flow**    | 1. Event admin logs in.  <br> 2. Navigates to the budget requests section. <br> 3. Chooses a sort parameter (e.g., date). <br> 4. System retrieves and displays sorted requests. |
-| **Alternate Scenario** | If no sort parameter is provided, the system defaults to sorting by date. If no budget requests exist, an empty list is shown. |
+### 3.1.33 Filter Budget Request
+| **Field**           | **Details**                                                                                                                                                   |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **ID**              | UC-FIN-005                                                                                                                                                    |
+| **Feature**         | Filter categories of the budget request for the club using price range                                                                                                                 |
+| **Purpose**         | Allows admin to efficiently filter and organize budget requests based on specified price ranges for faster decision-making and approval workflows.    |
+| **Actors**          | - System Admin                                                                                                                                                   |
+| **Precondition**    | The user must be logged in as an Admin and budget requests must exist in the system.                                                                    |
+| **Postcondition**   | Budget requests are displayed according to the selected price range, improving readability and enabling focused review.                                       |
+| **Main Flow**       | 1. Admin logs into the system. <br> 2. Navigates to the Budget Requests section. <br> 3. Selects "Filter by Price Range". <br> 4. Inputs or selects a range (e.g., $0–$500). <br> 5. System displays only the matching requests. |
+| **Alternate Scenario** | - **No Matching Requests**: System shows “No budget requests found within the selected range.” <br> - **Invalid Input**: User is prompted to enter a valid range. |
 
-### 3.1.35 Log Activities
+### 3.1.34 Log Activity
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
 | **ID**            | UC-AUDIT-01                                                                      |
-| **Feature**       | log_activity(user_id, action)                                                |
+| **Feature**       | Log activity                                                |
 | **Purpose**       | To automatically track and record significant actions performed by users in the system for audit and security purposes. |
 | **Actors**        | System (automated), System Admin (viewer)                                    |
 | **Precondition**  | A user performs an action that is deemed auditable (e.g., login, budget approval). |
@@ -463,29 +450,55 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**     | 1. User performs a key action in the system. <br> 2. System captures user ID and action. <br> 3. System records the activity in the audit log automatically. |
 | **Alternate Scenario** | If logging fails due to a system error, the system retries or reports the failure to the system admin. |
 
-### 3.1.36 View Audit Log
+### 3.1.35 View Audit Log
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
 | **ID**            | UC-AUDIT-02                                                                     |
-| **Feature**       | view_audit_log()                                                             |
+| **Feature**       | View audit log                                                             |
 | **Purpose**       | To allow system administrators to access and review system activity logs for monitoring, security audits, and issue investigation. |
-| **Actors**        | System Admin                                                                 |
+| **Actors**        | - System Admin                                                                 |
 | **Precondition**  | Admin is authenticated and has appropriate permissions to access system logs. |
 | **Postcondition** | The system displays a list of recorded user activities with details such as user ID, action, and timestamp. |
 | **Main Flow**     | 1. Admin logs in to the system. <br> 2. Navigates to the audit log section. <br> 3. System retrieves and displays activity logs. |
 | **Alternate Scenario** | If no logs are available, a message is shown indicating “No audit logs found.” If access is unauthorized, an error message is displayed. |
 
-### 3.1.37 Set Permissions
+
+
+### 3.1.36 Set Permission
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
 | **ID**            | UC-AUDIT-03                                                                        |
-| **Feature**       | set_permissions(role, permissions)                                           |
+| **Feature**       | Set permission                                         |
 | **Purpose**       | To allow system administrators to define or update the actions that each user role is authorized to perform within the system. |
-| **Actors**        | System Admin                                                                 |
+| **Actors**        | - System Admin                                                                 |
 | **Precondition**  | Admin is authenticated and has access to the role management module.         |
 | **Postcondition** | Permissions for the specified role are updated and enforced across the system. |
 | **Main Flow**     | 1. Admin logs in. <br> 2. Navigates to the role/permission settings. <br> 3. Selects a role. <br> 4. Assigns or updates permissions. <br> 5. System saves the changes. |
 | **Alternate Scenario** | If an invalid role is specified, an error message is shown. If no permissions are selected, the system prompts the admin to select at least one. |
+
+### 3.1.37 Generate Venue Status
+| **Field**           | **Details**                                                                                                                                                    |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **ID**              | UC-VEN-004                                                                                                                                                     |
+| **Feature**         | Generate Venue Status                                                                                                                                       |
+| **Purpose**         | Automatically generates the current status of all venues from the Campus Space Reservation System for Admin review and approval.                             |
+| **Actors**          | - <<external>> Campus Space Reservation System                                                                                                             |
+| **Precondition**    | The Admin must be logged in, and there must be existing venue requests or bookings in the system. Also, event content is approved.                                                             |
+| **Postcondition**   | A list of venue statuses (available, pending, booked) is presented to the Admin, enabling follow-up actions like approval.                                     |
+| **Main Flow**       | 1. Admin logs in. <br> 2. Navigates to Venue Management. <br> 3. System sends a request to the Campus Space Reservation System. <br> 4. System receives and generates venue status overview. <br> 5. Admin reviews the venue statuses. |
+| **Alternate Scenario** | - **No Data**: If no venue data is returned, the system shows: "No venue information available." <br> - **System Failure**: If external API fails, an error message is displayed. |
+
+### 3.1.38 Approve Venue Request
+| **Field**           | **Details**                                                                                                                                                    |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **ID**              | UC-VEN-005                                                                                                                                                     |
+| **Feature**         | Approve Venue Request                                                                                                                          |
+| **Purpose**         | Allows the Admin to review and approve or reject venue booking requests submitted by clubs for their events.                                                   |
+| **Actors**          | - Admin <br> - <<external>> Campus Space Reservation System                                                                                                             |
+| **Precondition**    | - Admin must be logged in. <br> - Venue booking requests must exist. <br> - `generate_venue_status()` has run to present current booking info.                 |
+| **Postcondition**   | The venue request is marked as approved or rejected, and the status is updated in the system and optionally reflected in the external campus reservation system. |
+| **Main Flow**       | 1. Admin logs in. <br> 2. Navigates to Venue Requests section. <br> 3. Views venue requests generated from system. <br> 4. Selects a request to review. <br> 5. Approves or rejects the request. <br> 6. System updates status and notifies the requester. |
+| **Alternate Scenario** | - **Venue Unavailable**: Admin attempts to approve a request for an already-booked venue. System prevents the action and shows a conflict message. <br> - **Request Already Processed**: System prevents duplicate action on a previously approved/rejected request. |
 
 ### 3.2 Functional
 > This section specifies the requirements of functional effects that the software-to-be is to have on its environment.
