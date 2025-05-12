@@ -273,7 +273,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Actors**          | Student                                              |
 | **Precondition**    | Student is logged in.                                                           |
 | **Postcondition**   | Events are displayed in calendar format.                                     |
-| **Main Flow**       | 1. Student logs in.<br>2. Navigates to event calendar.<br>3. Optionally filters by club/date.<br>4. Views events. |
+| **Main Flow**       | 1. Student logs in.<br>2. Navigates to event calendar.<br>3. Optionally filters by club/date.<br>4. Display available events. <br> 5. View events |
 | **Alternate Scenario** | If no events are available, display "No events scheduled".               |
 
 ---
