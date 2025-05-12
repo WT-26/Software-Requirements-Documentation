@@ -476,29 +476,29 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**     | 1. Admin logs in. <br> 2. Navigates to the role/permission settings. <br> 3. Selects a role. <br> 4. Assigns or updates permissions. <br> 5. System saves the changes. |
 | **Alternate Scenario** | If an invalid role is specified, an error message is shown. If no permissions are selected, the system prompts the admin to select at least one. |
 
-### 3.1.37 Generate Venue Status
+### 3.1.37 Generate Venue Status Report
 | **Field**           | **Details**                                                                                                                                                    |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**              | UC-VEN-004                                                                                                                                                     |
-| **Feature**         | Generate Venue Status                                                                                                                                       |
-| **Purpose**         | Automatically generates the current status of all venues from the Campus Space Reservation System for Admin review and approval.                             |
+| **Feature**         | Generate Venue Status Report                                                                                                                                       |
+| **Purpose**         | Automatically generates the current status of all venues for specificed time slots for Admin review and approval.                             |
 | **Actors**          | - <<external>> Campus Space Reservation System                                                                                                             |
 | **Precondition**    | The Admin must be logged in, and there must be existing venue requests or bookings in the system. Also, event content is approved.                                                             |
 | **Postcondition**   | A list of venue statuses (available, pending, booked) is presented to the Admin, enabling follow-up actions like approval.                                     |
 | **Main Flow**       | 1. Admin logs in. <br> 2. Navigates to Venue Management. <br> 3. System sends a request to the Campus Space Reservation System. <br> 4. System receives and generates venue status overview. <br> 5. Admin reviews the venue statuses. |
 | **Alternate Scenario** | - **No Data**: If no venue data is returned, the system shows: "No venue information available." <br> - **System Failure**: If external API fails, an error message is displayed. |
 
-### 3.1.38 Approve Venue Request
+### 3.1.38 View Venue Status
 | **Field**           | **Details**                                                                                                                                                    |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**              | UC-VEN-005                                                                                                                                                     |
-| **Feature**         | Approve Venue Request                                                                                                                          |
-| **Purpose**         | Allows the Admin to review and approve or reject venue booking requests submitted by clubs for their events.                                                   |
-| **Actors**          | - Admin <br> - <<external>> Campus Space Reservation System                                                                                                             |
-| **Precondition**    | - Admin must be logged in. <br> - Venue booking requests must exist. <br> - `generate_venue_status()` has run to present current booking info.                 |
-| **Postcondition**   | The venue request is marked as approved or rejected, and the status is updated in the system and optionally reflected in the external campus reservation system. |
-| **Main Flow**       | 1. Admin logs in. <br> 2. Navigates to Venue Requests section. <br> 3. Views venue requests generated from system. <br> 4. Selects a request to review. <br> 5. Approves or rejects the request. <br> 6. System updates status and notifies the requester. |
-| **Alternate Scenario** | - **Venue Unavailable**: Admin attempts to approve a request for an already-booked venue. System prevents the action and shows a conflict message. <br> - **Request Already Processed**: System prevents duplicate action on a previously approved/rejected request. |
+| **Feature**         | View Venue Status                                                                                                                         |
+| **Purpose**         | Allows the Admin to view real-time venue availability before making decisions.                                                  |
+| **Actors**          | - Admin                                                                                                             |
+| **Precondition**    | - Admin must be logged in. <br> - Venue booking requests must exist. <br> - Venue status report is available                 |
+| **Postcondition**   | Admin sees updated venue availability |
+| **Main Flow**       | 1. Admin logs in. <br> 2. Navigates to Venue Status section. <br> 3. Selects a request to review. <br> 4. Select date and timeslots. <br> 5. View generated status report. |
+| **Alternate Scenario** | - **No data found**: System sshows "No data available" message. |
 
 ### 3.2 Functional
 > This section specifies the requirements of functional effects that the software-to-be is to have on its environment.
