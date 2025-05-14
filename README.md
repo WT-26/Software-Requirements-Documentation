@@ -307,7 +307,8 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**       | 1. President logs in.<br>2. Navigates to event management section.<br>3. Selects an event <br> 4. Select "Submit Budget Proposal". <br> 5. Fills in amount and justification.<br>6. Submits proposal.<br>7. System logs request. |
 | **Alternate Scenario** | If required fields are missing, show error and prompt correction.         |
 
-![submitBudgetProposal](https://github.com/user-attachments/assets/fd8f7d12-cdd8-47a4-8f4d-2ba953eae019) <br>
+![SubmitBudgetProposal](https://github.com/user-attachments/assets/538e6086-9410-46d2-99ce-2feb6bad02ca)
+ <br>
 *Figure 3.1.23 Submit Budget Proposal* 
 
 
