@@ -232,6 +232,10 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**       | 1. Admin logs in.<br>2. Navigates to event approvals.<br>3. View pending event requests <br> 4. Selects event.<br>5. Reviews details.<br>6. Clicks "Approve".<br>7. System updates event status. |
 | **Alternate Scenario** | If event details are incomplete, the admin may reject or request revision. |
 
+  ![Image](https://github.com/user-attachments/assets/b4113954-90cf-4078-9a48-76248e21f3d9)<br>
+  *Figure 3.1.19 Approve Event Request* 
+
+
 ---
 
 ### 3.1.20 Request Venue Booking
