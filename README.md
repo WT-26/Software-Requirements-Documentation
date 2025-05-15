@@ -498,8 +498,6 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**     | 1. Admin logs in to the system. <br> 2. Navigates to the audit log section. <br> 3. System retrieves and displays activity logs. |
 | **Alternate Scenario** | If no logs are available, a message is shown indicating “No audit logs found.” If access is unauthorized, an error message is displayed. |
 
-
-
 ### 3.1.36 Set Permission
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
@@ -608,7 +606,60 @@ Specify schedule for delivery of the software product.
 <!-- TODO: come up with a description -->
 
 ## 3.6 Design Constraints
+### 3.6.1 External Standards and Regulatory Requirements
+a) Data Privacy and Security:
+- FERPA Compliance: The system must comply with the Family Educational Rights and Privacy Act to protect student data and activity records.
 
+- University Data Governance: The system must follow internal university policies for user data collection, retention, and handling.
+
+b) Security Standards:
+- OWASP Top 10: The platform must implement security best practices to defend against common web vulnerabilities such as XSS, CSRF, and SQL injection.
+- HTTPS Enforcement: All data exchanges must be secured using HTTPS protocols.
+
+c) Accessibility Standards:
+- WCAG 2.1 Compliance: The platform must meet the Web Content Accessibility Guidelines 2.1 to support users with disabilities.
+- Responsive Design: Interfaces must adapt across screen sizes and devices to ensure accessibility.
+
+### 3.6.2 Project Limitations
+a) Time Constraint
+The system must be fully developed, tested, and deployed within a single academic semester (typically 4–5 months). Due to this limited timeframe, advanced features such as AI integration, predictive analytics, or comprehensive reporting dashboards are out of scope for the initial release.
+
+b) Budget Constraint
+The project must exclusively use free and open-source tools and technologies due to the absence of dedicated financial resources. No commercial software licenses or paid services may be included.
+
+c) Resource Availability
+The development team is expected to consist of students or part-time contributors with varying availability and technical expertise. This may affect development pace and feature complexity.
+
+d) Stakeholder Input
+Availability for feedback and user testing from actual stakeholders (e.g., student club members, event approvers, venue managers) may be constrained due to conflicting academic and administrative responsibilities.
+
+### 3.6.3 Technical Constraints
+a) Framework Mandate
+The system must be developed using the Django (Python) web framework, following university IT department standards.
+
+b) Database Technology
+Only PostgreSQL and SQLite are approved for database implementation due to internal IT restrictions.
+
+c) Integration Requirement
+The system must integrate with the university’s Single Sign-On (SSO) solution via OAuth2 or LDAP for secure user authentication.
+
+d) API Use Compliance
+Any integration with third-party APIs (e.g., Google Calendar, email services) must adhere to the university’s data privacy and security policies.
+
+### 3.6.4 Platform Constraints
+a) Hosting Environment
+- The platform must be deployable on the university’s Linux-based infrastructure (on-premise or cloud-hosted), limiting the operating system and server stack configurations.
+
+b) Client Compatibility
+- The system must be accessible through all major modern browsers, including Google Chrome, Mozilla Firefox, Apple Safari, and Microsoft Edge, without relying on any browser-specific features.
+
+c) Mobile Access
+- A fully native mobile application is not in scope. The platform must use responsive web design to ensure usability across smartphones and tablets.
+
+d) Access Restrictions
+- Access to the system must be restricted to authenticated university members (students, faculty, staff), with features and permissions tailored to their assigned roles.
+
+### 
 ## 3.7 Software System Attributes
 
 ## 4. Verification
