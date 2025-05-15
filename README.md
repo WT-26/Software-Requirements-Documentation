@@ -201,7 +201,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Authorization**         | The process of granting a user specific system permissions based on their role (e.g., student, advisor, admin).                                     |
 | **Hosting Server**        | The server environment where the system is deployed, typically a Linux-based or cloud infrastructure approved by the university.                     |
 
-### 2 References
+## 2 References
 1. Chenjeri, A., Sai, Satya, T., Santhan Mourya, K., Murali, K., Muddada, & Student. (2024). Issue 3 www.jetir.org (ISSN-2349-5162). JETIR2403033 Journal of Emerging Technologies and Innovative Research, 11.
 2. Et. al., A. A. A. (2021). Design Architecture Of An Integrated Student Activities Management System For Higher Education. Turkish Journal of Computer and Mathematics Education (TURCOMAT), 12(5), 1676–1683. https://doi.org/10.17762/turcomat.v12i5.2158
 3. Hariprasad, M., Neha N, Dey, N., Pratiba D, & Ramakanth Kumar P. (2023). College Club Activity Management System. https://doi.org/10.1109/csitss60515.2023.10334208
@@ -606,6 +606,10 @@ Specify schedule for delivery of the software product.
 
 #### 3.5.8 Proof of Concept
 <!-- TODO: come up with a description -->
+
+## 3.6 Design Constraints
+
+## 3.7 Software System Attributes
 
 ## 4. Verification
 > This section provides the verification approaches and methods planned to qualify the software. The information items for verification are recommended to be given in a parallel manner with the requirement items in Section 3. The purpose of the verification process is to provide objective evidence that a system or system element fulfills its specified requirements and characteristics.
