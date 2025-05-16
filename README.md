@@ -80,6 +80,11 @@ Table of Contents
     * 3.5.7 [Deadline](#357-deadline)
     * 3.5.8 [Proof of Concept](#358-proof-of-concept)
    * 3.6 [Design Constraints](#36-design-constraints)
+     * 3.6.1 [External Standards and Regulatory Requirements](#361-external-standards-and-regulatory-requirements)
+     * 3.6.2 [Project Limitations](#362-project-limitations).
+     * 3.6.3 [Technical Constraints](#363-technical-constraints).
+     * 3.6.4 [Platform Constraints](#364-platform-constraints).
+     * 3.6.5 [Environmental Constraints](#365-environmental-constraints).
    * 3.7 [Software System Attributes](#37-software-system-attributes)
 * 4 [Verification](#4-verification)
 * 5 [Appendixes](#5-appendixes)
