@@ -613,50 +613,37 @@ Specify schedule for delivery of the software product.
 ## 3.6 Design Constraints
 ### 3.6.1 External Standards and Regulatory Requirements
 a) Data Privacy and Security:
-FERPA Compliance:
-- Ensures protection of student education records.
-- Restricts access to authorized personnel.
-- Applies to student profiles, club memberships, and event history.
-- Requires audit logging for access to personally identifiable information (PII).
+- FERPA Compliance: The platform must comply with the Family Educational Rights and Privacy Act to protect students' educational and activity records.
 
-University Data Governance Policies:
-- Enforces proper classification of user data such as confidential or internal.
-- Defines retention periods for student data. For example automatic deletion post-graduation.
-- Mandates secure handling, including backups and controlled deletion.
-- Implements role-based access control to prevent data overexposure.
+- University Data Governance: The system must follow internal policies regarding the collection, storage, retention, and access of student data.
+
+- Role-Based Access: Data visibility must be restricted according to user roles (e.g., students, club presidents, admins).
+
+- Audit Logging: All access to sensitive personal data must be logged for accountability and review.
 
 b) Security Standards:
-OWASP Top 10 Compliance:
-- Protects against common web security threats, such as SQL injection, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), broken authentication and sensitive data exposure.
-- Ensures input validation, proper session handling, and secure configurations.
-- Encourages use of secure coding practices throughout development.
+- OWASP Top 10 Compliance: The system must be protected against common vulnerabilities such as SQL injection, XSS, CSRF, and broken authentication.
 
-HTTPS Enforcement:
-- All system communication must use HTTPS (TLS encryption).
-- Automatic redirection from HTTP to HTTPS for all traffic.
-- Implementation of valid SSL/TLS certificates.
-- Use of HTTP Strict Transport Security (HSTS) headers for added security.
+- HTTPS Protocol: All data exchanges between clients and servers must be encrypted using HTTPS with valid SSL/TLS certificates.
+
+- Secure Coding Practices: Input validation, session management, and secure authentication mechanisms must be implemented to reduce risk.
+
+- HSTS Enforcement: HTTP Strict Transport Security headers should be used to ensure all communication is securely routed.
 
 c) Accessibility Standards:
-WCAG 2.1 Compliance (Level AA):
-- Adheres to international accessibility guidelines to support users with disabilities.
-- Ensures all content is perceivable, operable, understandable, and robust.
-- Key implementations include:
-  - Keyboard navigability (no mouse required).
-  - Alt text for images and meaningful icons.
-  - High contrast between text and background.
-  - Clear error messaging and form validation cues.
-  - Support for screen readers using semantic HTML and ARIA roles.
+- WCAG 2.1 Level AA Compliance: The platform must be accessible to users with disabilities by adhering to Web Content Accessibility Guidelines.
 
-Responsive Design:
-- Ensures usability across a wide range of devices (desktop, tablet, mobile).
-- Uses flexible layouts and breakpoints for screen size adaptability.
-- Implements scalable font sizes, fluid grids, and optimized mobile navigation.
+- Keyboard Navigation: All interactive elements must be operable without a mouse.
+
+- Screen Reader Support: Pages must use semantic HTML and ARIA roles for compatibility with assistive technologies.
+
+- Responsive Design: The interface must adapt fluidly to different screen sizes and orientations.
 
 ### 3.6.2 Project Limitations
 a) Time Constraint
-- The system must be designed, developed, tested, and deployed within the academic semester (4–5 months).
-- Advanced features like AI integration or analytics may be excluded due to time restrictions.
+- The platform must be completed within one academic semester (approximately 4–5 months).
+
+- Due to limited time, complex features such as analytics, AI, or predictive dashboards are not in scope.
 
 b) Budget Constraint
 - The project must utilize free and open-source tools and platforms.
@@ -670,17 +657,19 @@ d) Stakeholder Input
 - Availability for feedback and user testing from actual stakeholders (e.g., student club members, event approvers, venue managers) may be constrained due to conflicting academic and administrative responsibilities.
 
 ### 3.6.3 Technical Constraints
-a) Framework Mandate
-The system must be developed using the Django (Python) web framework, following university IT department standards.
+a) Technology Stack
+- The backend must use the Django (Python) framework as per university guidelines.
+
+- Frontend technologies must be lightweight and compatible with Django templates.
 
 b) Database Technology
-Only PostgreSQL and SQLite are approved for database implementation due to internal IT restrictions.
+- Only PostgreSQL and SQLite are approved for database implementation due to internal IT restrictions.
 
 c) Integration Requirement
-The system must integrate with the university’s Single Sign-On (SSO) solution via OAuth2 or LDAP for secure user authentication.
+- The system must integrate with the university’s Single Sign-On (SSO) solution via OAuth2 or LDAP for secure user authentication.
 
-d) API Use Compliance
-Any integration with third-party APIs (e.g., Google Calendar, email services) must adhere to the university’s data privacy and security policies.
+d) API Usage
+- Any integration with third-party APIs (e.g., Google Calendar, email services) must adhere to the university’s data privacy and security policies.
 
 ### 3.6.4 Platform Constraints
 a) Hosting Environment
@@ -697,16 +686,16 @@ d) Access Restrictions
 
 ### 3.6.5 Environmental Constraints
 a) Network Dependency:
-- Users require reliable internet access; offline functionality will be minimal.
+- The platform will require reliable internet access to function; offline features are not a requirement.
 
-b) Data Compliance:
-- Data storage and access must follow FERPA and university-specific policies.
+b) Data Privacy Compliance:
+- Data handling must align with FERPA and university-specific privacy policies, including data retention and access control rules.
 
-c) Access Context:
-- Users will access the platform from both on-campus networks and remote learning environments, necessitating lightweight and efficient frontend performance.
+c) User Access Context:
+- The system must perform reliably across both on-campus and remote environments, accounting for variable network speeds and firewall conditions.
 
 d) Maintenance Scheduling:
-- System updates must be scheduled during non-peak hours to avoid disrupting club activities and administrative tasks.
+- System updates must be planned during non-peak hours (e.g., evenings or weekends) to avoid disrupting ongoing student or administrative activities.
 
 ## 3.7 Software System Attributes
 
