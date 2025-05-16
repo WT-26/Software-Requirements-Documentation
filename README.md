@@ -700,59 +700,81 @@ d) Maintenance Scheduling:
 ## 3.7 Software System Attributes
 i. Scalability
 a. Horizontal Growth Support
-• The system must be designed to support an increasing number of users, clubs, events, and transactions without requiring major architectural changes.
+- The system must be designed to support an increasing number of users, clubs, events, and transactions without requiring major architectural changes.
 
 b. Load Distribution
-• System components such as authentication, event scheduling, and budget management should be independently scalable to handle peak load periods (e.g., club registration weeks).
+- System components such as authentication, event scheduling, and budget management should be independently scalable to handle peak load periods (e.g., club registration weeks).
 
 c. API and Data Scalability
-• APIs and database queries must be optimized to prevent bottlenecks during high-volume interactions such as bulk approvals or calendar views.
+- APIs and database queries must be optimized to prevent bottlenecks during high-volume interactions such as bulk approvals or calendar views.
 
 ii. Responsiveness
 a. Fast User Interaction
-• UI elements should respond within 500 milliseconds for most actions like button clicks, tab navigation, and form validation.
+- UI elements should respond within 500 milliseconds for most actions like button clicks, tab navigation, and form validation.
 
 b. Page Load Performance
-• All primary pages (dashboard, event list, profile) must load within 3 seconds under standard conditions.
+- All primary pages (dashboard, event list, profile) must load within 3 seconds under standard conditions.
 
 c. Lightweight Frontend
-• The frontend should minimize resource usage using lazy loading, AJAX updates, and asynchronous form submissions.
+- The frontend should minimize resource usage using lazy loading, AJAX updates, and asynchronous form submissions.
 
 iii. Security
 a. Session Management
-• Sessions must expire after inactivity and use secure session tokens. Re-authentication should be required for critical actions.
+- Sessions must expire after inactivity and use secure session tokens. Re-authentication should be required for critical actions.
 
 b. Role Isolation
-• The system must strictly separate user roles (student, committee, admin) to prevent privilege escalation.
+- The system must strictly separate user roles (student, committee, admin) to prevent privilege escalation.
 
 c. Secure Data Transactions
-• Budget submissions, event approvals, and user profile edits must be protected with input sanitization and transaction validation.
+- Budget submissions, event approvals, and user profile edits must be protected with input sanitization and transaction validation.
 
 iv. Usability
 a. Intuitive Navigation
-• The UI must support easy navigation with clear labels, minimal clicks to reach key features, and consistent layout across pages.
+- The UI must support easy navigation with clear labels, minimal clicks to reach key features, and consistent layout across pages.
 
 b. Accessible Form Design
-• All forms must include helper text, real-time validation feedback, and tooltips to improve user experience.
+- All forms must include helper text, real-time validation feedback, and tooltips to improve user experience.
 
 c. Feedback and Notifications
-• Users must receive real-time system feedback (e.g., success/error messages) and relevant in-app/email notifications.
+- Users must receive real-time system feedback (e.g., success/error messages) and relevant in-app/email notifications.
 
 v. Interoperability
 a. External System Integration
-• The system must support API-based integration with existing university systems such as financial software, facility booking tools, or attendance tracking.
+- The system must support API-based integration with existing university systems such as financial software, facility booking tools, or attendance tracking.
 
 b. Open Standards Compliance
-• Data exchange should use standard formats (e.g., JSON, CSV) and RESTful APIs for compatibility with third-party tools.
+- Data exchange should use standard formats (e.g., JSON, CSV) and RESTful APIs for compatibility with third-party tools.
 
 c. Calendar and Email Integration
-• Seamless syncing with services like Google Calendar, Outlook, and campus email systems is required to coordinate events and notify users.
+- Seamless syncing with services like Google Calendar, Outlook, and campus email systems is required to coordinate events and notify users.
 
 
 ## 4. Verification
-> This section provides the verification approaches and methods planned to qualify the software. The information items for verification are recommended to be given in a parallel manner with the requirement items in Section 3. The purpose of the verification process is to provide objective evidence that a system or system element fulfills its specified requirements and characteristics.
+### Requirements Verification
+Preceding the start of the design phase, formal evaluations of the Software Requirements Specification (SRS) will be carried out to guarantee that the system requirements are precise, comprehensive, and in line with stakeholder expectations.  Software developers, QA team members, administrative stakeholders, and student reps will all be important participants in these reviews.  Verifying that all requirements—functional and non-functional—are precise, standardized, testable, and traceable is the goal.  It is possible to provide thorough coverage by mapping each requirement to associated test cases using a Requirement Traceability Matrix (RTM).  Before moving on to design, any ambiguity, redundancy, or inconsistency found during the review process must be fixed. Review sessions can be conducted virtually or in person.
 
-<!-- TODO: give more guidance, similar to section 3 -->
-<!-- ieee 15288:2015 -->
+### Design Verification
+In the design verification phase, the suggested system architecture and module-level designs will be carefully examined.  Verifying that the design satisfies the verified criteria, facilitates modular development, and follows industry best practices for security, maintainability, and scalability is the aim.  Software architects, developers, and QA staff will examine and review design documentation, including UML class diagrams, ER diagrams, and sequence diagrams.  The application of role-based access control, event workflows, and data linkages among clubs, users, events, and budgets will receive particular emphasis.  The design should provide a clear foundation for implementation and be practicable within the constraints of time and resources.
+
+### Code Verification
+The code will undergo human code reviews and static code analysis throughout the development stage.  To automatically find any problems like code smells, formatting errors, and security flaws, static analysis tools like Pylint, ESLint, or SonarQube will be used.  Platforms such as GitHub will be used to conduct peer code reviews concurrently. Before code is merged into the main branch, developers must examine and approve each other's contributions.  Code verification will guarantee that the codebase is maintainable, that the system architecture is followed, and that project coding standards are followed.  Integration must come after all important issues have been resolved.
+
+### Unit Testing
+To confirm the accuracy of each component separately, unit testing will be done.  Using frameworks like Pytest or the integrated test runner in Django, developers will create automated test cases.  Core features like club formation, event registration, budget submission, and login authentication will be the focus of these testing.  Where required, mocking will be utilized to separate components.  Before code is deemed stable for integration testing, all tests must pass and a minimum of 80% code coverage will be the goal.
+
+### Integration Testing
+The proper operation of associated components will be confirmed by integration testing.  For instance, it will confirm that students may sign up for events after registering and joining a club, and that these interactions result in the proper permissions and notifications.  Tools like Selenium, Postman, or Pytest with Django's LiveServer will be used for testing.  This guarantees that business rules are appropriately enforced across components, data flows between modules, and APIs operate as intended.
+
+### System Testing
+In a controlled staging environment, system testing will verify that the complete system satisfies the validated functional and non-functional requirements.  This covers all of the main user roles (students, club leaders, event administrators, and system administrators) carrying out standard tasks including budget requests, club approval, and event planning.  Error handling, edge cases, and boundary conditions will all be extensively examined.  The QA team will be in charge of carrying out thorough test cases and documenting any errors so they can be fixed.
+
+### Non-Functional Testing
+Additionally, the system will be put through a rigorous non-functional testing process to assess its compatibility, security, performance, and usability.  The system's ability to support 500 users at once while keeping response times under three seconds will be tested through performance testing.  Security testing will guarantee that data is safely stored and communicated and validate protection against typical threats like SQL injection, CSRF, and XSS.  In order to verify accessibility, logical navigation, and ease of use, usability testing will entail assessing the interface from the viewpoints of administrators and students.  Testing for compatibility will guarantee that the system operates correctly on all supported platforms, including PCs, tablets, and smartphones, as well as on all supported browsers (Chrome, Firefox, Safari, and Edge).
+
+### User Acceptance Testing (UAT)
+A limited number of actual end users, such as students, and administrative personnel, will participate in UAT.  To ensure that the system satisfies their expectations and practical requirements, these users will engage with it in a live simulation.  Testers will be required to finish standard tasks including creating an event schedule, accepting a budget request, and joining a club.  Before the system can be deemed production-ready, any significant or urgent problems must be fixed, and feedback will be gathered and examined.  The software's ability to fulfill its intended function will be confirmed once UAT is successfully completed.
+
+### Deployment Verification
+The system will go through smoke testing after it is deployed to the production environment to ensure that essential features like user login, event registration, club listing, and administrative dashboards work as intended.  To guarantee system stability, the QA and DevOps teams will do this testing as soon as the system is deployed.  Real-time tracking of system problems and uptime will also be done with monitoring tools.  The platform's stability, usability, and readiness for the larger university community to access are the main objectives.
 
 ## 5. Appendixes
