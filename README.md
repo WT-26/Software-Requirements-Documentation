@@ -698,6 +698,56 @@ d) Maintenance Scheduling:
 - System updates must be planned during non-peak hours (e.g., evenings or weekends) to avoid disrupting ongoing student or administrative activities.
 
 ## 3.7 Software System Attributes
+i. Scalability
+a. Horizontal Growth Support
+• The system must be designed to support an increasing number of users, clubs, events, and transactions without requiring major architectural changes.
+
+b. Load Distribution
+• System components such as authentication, event scheduling, and budget management should be independently scalable to handle peak load periods (e.g., club registration weeks).
+
+c. API and Data Scalability
+• APIs and database queries must be optimized to prevent bottlenecks during high-volume interactions such as bulk approvals or calendar views.
+
+ii. Responsiveness
+a. Fast User Interaction
+• UI elements should respond within 500 milliseconds for most actions like button clicks, tab navigation, and form validation.
+
+b. Page Load Performance
+• All primary pages (dashboard, event list, profile) must load within 3 seconds under standard conditions.
+
+c. Lightweight Frontend
+• The frontend should minimize resource usage using lazy loading, AJAX updates, and asynchronous form submissions.
+
+iii. Security
+a. Session Management
+• Sessions must expire after inactivity and use secure session tokens. Re-authentication should be required for critical actions.
+
+b. Role Isolation
+• The system must strictly separate user roles (student, committee, admin) to prevent privilege escalation.
+
+c. Secure Data Transactions
+• Budget submissions, event approvals, and user profile edits must be protected with input sanitization and transaction validation.
+
+iv. Usability
+a. Intuitive Navigation
+• The UI must support easy navigation with clear labels, minimal clicks to reach key features, and consistent layout across pages.
+
+b. Accessible Form Design
+• All forms must include helper text, real-time validation feedback, and tooltips to improve user experience.
+
+c. Feedback and Notifications
+• Users must receive real-time system feedback (e.g., success/error messages) and relevant in-app/email notifications.
+
+v. Interoperability
+a. External System Integration
+• The system must support API-based integration with existing university systems such as financial software, facility booking tools, or attendance tracking.
+
+b. Open Standards Compliance
+• Data exchange should use standard formats (e.g., JSON, CSV) and RESTful APIs for compatibility with third-party tools.
+
+c. Calendar and Email Integration
+• Seamless syncing with services like Google Calendar, Outlook, and campus email systems is required to coordinate events and notify users.
+
 
 ## 4. Verification
 > This section provides the verification approaches and methods planned to qualify the software. The information items for verification are recommended to be given in a parallel manner with the requirement items in Section 3. The purpose of the verification process is to provide objective evidence that a system or system element fulfills its specified requirements and characteristics.
