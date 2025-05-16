@@ -608,30 +608,61 @@ Specify schedule for delivery of the software product.
 ## 3.6 Design Constraints
 ### 3.6.1 External Standards and Regulatory Requirements
 a) Data Privacy and Security:
-- FERPA Compliance: The system must comply with the Family Educational Rights and Privacy Act to protect student data and activity records.
+FERPA Compliance:
+- Ensures protection of student education records.
+- Restricts access to authorized personnel.
+- Applies to student profiles, club memberships, and event history.
+- Requires audit logging for access to personally identifiable information (PII).
 
-- University Data Governance: The system must follow internal university policies for user data collection, retention, and handling.
+University Data Governance Policies:
+- Enforces proper classification of user data such as confidential or internal.
+- Defines retention periods for student data. For example automatic deletion post-graduation.
+- Mandates secure handling, including backups and controlled deletion.
+- Implements role-based access control to prevent data overexposure.
 
 b) Security Standards:
-- OWASP Top 10: The platform must implement security best practices to defend against common web vulnerabilities such as XSS, CSRF, and SQL injection.
-- HTTPS Enforcement: All data exchanges must be secured using HTTPS protocols.
+OWASP Top 10 Compliance:
+- Protects against common web security threats, such as SQL injection, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), broken authentication and sensitive data exposure.
+- Ensures input validation, proper session handling, and secure configurations.
+- Encourages use of secure coding practices throughout development.
+
+HTTPS Enforcement:
+- All system communication must use HTTPS (TLS encryption).
+- Automatic redirection from HTTP to HTTPS for all traffic.
+- Implementation of valid SSL/TLS certificates.
+- Use of HTTP Strict Transport Security (HSTS) headers for added security.
 
 c) Accessibility Standards:
-- WCAG 2.1 Compliance: The platform must meet the Web Content Accessibility Guidelines 2.1 to support users with disabilities.
-- Responsive Design: Interfaces must adapt across screen sizes and devices to ensure accessibility.
+WCAG 2.1 Compliance (Level AA):
+- Adheres to international accessibility guidelines to support users with disabilities.
+- Ensures all content is perceivable, operable, understandable, and robust.
+- Key implementations include:
+  - Keyboard navigability (no mouse required).
+  - Alt text for images and meaningful icons.
+  - High contrast between text and background.
+  - Clear error messaging and form validation cues.
+  - Support for screen readers using semantic HTML and ARIA roles.
+
+Responsive Design:
+- Ensures usability across a wide range of devices (desktop, tablet, mobile).
+- Uses flexible layouts and breakpoints for screen size adaptability.
+- Implements scalable font sizes, fluid grids, and optimized mobile navigation.
 
 ### 3.6.2 Project Limitations
 a) Time Constraint
-The system must be fully developed, tested, and deployed within a single academic semester (typically 4–5 months). Due to this limited timeframe, advanced features such as AI integration, predictive analytics, or comprehensive reporting dashboards are out of scope for the initial release.
+- The system must be designed, developed, tested, and deployed within the academic semester (4–5 months).
+- Advanced features like AI integration or analytics may be excluded due to time restrictions.
 
 b) Budget Constraint
-The project must exclusively use free and open-source tools and technologies due to the absence of dedicated financial resources. No commercial software licenses or paid services may be included.
+- The project must utilize free and open-source tools and platforms.
+- No commercial licensing or paid APIs are allowed due to limited funding.
 
 c) Resource Availability
-The development team is expected to consist of students or part-time contributors with varying availability and technical expertise. This may affect development pace and feature complexity.
+- The development team is likely composed of students or part-time contributors with varying skill levels.
+- Testing feedback from real stakeholders (students, admins) may be limited due to academic scheduling.
 
 d) Stakeholder Input
-Availability for feedback and user testing from actual stakeholders (e.g., student club members, event approvers, venue managers) may be constrained due to conflicting academic and administrative responsibilities.
+- Availability for feedback and user testing from actual stakeholders (e.g., student club members, event approvers, venue managers) may be constrained due to conflicting academic and administrative responsibilities.
 
 ### 3.6.3 Technical Constraints
 a) Framework Mandate
@@ -659,7 +690,19 @@ c) Mobile Access
 d) Access Restrictions
 - Access to the system must be restricted to authenticated university members (students, faculty, staff), with features and permissions tailored to their assigned roles.
 
-### 
+### 3.6.5 Environmental Constraints
+a) Network Dependency:
+- Users require reliable internet access; offline functionality will be minimal.
+
+b) Data Compliance:
+- Data storage and access must follow FERPA and university-specific policies.
+
+c) Access Context:
+- Users will access the platform from both on-campus networks and remote learning environments, necessitating lightweight and efficient frontend performance.
+
+d) Maintenance Scheduling:
+- System updates must be scheduled during non-peak hours to avoid disrupting club activities and administrative tasks.
+
 ## 3.7 Software System Attributes
 
 ## 4. Verification
