@@ -301,11 +301,11 @@ The general characteristics of the intended groups of users are as follows:
 ---
 
 
-### 3.1.5 Profile Update
+### 3.1.6 Profile Update
 
 | **Field**           | **Details**                                                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------|
-| **ID**               | UC-USER-05                                                                                                   |
+| **ID**               | UC-USER-06                                                                                                   |
 | **Feature**          | User Profile Update                                                                                  |
 | **Purpose**          | Allow the user to access and update their profile information.                                        |
 | **Actors**           | User                                                                                                  |
@@ -316,15 +316,15 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/90f72f9c-97f3-40fa-a981-01209ec1a3b1)<br>
 
-*Figure 3.1.5 Profile Update*
+*Figure 3.1.6 Profile Update*
 
 ---
 
-### 3.1.6 Request Create Club
+### 3.1.7 Request Create Club
 
 | **Field**            | **Details**                                                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------|
-| **ID**               | UC-USER-06                                                                                                  |
+| **ID**               | UC-USER-07                                                                                                  |
 | **Feature**          | Request Create Club                                                                                  |
 | **Purpose**          | Allow students to request the creation of a new club.                                                  |
 | **Actors**           | Student, System, Admin                                                                                 |
@@ -335,11 +335,11 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/fa94cc6c-20d4-48c8-9738-25ca276eae56)<br>
 
-*Figure 3.1.06 Request Create Club*
+*Figure 3.1.7 Request Create Club*
 
 ---
 
-### 3.1.7 Club Approval
+### 3.1.8 Club Approval
 
 | **Field**          | **Details**                                                                                            |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -354,7 +354,45 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/f06fad5f-9462-46cf-8e63-e5bf8722299c)<br>
 
-*Figure 3.1.7  Club Approval*
+*Figure 3.1.8  Club Approval*
+
+---
+
+### 3.1.9 Request to Join Event Committee 
+
+| **Field**            | **Details**                                                                                          |
+|----------------------|-------------------------------------------------------------------------------------------------------|
+| **ID**               | UC-Member-01                                                                                                 |
+| **Feature**          | Request to Join Event Committee                                                                       |
+| **Purpose**          | Allow a club member to request participation in an event's organizing committee.                      |
+| **Actors**           | Club Member, System, Event Organizer                                                                  |
+| **Precondition**     | The club member is logged in and is a valid member of the club hosting the event.                     |
+| **Postcondition**    | The request to join the committee is submitted and awaits approval by the event organizer or system.  |
+| **Main Flow**        | 1. Club member navigates to the event page.<br>2. Members click the "Join Committee" button.<br>3. System displays a confirmation dialog.<br>4. Member confirms the request.<br>5. System records the request and notifies the event organizer.<br>6. Request status is set to "Pending". |
+| **Alternate Scenario** | 1. If the member is not eligible (e.g. already part of the committee), the system blocks the request and shows an error.<br>2. If the system fails to save the request, an error message is shown.<br>3. Member cancels the request at the confirmation dialog. |
+
+![Image](https://github.com/user-attachments/assets/4c34c86b-323e-4bf3-bda4-c02151f70a9b)<br>
+
+*Figure 3.1.9 Request to Join Event Committee *
+
+---
+
+### 3.1.10 Approve Join Committee Request
+
+| **Field**              | **Details**                                                                                                     |
+|----------------------|-----------------------------------------------------------------------------------------------------------------|
+| **ID**               | UC05                                                                                                            |
+| **Feature**          | Approve Join Committee Request                                                                                  |
+| **Purpose**          | Allow the president to approve a club member’s request to join an event’s organizing committee.                |
+| **Actors**           | President, System                                                                                               |
+| **Precondition**     | President is logged in and viewing pending join committee requests for an event.                               |
+| **Postcondition**    | Selected club members are approved and assigned as part of the event committee.                                  |
+| **Main Flow**        | 1. President views the list of join committee requests.<br>2. President selects a request to review.<br>3. The President clicks "Approve".<br>4. System updates the request status to "Approved".<br>5. System notifies the member of the approval. |
+| **Alternate Scenario** | 1. If the member is already in the committee, the system disables the action or shows a warning.<br>2. If the system fails to update, show an error message and prompt to retry. |
+
+![Image](https://github.com/user-attachments/assets/ce7d3787-bf81-40f9-b909-4d230ab5cb4c)<br>
+
+*Figure 3.1.10 Approve Join Committee Request*
 
 ---
 
