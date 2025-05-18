@@ -224,7 +224,7 @@ The general characteristics of the intended groups of users are as follows:
 * Be verifiable (e.g., the requirement realization can be proven to the customer's satisfaction)
 * Conform to agreed upon syntax, keywords, and terms.
 
-###3.1.01 User Registration with Role Selection 
+### 3.1.01 User Registration with Role Selection 
 
  | **Field**             | **Details**                                                                                                                                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -238,7 +238,48 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario**| - If user selects an invalid role or submits incomplete form, system prompts for correction. <br> - If Admin rejects President request, system does not assign President role; user is notified of rejection. <br> - If confirmation or notification fails, user is registered but unaware until manually informed. |
 
 
+
 *Figure 3.1.01 User Registration with Role Selection* 
+
+---
+
+### 3.1.02 User Login and Role-Based Redirection
+
+| **Field**             | **Details**                                                                                                                                                                                                 |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **ID**                | UC-USER-02                                                                                                                                                                                                  |
+| **Feature**           | User Login and Role-Based Redirection                                                                                                                                                                       |
+| **Purpose**           | To authenticate users and redirect them to the appropriate dashboard based on their role (Student, President, or Admin).                                                                                   |
+| **Actors**            | User (Student/President/Admin), System                                                                                                                                                                      |
+| **Precondition**      | - User accesses the login page.                                                                                                                                                                             |
+| **Postcondition**     | - If login is successful and user role is valid, user is redirected to the correct dashboard. <br> - If invalid, user sees error or is logged out.                                                         |
+| **Main Flow**         | 1. User enters username and password. <br> 2. User submits credentials. <br> 3. System checks if credentials are valid. <br> 4. If valid: system retrieves user role. <br> 5. System checks if user role is student, president, or admin. <br> 6. If valid role, system redirects to respective dashboard. |
+| **Alternate Scenario**| - If credentials are invalid, show "Invalid Credentials" error message and prompt to try again. <br> - If user role is misconfigured or invalid, show "Invalid user role configuration" and log out user. |
+
+![Image](https://github.com/user-attachments/assets/d3b57598-f0f9-4eb3-a133-3b1000c6a9f2) <br>
+
+*Figure 3.1.02 User Login and Role-Based Redirection* 
+
+---
+
+### 3.1.03 User Logout Process
+
+| **Field**             | **Details**                                                                                                                                                                                                 |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **ID**                | UC-USER-03                                                                                                                                                                                                  |
+| **Feature**           | User Logout                                                                                                                                                                                                 |
+| **Purpose**           | To log the user out of the system, invalidate the session, clear session data, and redirect them to the login page.                                                                                           |
+| **Actors**            | User, System                                                                                                                                                                                                |
+| **Precondition**      | - User is logged in.                                                                                                                                                                                         |
+| **Postcondition**     | - User session is invalidated. <br> - Session data is cleared. <br> - User is redirected to the login page.                                                                                                 |
+| **Main Flow**         | 1. User clicks "Logout" button. <br> 2. System triggers `logout_user()` function. <br> 3. System invalidates the user session. <br> 4. System clears session data. <br> 5. System redirects the user to the login page. |
+| **Alternate Scenario**| - If logout fails, show "Logout failed" error message and prompt the user to try again.                                                                                                                      |
+
+
+
+*Figure 3.1.03 User Logout Process* 
+
+---
 
 ### 3.1.19 Approve Event Request
 
