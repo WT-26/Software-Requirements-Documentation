@@ -224,7 +224,7 @@ The general characteristics of the intended groups of users are as follows:
 * Be verifiable (e.g., the requirement realization can be proven to the customer's satisfaction)
 * Conform to agreed upon syntax, keywords, and terms.
 
-### 3.1.01 User Registration with Role Selection 
+### 3.1.1 Register User
 
  | **Field**             | **Details**                                                                                                                                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -243,12 +243,12 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.02 User Login and Role-Based Redirection
+### 3.1.2 Login User
 
 | **Field**             | **Details**                                                                                                                                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**                | UC-USER-02                                                                                                                                                                                                  |
-| **Feature**           | User Login and Role-Based Redirection                                                                                                                                                                       |
+| **Feature**           | Login User                                                                                                                                                                  |
 | **Purpose**           | To authenticate users and redirect them to the appropriate dashboard based on their role (Student, President, or Admin).                                                                                   |
 | **Actors**            | User (Student/President/Admin), System                                                                                                                                                                      |
 | **Precondition**      | - User accesses the login page.                                                                                                                                                                             |
@@ -258,11 +258,11 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/af42b90b-dfee-413a-84b5-63490e043cd9) <br>
 
-*Figure 3.1.02 User Login and Role-Based Redirection* 
+*Figure 3.1.2 User Login and Role-Based Redirection* 
 
 ---
 
-### 3.1.03 User Logout Process
+### 3.1.3 Logout User
 
 | **Field**             | **Details**                                                                                                                                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -277,11 +277,11 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/67e11e9b-192c-49e8-aea7-c6bdf9c099c7) <br>
 
-*Figure 3.1.03 User Logout Process* 
+*Figure 3.1.3 User Logout Process* 
 
 ---
 
-### 3.1.04 Password Recovery Use Case   
+### 3.1.4 Password Recovery   
 | **Field**        |    **Details**                                                                                                                                                                                                                        |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**           | UC-USER-04                                                                                                                                                                                                                                                            |
@@ -296,12 +296,12 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/6f554304-19e8-4cc3-9f49-0ce2c5724015) <br>
 
-*Figure 3.1.04 Password Recovery Use Case*
+*Figure 3.1.4 Password Recovery*
 
 ---
 
 
-### 3.1.05 Profile Update Use Case
+### 3.1.5 Profile Update
 
 | **Field**           | **Details**                                                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -316,11 +316,11 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/90f72f9c-97f3-40fa-a981-01209ec1a3b1)<br>
 
-*Figure 3.1.05 Profile Update Use Case*
+*Figure 3.1.5 Profile Update*
 
 ---
 
-### 3.1.06 Request Create Club Use Case
+### 3.1.6 Request Create Club
 
 | **Field**            | **Details**                                                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -335,11 +335,11 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/fa94cc6c-20d4-48c8-9738-25ca276eae56)<br>
 
-*Figure 3.1.06 Request Create Club Use Case*
+*Figure 3.1.06 Request Create Club*
 
 ---
 
-### 3.1.07 Club Approval by Admin Use Case
+### 3.1.7 Club Approval
 
 | **Field**          | **Details**                                                                                            |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -354,7 +354,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/f06fad5f-9462-46cf-8e63-e5bf8722299c)<br>
 
-*Figure 3.1.07  Club Approval by Admin Use Case*
+*Figure 3.1.7  Club Approval*
 
 ---
 
