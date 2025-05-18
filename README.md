@@ -390,7 +390,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**        | 1. President views the list of join committee requests.<br>2. President selects a request to review.<br>3. The President clicks "Approve".<br>4. System updates the request status to "Approved".<br>5. System notifies the member of the approval. |
 | **Alternate Scenario** | 1. If the member is already in the committee, the system disables the action or shows a warning.<br>2. If the system fails to update, show an error message and prompt to retry. |
 
-![Image](https://github.com/user-attachments/assets/ce7d3787-bf81-40f9-b909-4d230ab5cb4c)<br>
+![Image](https://github.com/user-attachments/assets/bf4b92f7-6852-4765-be1d-d3eb801b6a63)<br>
 
 *Figure 3.1.10 Approve Join Committee Request*
 
