@@ -237,7 +237,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**         | 1. User accesses the registration page. <br> 2. User fills in details and selects role. <br> 3. If Student is selected: system registers user as Student and sends confirmation. <br> 4. If President is selected: system submits President registration request to Admin. <br> 5. Admin reviews request. <br> 6. If approved, system registers user as President and sends notification. |
 | **Alternate Scenario**| - If user selects an invalid role or submits incomplete form, system prompts for correction. <br> - If Admin rejects President request, system does not assign President role; user is notified of rejection. <br> - If confirmation or notification fails, user is registered but unaware until manually informed. |
 
-![Image] !(https://github.com/user-attachments/assets/8cf05f70-2a53-4944-ba95-d28a41740faa)<br>
+![Image](https://github.com/user-attachments/assets/8cf05f70-2a53-4944-ba95-d28a41740faa) <br>
 
 *Figure 3.1.01 User Registration with Role Selection* 
 
@@ -256,8 +256,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**         | 1. User enters username and password. <br> 2. User submits credentials. <br> 3. System checks if credentials are valid. <br> 4. If valid: system retrieves user role. <br> 5. System checks if user role is student, president, or admin. <br> 6. If valid role, system redirects to respective dashboard. |
 | **Alternate Scenario**| - If credentials are invalid, show "Invalid Credentials" error message and prompt to try again. <br> - If user role is misconfigured or invalid, show "Invalid user role configuration" and log out user. |
 
-![Image] !![SRS-Login drawio](https://github.com/user-attachments/assets/af42b90b-dfee-413a-84b5-63490e043cd9)
-<br>
+![Image][SRS-Login drawio](https://github.com/user-attachments/assets/af42b90b-dfee-413a-84b5-63490e043cd9) <br>
 
 *Figure 3.1.02 User Login and Role-Based Redirection* 
 
