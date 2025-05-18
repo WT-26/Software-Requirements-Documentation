@@ -224,6 +224,22 @@ The general characteristics of the intended groups of users are as follows:
 * Be verifiable (e.g., the requirement realization can be proven to the customer's satisfaction)
 * Conform to agreed upon syntax, keywords, and terms.
 
+###3.1.01 User Registration with Role Selection 
+
+ | **Field**             | **Details**                                                                                                                                                                                                 |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **ID**                | UC-USER-01                                                                                                                                                                                                  |
+| **Feature**           | User Registration with Role Selection                                                                                                                                                                       |
+| **Purpose**           | To register a user and determine their role (Student or President), and ensure appropriate follow-up actions based on the selected role.                                                                    |
+| **Actors**            | User (Student/President), Admin, System                                                                                                                                                                     |
+| **Precondition**      | - User accesses the registration page.                                                                                                                                                                      |
+| **Postcondition**     | - User is registered as Student or President. <br> - Confirmation or notification is sent accordingly.                                                                                                      |
+| **Main Flow**         | 1. User accesses the registration page. <br> 2. User fills in details and selects role. <br> 3. If Student is selected: system registers user as Student and sends confirmation. <br> 4. If President is selected: system submits President registration request to Admin. <br> 5. Admin reviews request. <br> 6. If approved, system registers user as President and sends notification. |
+| **Alternate Scenario**| - If user selects an invalid role or submits incomplete form, system prompts for correction. <br> - If Admin rejects President request, system does not assign President role; user is notified of rejection. <br> - If confirmation or notification fails, user is registered but unaware until manually informed. |
+
+
+*Figure 3.1.01 User Registration with Role Selection* 
+
 ### 3.1.19 Approve Event Request
 
 | **Field**           | **Details**                                                                 |
