@@ -233,11 +233,11 @@ The general characteristics of the intended groups of users are as follows:
 | **Purpose**           | To register a user and determine their role (Student or President), and ensure appropriate follow-up actions based on the selected role.                                                                    |
 | **Actors**            | User (Student/President), Admin, System                                                                                                                                                                     |
 | **Precondition**      | - User accesses the registration page.                                                                                                                                                                      |
-| **Postcondition**     | - User is registered as Student or President. <br> - Confirmation or notification is sent accordingly.                                                                                                      |
-| **Main Flow**         | 1. User accesses the registration page. <br> 2. User fills in details and selects role. <br> 3. If Student is selected: system registers user as Student and sends confirmation. <br> 4. If President is selected: system submits President registration request to Admin. <br> 5. Admin reviews request. <br> 6. If approved, system registers user as President and sends notification. |
-| **Alternate Scenario**| - If user selects an invalid role or submits incomplete form, system prompts for correction. <br> - If Admin rejects President request, system does not assign President role; user is notified of rejection. <br> - If confirmation or notification fails, user is registered but unaware until manually informed. |
+| **Postcondition**     | - User is registered as Student. <br> - Confirmation or notification is sent accordingly.                                                                                                      |
+| **Main Flow**         | 1. User accesses the registration page. <br> 2. User fills in details and selects role. <br> 3. If Student is selected: system registers user as Student and sends confirmation. <br> |
+| **Alternate Scenario**| - If user submits incomplete form, system prompts for correction. <br> - If confirmation or notification fails, user is registered but unaware until manually informed. |
 
-![Image](https://github.com/user-attachments/assets/8cf05f70-2a53-4944-ba95-d28a41740faa) <br>
+![Image](https://github.com/user-attachments/assets/daf29375-7313-4163-a6cd-63f0da989885)<br>
 
 *Figure 3.1.01 User Registration with Role Selection* 
 
@@ -275,9 +275,86 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**         | 1. User clicks "Logout" button. <br> 2. System triggers `logout_user()` function. <br> 3. System invalidates the user session. <br> 4. System clears session data. <br> 5. System redirects the user to the login page. |
 | **Alternate Scenario**| - If logout fails, show "Logout failed" error message and prompt the user to try again.                                                                                                                      |
 
-
+![Image](https://github.com/user-attachments/assets/67e11e9b-192c-49e8-aea7-c6bdf9c099c7) <br>
 
 *Figure 3.1.03 User Logout Process* 
+
+---
+
+### 3.1.04 Password Recovery Use Case   
+| **Field**        |    **Details**                                                                                                                                                                                                                        |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **ID**           | UC-USER-04                                                                                                                                                                                                                                                            |
+| **Feature**      | Password Recovery                                                                                                                                                                                                                                              |
+| **Purpose**      | To allow users to recover access to their account by securely resetting a forgotten password via a reset link sent to their registered email                                                                                                                  |
+| **Actors**       | User                                                                                                                                                                                                                                                           |
+| **Precondition** | User has a registered account and initiates a password reset request via the "Forgot Password?" link                                                                                                                                                          |
+| **Postcondition**| User either receives a reset link email and successfully resets the password, or is shown an appropriate error message                                                                                                                                         |
+| **Main Flow**    | 1. User clicks "Forgot Password?"<br>2. System prompts for registered email<br>3. User submits email<br>4. System verifies if email is registered<br>5. If valid, system generates reset token and sends email<br>6. User clicks reset link from email<br>7. System validates token<br>8. If valid, system prompts for new password<br>9. User submits new password<br>10. System validates and updates password<br>11. User is redirected to login with success message |
+| **Alternate Scenario** | 1. Email not found → System shows error message<br>2. Email service fails → System shows retry notice<br>3. Invalid or expired token → System shows error<br>4. Password doesn't meet criteria → System shows error and prompts re-entry<br>5. Database update failure → System shows internal error |
+
+
+![Image](https://github.com/user-attachments/assets/6f554304-19e8-4cc3-9f49-0ce2c5724015) <br>
+
+*Figure 3.1.04 Password Recovery Use Case*
+
+---
+
+
+### 3.1.05 Profile Update Use Case
+
+| **Field**           | **Details**                                                                                           |
+|----------------------|-------------------------------------------------------------------------------------------------------|
+| **ID**               | UC-USER-05                                                                                                   |
+| **Feature**          | User Profile Update                                                                                  |
+| **Purpose**          | Allow the user to access and update their profile information.                                        |
+| **Actors**           | User                                                                                                  |
+| **Precondition**     | User is logged in and on the profile page.                                                             |
+| **Postcondition**    | User’s profile information is updated in the database, or an error message is shown if invalid data.  |
+| **Main Flow**        | 1. User accesses the profile page.<br>2. User clicks "Edit Profile".<br>3. User modifies profile details.<br>4. User submits the updated data.<br>5. System validates the data.<br>6. If data is valid, it is updated in the database.<br>7. System shows a success message and redirects to the profile view page. |
+| **Alternate Scenario** | 1. Invalid data entered → System prompts user to correct data.<br>2. Data is valid but update fails → System shows an error message. |
+
+![Image](https://github.com/user-attachments/assets/90f72f9c-97f3-40fa-a981-01209ec1a3b1)<br>
+
+*Figure 3.1.05 Profile Update Use Case*
+
+---
+
+### 3.1.06 Request Create Club Use Case
+
+| **Field**            | **Details**                                                                                           |
+|----------------------|-------------------------------------------------------------------------------------------------------|
+| **ID**               | UC-USER-06                                                                                                  |
+| **Feature**          | Request Create Club                                                                                  |
+| **Purpose**          | Allow students to request the creation of a new club.                                                  |
+| **Actors**           | Student, System, Admin                                                                                 |
+| **Precondition**     | Student is logged in and navigates to the "Request Create Club" page.                                  |
+| **Postcondition**    | Club creation request is saved in the database, and the student is notified of the request status.     |
+| **Main Flow**        | 1. Student accesses the "Request Create Club" page.<br>2. Student fills in club name, description, and proposed leader.<br>3. Student submits the club creation request.<br>4. System validates the submitted data.<br>5. If data is valid, it is saved in the database and updated to "Pending Admin Approval".<br>6. System notifies the admin to review the request.<br>7. Student is shown a success message. |
+| **Alternate Scenario** | 1. Invalid data entered → System prompts student to correct and resubmit.<br>2. Data is valid, but saving fails → System shows an error message.<br>3. Club request is successfully submitted, but the system does not notify admin → System shows a notification error message. |
+
+![Image](https://github.com/user-attachments/assets/fa94cc6c-20d4-48c8-9738-25ca276eae56)<br>
+
+*Figure 3.1.06 Request Create Club Use Case*
+
+---
+
+### 3.1.07 Club Approval by Admin Use Case
+
+| **Field**          | **Details**                                                                                            |
+|----------------------|-------------------------------------------------------------------------------------------------------|
+| **ID**               | UC-Admin-01                                                                                                  |
+| **Feature**          | Club Approval by Admin                                                                                 |
+| **Purpose**          | Allow the admin to review and approve or reject club creation requests submitted by the president.     |
+| **Actors**           | Admin, President, System                                                                         |
+| **Precondition**     | Admin is logged in and accesses the "Pending Club Requests" page.                                      |
+| **Postcondition**    | Club request is either approved or rejected, and the system notifies the user (president) accordingly. |
+| **Main Flow**        | 1. Admin accesses the "Pending Club Requests" page.<br>2. System displays a list of submitted club requests.<br>3. Admin selects a club request to review.<br>4. Admin reviews the club name, description, and proposed leader.<br>5. Admin validates the data of the club request.<br>6. Admin approves or rejects the club request.<br>7. If approved, the system creates the club in the database.<br>8. If approved, the leader is assigned as the club president.<br>9. System notifies the president of approval.<br>10. If rejected, system notifies the student of rejection. |
+| **Alternate Scenario** | 1. If data is invalid, admin rejects the club request, and the system notifies the student of rejection.<br>2. If the request fails to save, an error message is shown to the admin.<br>3. If the admin encounters any issues in validating the data, they can choose to re-review the request. |
+
+![Image](https://github.com/user-attachments/assets/f06fad5f-9462-46cf-8e63-e5bf8722299c)<br>
+
+*Figure 3.1.07  Club Approval by Admin Use Case*
 
 ---
 
