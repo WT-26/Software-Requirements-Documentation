@@ -111,6 +111,39 @@ The system's primary goals are to eliminate manual administrative work, improve 
 
 ### 1.3 Product Overview
 
+The **Student Club Management System (SCMS)** is a unified platform designed to simplify and enhance the operations of student clubs and organizations. By integrating with the university's financial management system and campus space reservation database, SCMS provides a centralized solution for membership management, event planning, budget tracking, and venue booking. This system eliminates administrative inefficiencies, ensuring seamless coordination for student-led activities.
+
+#### Core Functionalities:
+
+1. **Membership Management**  
+   SCMS includes a centralized database for club members, with features for roles, permissions, and membership verification. It automates approvals and renewals to improve efficiency.
+
+2. **Budget Tracking & Financial Integration**  
+   The platform synchronizes in real-time with the university's financial system, enabling transparent fund allocation and expense tracking. It automates budget requests, approvals, and expenditure reporting.
+
+3. **Event Planning & Venue Booking**  
+   Direct integration with the campus space reservation system allows instant venue availability checks and bookings. All requests and approvals are logged for efficient tracking.
+
+4. **Unified Communication**  
+   SCMS offers networking tools like announcement dashboards, email/SMS notifications, and discussion forums to strengthen student engagement. These features enhance collaboration for event planning and task delegation.
+
+#### Relationship to Existing Systems:
+
+SCMS acts as an intermediary layer between student clubs and the university's financial and facility management systems. It retrieves real-time budget data and venue availability, ensuring accuracy while complementing (not replacing) existing university systems.
+
+#### User Interfaces:
+
+- **Administrator Interface**  
+  University staff can oversee club registrations, budget requests/approvals, and event compliance. A dashboard provides insights into club engagement and resource utilization.
+
+- **Student Interface**  
+  - Students can register in SCMS, join clubs, or request to create new clubs.  
+  - **Member**: After joining a club, students gain access to features like event RSVPs, budget viewing, and club announcements.  
+  - **Club President**: Upon approval of a new club, the creator becomes Club President, with permissions to manage members, submit budgets, book venues, and organize events.  
+  - **Committee**: Members can apply for committee roles in specific events, gaining limited access to assist with announcements, event updates, and financial reports.
+
+Overall, SCMS empowers student organizations by automating administrative tasks, improving financial transparency, and optimizing event planning—fostering a more active and well-managed campus community.
+
 #### 1.3.1 Product Perspective
 #### 1.3.2 Product Functions
 
