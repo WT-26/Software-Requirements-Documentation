@@ -481,14 +481,15 @@ The general characteristics of the intended groups of users are as follows:
 
 ### 3.1.11. F-011 Update Club Details
 
-| **ID**          | F-011                                                   |
-|-----------------|---------------------------------------------------------|
-| **Feature**     | Update club details                                     |
-| **Purpose**     | Allow the user to modify the information of the club.   |
-| **Actor(s)**    | Club President                                          |
-| **Precondition**| 1. Club exists.<br>2. Club President is authenticated.<br>3. Club President is logged in. |
-| **Postcondition**| New club details updated in the system.                |
-| **Main Flow**   | 1. Selects the club.<br>2. Navigate to club info page.<br>3. Press on edit details.<br>4. Update new information.<br>5. Submits changes. |
+| Field            | Details                                                                 |
+|------------------|-------------------------------------------------------------------------|
+| **ID**           | F-011                                                                  |
+| **Feature**      | Update club details                                                    |
+| **Purpose**      | Allow the user to modify the information of the club.                  |
+| **Actor(s)**     | Club President                                                         |
+| **Precondition** | 1. Club exists.<br>2. Club President is authenticated.<br>3. Club President is logged in. |
+| **Postcondition**| New club details updated in the system.                                |
+| **Main Flow**    | 1. Selects the club.<br>2. Navigate to club info page.<br>3. Press on edit details.<br>4. Update new information.<br>5. Submits changes. |
 | **Alternate Scenario** | Required field is missing or invalid input, show error and prompt correction. |
 
 ![updateClubDetails](media/image1.jpeg)  
@@ -498,14 +499,15 @@ The general characteristics of the intended groups of users are as follows:
 
 ### 3.1.12. F-012 Delete Club
 
-| **ID**          | F-012                                                   |
-|-----------------|---------------------------------------------------------|
-| **Feature**     | Delete club                                             |
-| **Purpose**     | Allow the user to delete the club from the system.      |
-| **Actor(s)**    | Admin                                                   |
-| **Precondition**| 1. Club exists.<br>2. Admin is authenticated.<br>3. Admin is logged in. |
-| **Postcondition**| The club is deleted from the system.                   |
-| **Main Flow**   | 1. Selects the club.<br>2. Navigate to club info page.<br>3. Press delete club.<br>4. Confirm to delete club. |
+| Field            | Details                                                                 |
+|------------------|-------------------------------------------------------------------------|
+| **ID**           | F-012                                                                  |
+| **Feature**      | Delete club                                                            |
+| **Purpose**      | Allow the user to delete the club from the system.                     |
+| **Actor(s)**     | Admin                                                                  |
+| **Precondition** | 1. Club exists.<br>2. Admin is authenticated.<br>3. Admin is logged in. |
+| **Postcondition**| The club is deleted from the system.                                   |
+| **Main Flow**    | 1. Selects the club.<br>2. Navigate to club info page.<br>3. Press delete club.<br>4. Confirm to delete club. |
 | **Alternate Scenario** | The club has active event ongoing, system displays event cancellation required to delete club. |
 
 ![deleteClub](media/image2.jpeg)  
@@ -515,14 +517,15 @@ The general characteristics of the intended groups of users are as follows:
 
 ### 3.1.13. F-013 Join Club
 
-| **ID**          | F-013                                                   |
-|-----------------|---------------------------------------------------------|
-| **Feature**     | Join club                                               |
-| **Purpose**     | Allow the student to join the club.                     |
-| **Actor(s)**    | Student                                                 |
-| **Precondition**| 1. Club exists.<br>2. The student is logged into the system.<br>3. The student never joined the club. |
-| **Postcondition**| The student join club successfully and promoted into club member. |
-| **Main Flow**   | 1. Navigate to view club list.<br>2. Search the club.<br>3. Select the club.<br>4. Click "Join club".<br>5. Fill in personal student information.<br>6. Proceed with payment of joining fee.<br>7. Submit application. |
+| Field            | Details                                                                 |
+|------------------|-------------------------------------------------------------------------|
+| **ID**           | F-013                                                                  |
+| **Feature**      | Join club                                                              |
+| **Purpose**      | Allow the student to join the club.                                    |
+| **Actor(s)**     | Student                                                                |
+| **Precondition** | 1. Club exists.<br>2. The student is logged into the system.<br>3. The student never joined the club. |
+| **Postcondition**| The student join club successfully and promoted into club member.       |
+| **Main Flow**    | 1. Navigate to view club list.<br>2. Search the club.<br>3. Select the club.<br>4. Click "Join club".<br>5. Fill in personal student information.<br>6. Proceed with payment of joining fee.<br>7. Submit application. |
 | **Alternate Scenario** | Student has duplicated application, system pop up notification window. |
 
 ![joinClub](media/image3.jpeg)  
@@ -532,15 +535,16 @@ The general characteristics of the intended groups of users are as follows:
 
 ### 3.1.14. F-014 View Club List
 
-| **ID**          | F-014                                                   |
-|-----------------|---------------------------------------------------------|
-| **Feature**     | View club list                                          |
-| **Purpose**     | Allow the student to view existing club in the system.  |
-| **Actor(s)**    | Student                                                 |
-| **Precondition**| Student is logged in the system.                        |
-| **Postcondition**| Existing club showing in list is displayed.            |
-| **Main Flow**   | 1. Navigate to view club list.<br>2. All existing club is displayed in list. |
-| **Alternate Scenario** | No club match the applied filter, club list is empty. |
+| Field            | Details                                                                 |
+|------------------|-------------------------------------------------------------------------|
+| **ID**           | F-014                                                                  |
+| **Feature**      | View club list                                                         |
+| **Purpose**      | Allow the student to view existing club in the system.                 |
+| **Actor(s)**     | Student                                                                |
+| **Precondition** | Student is logged in the system.                                       |
+| **Postcondition**| Existing club showing in list is displayed.                            |
+| **Main Flow**    | 1. Navigate to view club list.<br>2. All existing club is displayed in list. |
+| **Alternate Scenario** | No club match the applied filter, club list is empty.              |
 
 ![viewClubList](media/image4.jpeg)  
 **Figure 3.1.14: View Club List Use Case Activity Diagram**  
@@ -549,14 +553,15 @@ The general characteristics of the intended groups of users are as follows:
 
 ### 3.1.15. F-015 Request Create Event
 
-| **ID**          | F-015                                                   |
-|-----------------|---------------------------------------------------------|
-| **Feature**     | Request create event                                    |
-| **Purpose**     | Allow club president to request for create club event.  |
-| **Actor(s)**    | Club president                                          |
-| **Precondition**| 1. Club exists.<br>2. Club president is authenticated.<br>3. Club president is logged in. |
+| Field            | Details                                                                 |
+|------------------|-------------------------------------------------------------------------|
+| **ID**           | F-015                                                                  |
+| **Feature**      | Request create event                                                   |
+| **Purpose**      | Allow club president to request for create club event.                 |
+| **Actor(s)**     | Club president                                                         |
+| **Precondition** | 1. Club exists.<br>2. Club president is authenticated.<br>3. Club president is logged in. |
 | **Postcondition**| Club event request is submitted successfully, pending for admin approval. |
-| **Main Flow**   | 1. Navigate to request create event page.<br>2. Select "New event".<br>3. Fill in event details.<br>4. Submit request. |
+| **Main Flow**    | 1. Navigate to request create event page.<br>2. Select "New event".<br>3. Fill in event details.<br>4. Submit request. |
 | **Alternate Scenario** | Required field is missing or invalid input, show error and prompt correction. |
 
 ![requestCreateEvent](media/image5.jpeg)  
@@ -566,14 +571,15 @@ The general characteristics of the intended groups of users are as follows:
 
 ### 3.1.16. F-016 Update Event Info
 
-| **ID**          | F-016                                                   |
-|-----------------|---------------------------------------------------------|
-| **Feature**     | Update event info                                       |
-| **Purpose**     | Allow user to update event information.                 |
-| **Actor(s)**    | - Club president<br>- Committee                         |
-| **Precondition**| 1. Event exists.<br>2. User is authenticated.<br>3. User is logged in. |
-| **Postcondition**| Event new information updated successfully in the system. |
-| **Main Flow**   | 1. Navigate to the event management page.<br>2. Select the event.<br>3. Select update event info.<br>4. Fill in new event information.<br>5. Submit changes. |
+| Field            | Details                                                                 |
+|------------------|-------------------------------------------------------------------------|
+| **ID**           | F-016                                                                  |
+| **Feature**      | Update event info                                                      |
+| **Purpose**      | Allow user to update event information.                                |
+| **Actor(s)**     | - Club president<br>- Committee                                       |
+| **Precondition** | 1. Event exists.<br>2. User is authenticated.<br>3. User is logged in. |
+| **Postcondition**| Event new information updated successfully in the system.              |
+| **Main Flow**    | 1. Navigate to the event management page.<br>2. Select the event.<br>3. Select update event info.<br>4. Fill in new event information.<br>5. Submit changes. |
 | **Alternate Scenario** | Required field is missing or invalid input, show error and prompt correction. |
 
 ![updateEventInfo](media/image6.jpeg)  
@@ -583,15 +589,16 @@ The general characteristics of the intended groups of users are as follows:
 
 ### 3.1.17. F-017 Cancel Event
 
-| **ID**          | F-017                                                   |
-|-----------------|---------------------------------------------------------|
-| **Feature**     | Cancel event                                            |
-| **Purpose**     | Allow user to cancel the event.                         |
-| **Actor(s)**    | - Club president<br>- Committee                         |
-| **Precondition**| 1. Event exists.<br>2. User is authenticated.<br>3. User is logged in. |
-| **Postcondition**| The event is cancelled and deleted from the system.     |
-| **Main Flow**   | 1. Navigate to the event management page.<br>2. Select the event.<br>3. Select cancel event.<br>4. Fill in the reason of cancelling the event.<br>5. Confirm cancel. |
-| **Alternate Scenario** | If the event has committee, send notification to all committee. |
+| Field            | Details                                                                 |
+|------------------|-------------------------------------------------------------------------|
+| **ID**           | F-017                                                                  |
+| **Feature**      | Cancel event                                                           |
+| **Purpose**      | Allow user to cancel the event.                                        |
+| **Actor(s)**     | - Club president<br>- Committee                                       |
+| **Precondition** | 1. Event exists.<br>2. User is authenticated.<br>3. User is logged in. |
+| **Postcondition**| The event is cancelled and deleted from the system.                    |
+| **Main Flow**    | 1. Navigate to the event management page.<br>2. Select the event.<br>3. Select cancel event.<br>4. Fill in the reason of cancelling the event.<br>5. Confirm cancel. |
+| **Alternate Scenario** | If the event has committee, send notification to all committee.     |
 
 ![cancelEvent](media/image7.jpeg)  
 **Figure 3.1.17: Cancel Event Use Case Activity Diagram**  
@@ -600,14 +607,15 @@ The general characteristics of the intended groups of users are as follows:
 
 ### 3.1.18. F-018 Renew Membership
 
-| **ID**          | F-018                                                   |
-|-----------------|---------------------------------------------------------|
-| **Feature**     | Renew club membership                                   |
-| **Purpose**     | Allow member to renew club membership.                  |
-| **Actor(s)**    | Member                                                  |
-| **Precondition**| 1. Club exists.<br>2. Member is authenticated.<br>3. Member is logged in. |
-| **Postcondition**| Member successfully renew the membership and update in the system. |
-| **Main Flow**   | 1. Select the club.<br>2. Navigate to club membership page.<br>3. Select renew membership.<br>4. Proceed with the payment of membership renewal.<br>5. System update membership status in the system. |
+| Field            | Details                                                                 |
+|------------------|-------------------------------------------------------------------------|
+| **ID**           | F-018                                                                  |
+| **Feature**      | Renew club membership                                                  |
+| **Purpose**      | Allow member to renew club membership.                                 |
+| **Actor(s)**     | Member                                                                 |
+| **Precondition** | 1. Club exists.<br>2. Member is authenticated.<br>3. Member is logged in. |
+| **Postcondition**| Member successfully renew the membership and update in the system.      |
+| **Main Flow**    | 1. Select the club.<br>2. Navigate to club membership page.<br>3. Select renew membership.<br>4. Proceed with the payment of membership renewal.<br>5. System update membership status in the system. |
 | **Alternate Scenario** | Member did not complete the payment, system display error and notify member to try again with complete the payment. |
 
 ![renewMembership](media/image8.jpeg)  
@@ -617,18 +625,19 @@ The general characteristics of the intended groups of users are as follows:
 
 ### 3.1.19. F-019 View Announcement
 
-| **ID**          | F-019                                                   |
-|-----------------|---------------------------------------------------------|
-| **Feature**     | View announcement                                       |
-| **Purpose**     | Allow member to view exclusive announcement of the club. |
-| **Actor(s)**    | Member                                                  |
-| **Precondition**| 1. Club exists.<br>2. Member is authenticated.<br>3. Member is logged in. |
-| **Postcondition**| All existing announcement is displaying.                |
-| **Main Flow**   | 1. Select the club.<br>2. Navigate to announcement page.<br>3. All existing club announcement is displaying. |
+| Field            | Details                                                                 |
+|------------------|-------------------------------------------------------------------------|
+| **ID**           | F-019                                                                  |
+| **Feature**      | View announcement                                                      |
+| **Purpose**      | Allow member to view exclusive announcement of the club.               |
+| **Actor(s)**     | Member                                                                 |
+| **Precondition** | 1. Club exists.<br>2. Member is authenticated.<br>3. Member is logged in. |
+| **Postcondition**| All existing announcement is displaying.                               |
+| **Main Flow**    | 1. Select the club.<br>2. Navigate to announcement page.<br>3. All existing club announcement is displaying. |
 | **Alternate Scenario** | No announcement is made in the system, announcement page displaying "There is no announcement currently". |
 
 ![viewAnnouncement](media/image9.jpeg)  
-**Figure 3.1.19: View Announcement Use Case Activity Diagram**  
+**Figure 3.1.19: View Announcement Use Case Activity Diagram**    
 
 ---
 
