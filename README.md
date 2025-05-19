@@ -384,7 +384,7 @@ The general characteristics of the intended groups of users are as follows:
 ---
 
 
-### 3.1.6 Profile Update
+### 3.1.5 Profile Update
 
 | **Field**           | **Details**                                                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -399,11 +399,11 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/90f72f9c-97f3-40fa-a981-01209ec1a3b1)<br>
 
-*Figure 3.1.6 Profile Update*
+*Figure 3.1.5 Profile Update*
 
 ---
 
-### 3.1.7 Request Create Club
+### 3.1.6 Request Create Club
 
 | **Field**            | **Details**                                                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -418,11 +418,11 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/fa94cc6c-20d4-48c8-9738-25ca276eae56)<br>
 
-*Figure 3.1.7 Request Create Club*
+*Figure 3.1.6 Request Create Club*
 
 ---
 
-### 3.1.8 Club Approval
+### 3.1.7 Club Approval
 
 | **Field**          | **Details**                                                                                            |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -437,11 +437,11 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/f06fad5f-9462-46cf-8e63-e5bf8722299c)<br>
 
-*Figure 3.1.8  Club Approval*
+*Figure 3.1.7  Club Approval*
 
 ---
 
-### 3.1.9 Request to Join Event Committee 
+### 3.1.8 Request to Join Event Committee 
 
 | **Field**            | **Details**                                                                                          |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -456,11 +456,11 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/4c34c86b-323e-4bf3-bda4-c02151f70a9b)<br>
 
-*Figure 3.1.9 Request to Join Event Committee *
+*Figure 3.1.8 Request to Join Event Committee *
 
 ---
 
-### 3.1.10 Approve Join Committee Request
+### 3.1.9 Approve Join Committee Request
 
 | **Field**              | **Details**                                                                                                     |
 |----------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -475,15 +475,15 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/bf4b92f7-6852-4765-be1d-d3eb801b6a63)<br>
 
-*Figure 3.1.10 Approve Join Committee Request*
+*Figure 3.1.9 Approve Join Committee Request*
 
 ---
 
-### 3.1.11. F-011 Update Club Details
+### 3.1.10. Update Club Details
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
-| **ID**           | F-011                                                                  |
+| **ID**           | F-010                                                                  |
 | **Feature**      | Update club details                                                    |
 | **Purpose**      | Allow the user to modify the information of the club.                  |
 | **Actor(s)**     | Club President                                                         |
@@ -493,15 +493,15 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | Required field is missing or invalid input, show error and prompt correction. |
 
 ![updateClubDetails](https://github.com/user-attachments/assets/31786f07-91b7-43b0-9be4-779cb5d3f244)  
-***Figure 3.1.11: Update Club Details Use Case Activity Diagram***  
+***Figure 3.1.10: Update Club Details Use Case Activity Diagram***  
 
 ---
 
-### 3.1.12. F-012 Delete Club
+### 3.1.11. Delete Club
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
-| **ID**           | F-012                                                                  |
+| **ID**           | F-011                                                                  |
 | **Feature**      | Delete club                                                            |
 | **Purpose**      | Allow the user to delete the club from the system.                     |
 | **Actor(s)**     | Admin                                                                  |
@@ -511,15 +511,15 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | The club has active event ongoing, system displays event cancellation required to delete club. |
 
 ![deleteClub](https://github.com/user-attachments/assets/2210ccf4-7c6c-4be8-aa80-59202b349643)  
-***Figure 3.1.12: Delete Club Use Case Activity Diagram***  
+***Figure 3.1.11: Delete Club Use Case Activity Diagram***  
 
 ---
 
-### 3.1.13. F-013 Join Club
+### 3.1.12. F-012 Join Club
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
-| **ID**           | F-013                                                                  |
+| **ID**           | F-012                                                                  |
 | **Feature**      | Join club                                                              |
 | **Purpose**      | Allow the student to join the club.                                    |
 | **Actor(s)**     | Student                                                                |
@@ -529,15 +529,15 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | Student has duplicated application, system pop up notification window. |
 
 ![joinClub](https://github.com/user-attachments/assets/529d4074-e116-4895-8c9e-d3342ab0d2ed)  
-***Figure 3.1.13: Join Club Use Case Activity Diagram***  
+***Figure 3.1.12: Join Club Use Case Activity Diagram***  
 
 ---
 
-### 3.1.14. F-014 View Club List
+### 3.1.13. View Club List
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
-| **ID**           | F-014                                                                  |
+| **ID**           | F-013                                                                  |
 | **Feature**      | View club list                                                         |
 | **Purpose**      | Allow the student to view existing club in the system.                 |
 | **Actor(s)**     | Student                                                                |
@@ -547,15 +547,15 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | No club match the applied filter, club list is empty.              |
 
 ![viewClubList](https://github.com/user-attachments/assets/33e7013b-ce2c-4576-91eb-b6ffc792e086)  
-***Figure 3.1.14: View Club List Use Case Activity Diagram***  
+***Figure 3.1.13: View Club List Use Case Activity Diagram***  
 
 ---
 
-### 3.1.15. F-015 Request Create Event
+### 3.1.14. Request Create Event
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
-| **ID**           | F-015                                                                  |
+| **ID**           | F-014                                                                  |
 | **Feature**      | Request create event                                                   |
 | **Purpose**      | Allow club president to request for create club event.                 |
 | **Actor(s)**     | Club president                                                         |
@@ -565,15 +565,15 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | Required field is missing or invalid input, show error and prompt correction. |
 
 ![requestCreateEvent](https://github.com/user-attachments/assets/915285a8-65d3-4c7f-8b12-5bbea1ed7830)  
-***Figure 3.1.15: Request Create Event Use Case Activity Diagram***  
+***Figure 3.1.14: Request Create Event Use Case Activity Diagram***  
 
 ---
 
-### 3.1.16. F-016 Update Event Info
+### 3.1.15. Update Event Info
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
-| **ID**           | F-016                                                                  |
+| **ID**           | F-015                                                                  |
 | **Feature**      | Update event info                                                      |
 | **Purpose**      | Allow user to update event information.                                |
 | **Actor(s)**     | - Club president<br>- Committee                                       |
@@ -583,15 +583,15 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | Required field is missing or invalid input, show error and prompt correction. |
 
 ![updateEventInfo](https://github.com/user-attachments/assets/6cb80db5-6ecd-4d56-98a5-48923d5c4eb9)  
-***Figure 3.1.16: Update Event Info Use Case Activity Diagram***  
+***Figure 3.1.15: Update Event Info Use Case Activity Diagram***  
 
 ---
 
-### 3.1.17. F-017 Cancel Event
+### 3.1.16. Cancel Event
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
-| **ID**           | F-017                                                                  |
+| **ID**           | F-016                                                                  |
 | **Feature**      | Cancel event                                                           |
 | **Purpose**      | Allow user to cancel the event.                                        |
 | **Actor(s)**     | - Club president<br>- Committee                                       |
@@ -601,15 +601,15 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | If the event has committee, send notification to all committee.     |
 
 ![cancelEvent](https://github.com/user-attachments/assets/5009813e-5ebd-4ec8-8cb2-b30589eac5ec)  
-***Figure 3.1.17: Cancel Event Use Case Activity Diagram***  
+***Figure 3.1.16: Cancel Event Use Case Activity Diagram***  
 
 ---
 
-### 3.1.18. F-018 Renew Membership
+### 3.1.17. Renew Membership
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
-| **ID**           | F-018                                                                  |
+| **ID**           | F-017                                                                  |
 | **Feature**      | Renew club membership                                                  |
 | **Purpose**      | Allow member to renew club membership.                                 |
 | **Actor(s)**     | Member                                                                 |
@@ -619,15 +619,15 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | Member did not complete the payment, system display error and notify member to try again with complete the payment. |
 
 ![renewMembership](https://github.com/user-attachments/assets/ed273b6d-dd5f-4ede-9923-b4be5417b84a)  
-***Figure 3.1.18: Renew Membership Use Case Activity Diagram***  
+***Figure 3.1.17: Renew Membership Use Case Activity Diagram***  
 
 ---
 
-### 3.1.19. F-019 View Announcement
+### 3.1.18. View Announcement
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
-| **ID**           | F-019                                                                  |
+| **ID**           | F-018                                                                  |
 | **Feature**      | View announcement                                                      |
 | **Purpose**      | Allow member to view exclusive announcement of the club.               |
 | **Actor(s)**     | Member                                                                 |
@@ -637,7 +637,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | No announcement is made in the system, announcement page displaying "There is no announcement currently". |
 
 ![viewAnnouncement](https://github.com/user-attachments/assets/890e2a99-9ef3-48fb-9251-333b6c57c2f3)  
-***Figure 3.1.19: View Announcement Use Case Activity Diagram***    
+***Figure 3.1.18: View Announcement Use Case Activity Diagram***    
 
 ---
 
