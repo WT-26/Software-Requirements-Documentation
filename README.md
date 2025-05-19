@@ -479,6 +479,42 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
+### 3.1.11 Update Club Details
+
+---
+
+### 3.1.12 Delete Club
+
+---
+
+### 3.1.13 Join Club
+
+---
+
+### 3.1.14 View Club List
+
+---
+
+### 3.1.15 Request Create Event
+
+---
+
+### 3.1.16 Update Event Info
+
+---
+
+### 3.1.17 Cancel Event
+
+---
+
+### 3.1.18 Renew Membership
+
+---
+
+### 3.1.19 View Announcement
+
+---
+
 ### 3.1.19 Approve Event Request
 
 | **Field**           | **Details**                                                                 |
