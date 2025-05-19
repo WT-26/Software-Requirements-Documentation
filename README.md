@@ -492,7 +492,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**    | 1. Selects the club.<br>2. Navigate to club info page.<br>3. Press on edit details.<br>4. Update new information.<br>5. Submits changes. |
 | **Alternate Scenario** | Required field is missing or invalid input, show error and prompt correction. |
 
-![updateClubDetails](media/image1.jpeg)  
+![updateClubDetails](https://github.com/user-attachments/assets/31786f07-91b7-43b0-9be4-779cb5d3f244)
 **Figure 3.1.11: Update Club Details Use Case Activity Diagram**  
 
 ---
@@ -510,7 +510,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**    | 1. Selects the club.<br>2. Navigate to club info page.<br>3. Press delete club.<br>4. Confirm to delete club. |
 | **Alternate Scenario** | The club has active event ongoing, system displays event cancellation required to delete club. |
 
-![deleteClub](media/image2.jpeg)  
+![deleteClub](https://github.com/user-attachments/assets/2210ccf4-7c6c-4be8-aa80-59202b349643)
 **Figure 3.1.12: Delete Club Use Case Activity Diagram**  
 
 ---
@@ -528,7 +528,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**    | 1. Navigate to view club list.<br>2. Search the club.<br>3. Select the club.<br>4. Click "Join club".<br>5. Fill in personal student information.<br>6. Proceed with payment of joining fee.<br>7. Submit application. |
 | **Alternate Scenario** | Student has duplicated application, system pop up notification window. |
 
-![joinClub](media/image3.jpeg)  
+![joinClub](https://github.com/user-attachments/assets/529d4074-e116-4895-8c9e-d3342ab0d2ed)
 **Figure 3.1.13: Join Club Use Case Activity Diagram**  
 
 ---
@@ -546,7 +546,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**    | 1. Navigate to view club list.<br>2. All existing club is displayed in list. |
 | **Alternate Scenario** | No club match the applied filter, club list is empty.              |
 
-![viewClubList](media/image4.jpeg)  
+![viewClubList](https://github.com/user-attachments/assets/33e7013b-ce2c-4576-91eb-b6ffc792e086)
 **Figure 3.1.14: View Club List Use Case Activity Diagram**  
 
 ---
@@ -564,7 +564,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**    | 1. Navigate to request create event page.<br>2. Select "New event".<br>3. Fill in event details.<br>4. Submit request. |
 | **Alternate Scenario** | Required field is missing or invalid input, show error and prompt correction. |
 
-![requestCreateEvent](media/image5.jpeg)  
+![requestCreateEvent](https://github.com/user-attachments/assets/915285a8-65d3-4c7f-8b12-5bbea1ed7830)
 **Figure 3.1.15: Request Create Event Use Case Activity Diagram**  
 
 ---
@@ -582,7 +582,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**    | 1. Navigate to the event management page.<br>2. Select the event.<br>3. Select update event info.<br>4. Fill in new event information.<br>5. Submit changes. |
 | **Alternate Scenario** | Required field is missing or invalid input, show error and prompt correction. |
 
-![updateEventInfo](media/image6.jpeg)  
+![updateEventInfo](https://github.com/user-attachments/assets/6cb80db5-6ecd-4d56-98a5-48923d5c4eb9)
 **Figure 3.1.16: Update Event Info Use Case Activity Diagram**  
 
 ---
@@ -600,7 +600,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**    | 1. Navigate to the event management page.<br>2. Select the event.<br>3. Select cancel event.<br>4. Fill in the reason of cancelling the event.<br>5. Confirm cancel. |
 | **Alternate Scenario** | If the event has committee, send notification to all committee.     |
 
-![cancelEvent](media/image7.jpeg)  
+![cancelEvent](https://github.com/user-attachments/assets/5009813e-5ebd-4ec8-8cb2-b30589eac5ec)
 **Figure 3.1.17: Cancel Event Use Case Activity Diagram**  
 
 ---
@@ -618,7 +618,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**    | 1. Select the club.<br>2. Navigate to club membership page.<br>3. Select renew membership.<br>4. Proceed with the payment of membership renewal.<br>5. System update membership status in the system. |
 | **Alternate Scenario** | Member did not complete the payment, system display error and notify member to try again with complete the payment. |
 
-![renewMembership](media/image8.jpeg)  
+![renewMembership](https://github.com/user-attachments/assets/ed273b6d-dd5f-4ede-9923-b4be5417b84a)
 **Figure 3.1.18: Renew Membership Use Case Activity Diagram**  
 
 ---
@@ -636,7 +636,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**    | 1. Select the club.<br>2. Navigate to announcement page.<br>3. All existing club announcement is displaying. |
 | **Alternate Scenario** | No announcement is made in the system, announcement page displaying "There is no announcement currently". |
 
-![viewAnnouncement](media/image9.jpeg)  
+![viewAnnouncement](https://github.com/user-attachments/assets/890e2a99-9ef3-48fb-9251-333b6c57c2f3)
 **Figure 3.1.19: View Announcement Use Case Activity Diagram**    
 
 ---
