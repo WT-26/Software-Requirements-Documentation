@@ -184,7 +184,7 @@ and well-managed campus community.
 #### 1.3.1 Product Perspective
 
 ![SRE_productPerspective (2)](https://github.com/user-attachments/assets/e77fbb3b-716c-425e-8cb2-0750ec0770e8)  
-**Figure 1: Student Club Management System**  
+***Figure 1: Student Club Management System***  
 
 As shown in Figure 1 above, the Student Club Management System (SCMS) is a centralized platform designed for three primary users: Student, Administrator, and university backend systems. The SCMS platform will be hosted on an internet-accessible web server. It works by collaborating with the university's existing financial management system server and campus space reservation database.
 
@@ -193,7 +193,7 @@ The hosted database acts as an intermediary for real-time data synchronization b
 SCMS bridges student organizations with institutional resources, enabling comprehensive club management including membership tracking, event planning, financial oversight, and facility reservations. It involves 7 actors such that Student, Member, Committee, Club President, Administrator, University's financial management system and Campus space reservation database. The use case diagram below illustrates all function and feature available in SCMS.
 
 ![useCase](https://github.com/user-attachments/assets/1866f359-99ca-4b66-88ad-e25b736f596a)  
-**Figure 2: Use Case Diagram of Student Management System**  
+***Figure 2: Use Case Diagram of Student Management System***  
 
 #### 1.3.2 Product Functions
 
@@ -493,7 +493,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | Required field is missing or invalid input, show error and prompt correction. |
 
 ![updateClubDetails](https://github.com/user-attachments/assets/31786f07-91b7-43b0-9be4-779cb5d3f244)  
-**Figure 3.1.11: Update Club Details Use Case Activity Diagram**  
+***Figure 3.1.11: Update Club Details Use Case Activity Diagram***  
 
 ---
 
@@ -511,7 +511,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | The club has active event ongoing, system displays event cancellation required to delete club. |
 
 ![deleteClub](https://github.com/user-attachments/assets/2210ccf4-7c6c-4be8-aa80-59202b349643)  
-**Figure 3.1.12: Delete Club Use Case Activity Diagram**  
+***Figure 3.1.12: Delete Club Use Case Activity Diagram***  
 
 ---
 
@@ -528,8 +528,8 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**    | 1. Navigate to view club list.<br>2. Search the club.<br>3. Select the club.<br>4. Click "Join club".<br>5. Fill in personal student information.<br>6. Proceed with payment of joining fee.<br>7. Submit application. |
 | **Alternate Scenario** | Student has duplicated application, system pop up notification window. |
 
-![joinClub](https://github.com/user-attachments/assets/529d4074-e116-4895-8c9e-d3342ab0d2ed)
-**Figure 3.1.13: Join Club Use Case Activity Diagram**  
+![joinClub](https://github.com/user-attachments/assets/529d4074-e116-4895-8c9e-d3342ab0d2ed)  
+***Figure 3.1.13: Join Club Use Case Activity Diagram***  
 
 ---
 
@@ -547,7 +547,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | No club match the applied filter, club list is empty.              |
 
 ![viewClubList](https://github.com/user-attachments/assets/33e7013b-ce2c-4576-91eb-b6ffc792e086)  
-**Figure 3.1.14: View Club List Use Case Activity Diagram**  
+***Figure 3.1.14: View Club List Use Case Activity Diagram***  
 
 ---
 
@@ -565,7 +565,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | Required field is missing or invalid input, show error and prompt correction. |
 
 ![requestCreateEvent](https://github.com/user-attachments/assets/915285a8-65d3-4c7f-8b12-5bbea1ed7830)  
-**Figure 3.1.15: Request Create Event Use Case Activity Diagram**  
+***Figure 3.1.15: Request Create Event Use Case Activity Diagram***  
 
 ---
 
@@ -583,7 +583,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | Required field is missing or invalid input, show error and prompt correction. |
 
 ![updateEventInfo](https://github.com/user-attachments/assets/6cb80db5-6ecd-4d56-98a5-48923d5c4eb9)  
-**Figure 3.1.16: Update Event Info Use Case Activity Diagram**  
+***Figure 3.1.16: Update Event Info Use Case Activity Diagram***  
 
 ---
 
@@ -601,7 +601,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | If the event has committee, send notification to all committee.     |
 
 ![cancelEvent](https://github.com/user-attachments/assets/5009813e-5ebd-4ec8-8cb2-b30589eac5ec)  
-**Figure 3.1.17: Cancel Event Use Case Activity Diagram**  
+***Figure 3.1.17: Cancel Event Use Case Activity Diagram***  
 
 ---
 
@@ -619,7 +619,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | Member did not complete the payment, system display error and notify member to try again with complete the payment. |
 
 ![renewMembership](https://github.com/user-attachments/assets/ed273b6d-dd5f-4ede-9923-b4be5417b84a)  
-**Figure 3.1.18: Renew Membership Use Case Activity Diagram**  
+***Figure 3.1.18: Renew Membership Use Case Activity Diagram***  
 
 ---
 
@@ -637,7 +637,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | No announcement is made in the system, announcement page displaying "There is no announcement currently". |
 
 ![viewAnnouncement](https://github.com/user-attachments/assets/890e2a99-9ef3-48fb-9251-333b6c57c2f3)  
-**Figure 3.1.19: View Announcement Use Case Activity Diagram**    
+***Figure 3.1.19: View Announcement Use Case Activity Diagram***    
 
 ---
 
