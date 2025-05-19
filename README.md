@@ -182,6 +182,21 @@ transparency, and optimizing event planning---fostering a more active
 and well-managed campus community.
 
 #### 1.3.1 Product Perspective
+
+![SRE_productPerspective](media/image1.jpeg)
+
+**Figure 1: Student Club Management System**
+
+As shown in Figure 1 above, the Student Club Management System (SCMS) is a centralized platform designed for three primary users: Student, Administrator, and university backend systems. The SCMS platform will be hosted on an internet-accessible web server. It works by collaborating with the university's existing financial management system server and campus space reservation database.
+
+The hosted database acts as an intermediary for real-time data synchronization between the web server and university's backend systems. By integrating with the university's financial management system, SCMS can rapidly retrieve oldest to latest budget data from system and summarizes a best view for administrator. On the other hand, campus space reservation database can store every venue reservation data for efficient tracking purposes.
+
+SCMS bridges student organizations with institutional resources, enabling comprehensive club management including membership tracking, event planning, financial oversight, and facility reservations. It involves 7 actors such that Student, Member, Committee, Club President, Administrator, University's financial management system and Campus space reservation database. The use case diagram below illustrates all function and feature available in SCMS.
+
+![useCase](media/image2.jpeg)
+
+**Figure 2: Use Case Diagram of Student Management System**
+
 #### 1.3.2 Product Functions
 
 The following table features an overview of the list of features in the system along with a brief description, categorized by accessible actors.
