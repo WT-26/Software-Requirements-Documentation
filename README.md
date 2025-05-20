@@ -165,11 +165,11 @@ systems.
     join in a club, they will be promoted into Member, which having more
     features such as RSVP for events, view club budgets, and participate
     in club event via club exclusive announcements. On the other hand,
-    student will be promoted into Club President once the new club
+    the student will be promoted into Club President once the new club
     creation request is approved. The Club President can manage members,
-    submit budget requests, book venues, and request to organize events
+    submit budget requests, book venue, and request to organize event
     via the exclusive features on their dashboard provided on SCMS.
-    Futhermore, Member can promoted into Committee once they applied in
+    Futhermore, Member can promoted into Committee once they applied to join committe team in
     the club event. They are given limited accesses to help Club
     Preseident further enhance the management of the club event. For
     instances, send club announcement, update event info, and manage
@@ -177,7 +177,7 @@ systems.
 
 Overall, the Student Club Management System empowers student
 organizations by automating administrative tasks, improving financial
-transparency, and optimizing event planning---fostering a more active
+transparency, and optimizing event planning. It helps to foster a more active
 and well-managed campus community.
 
 #### 1.3.1 Product Perspective
