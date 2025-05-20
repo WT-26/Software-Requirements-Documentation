@@ -39,37 +39,37 @@ Table of Contents
      * 3.1.6 [Update Profile](#316-update-profile)
      * 3.1.7 [Request Create Club](#317-request-create-club)
      * 3.1.8 [Club Approval](#318-club-approval)
-     * 3.1.9
-     * 3.1.10
+     * 3.1.9 [Request to Join Event Committee](#319-request-to-join-event-committee)
+     * 3.1.10 [Approve Join Committee Request](#3110-approve-join-committee-request)
      * 3.1.11 [Update Club Details](#3111-update-club-details)
-     * 3.1.12
-     * 3.1.13
-     * 3.1.14
-     * 3.1.15
-     * 3.1.16
-     * 3.1.17
-     * 3.1.18
-     * 3.1.19 [Approve Event Request](#3119-approve-event-request)
-     * 3.1.20 [Request Venue Booking](#3120-request-venue-booking)
-     * 3.1.21 [Approve Venue Request](#3121-approve-venue-request)
-     * 3.1.22 [View Event Calendar](#3122-view-event-calendar)
-     * 3.1.23 [Submit Budget Proposal](#3123-submit-budget-proposal)
-     * 3.1.24 [Approve Budget Proposal](#3124-approve-budget-proposal)
-     * 3.1.25 [View Club Budget](#3125-view-club-budget)
-     * 3.1.26 [Generate Financial Report](#3126-generate-financial-report)
-     * 3.1.27 [View Financial Report](#3127-view-financial-report)
-     * 3.1.28 [Send club Announcement](#3128-send-club-announcement)
-     * 3.1.29 [Notify User](#3129-notify-user)
-     * 3.1.30 [View All Club](#3130-view-all-user)
-     * 3.1.31 [Search Club](#3131-search-club)
-     * 3.1.32 [Filter Event](#3132-filter-event)
-     * 3.1.33 [Filter Budget Request](#3133-filter-budget-request)
-     * 3.1.34 [Log Activity](#3134-log-activity)
-     * 3.1.35 [View Audit Log](#3135-view-audit-log)
-     * 3.1.36 [Set Permission](#3136-set-permission)
-     * 3.1.37 [Generate Venue Status](#3137-generate-venue-status).
-     * 3.1.38 [View Venue Status](#3138-view-venue-status).
-     * 3.1.39
+     * 3.1.12 [Delete Club](#3112-delete-club)
+     * 3.1.13 [Join Club](#3113-join-club)
+     * 3.1.14 [View Club List](#3114-view-club-list)
+     * 3.1.15 [Request Create Event](#3115-request-create-event)
+     * 3.1.16 [Update Event Info](#3116-update-event-info)
+     * 3.1.17 [Cancel Event](#3117-cancel-event)
+     * 3.1.18 [Renew Membership](#3118-renew-membership)
+     * 3.1.19 [View Announcement](#3119-view-announcement)
+     * 3.1.20 [Approve Event Request](#3120-approve-event-request)
+     * 3.1.21 [Request Venue Booking](#3121-request-venue-booking)
+     * 3.1.22 [Approve Venue Request](#3122-approve-venue-request)
+     * 3.1.23 [View Event Calendar](#3123-view-event-calendar)
+     * 3.1.24 [Submit Budget Proposal](#3124-submit-budget-proposal)
+     * 3.1.25 [Approve Budget Proposal](#3125-approve-budget-proposal)
+     * 3.1.26 [View Club Budget](#3126-view-club-budget)
+     * 3.1.27 [Generate Financial Report](#3127-generate-financial-report)
+     * 3.1.28 [View Financial Report](#3128-view-financial-report)
+     * 3.1.29 [Send Club Announcement](#3129-send-club-announcement)
+     * 3.1.30 [Notify User](#3130-notify-user)
+     * 3.1.31 [View All Club](#3131-view-all-club)
+     * 3.1.32 [Search Club](#3132-search-club)
+     * 3.1.33 [Filter Event](#3133-filter-event)
+     * 3.1.34 [Filter Budget Request](#3134-filter-budget-request)
+     * 3.1.35 [Log Activity](#3135-log-activity)
+     * 3.1.36 [View Audit Log](#3136-view-audit-log)
+     * 3.1.37 [Set Permission](#3137-set-permission)
+     * 3.1.38 [Generate Venue Status](#3138-generate-venue-status)
+     * 3.1.39 [View Venue Status](#3139-view-venue-status)
   * 3.2 [Performance Requirements](#32-performance-requirements)
   * 3.3 [Usability Requirements](#33-usability-requirements)
     * 3.3.1 [Performance](#331-performance)
