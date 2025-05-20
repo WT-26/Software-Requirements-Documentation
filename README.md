@@ -97,7 +97,7 @@ Table of Contents
 |      |         |                     |           |
 
 ## 1. Introduction
-> This section should provide an overview of the entire document
+Student clubs improve campus life by encouraging students to be leaders, collaborate, and interact in the community. However, coordinating club activities, funds, and event logistics may be difficult and time-consuming, frequently necessitating manual processes and communication breakdowns. As institutions grow and student participation increases, there is a greater demand for a centralised digital solution to enable efficient club administration. The Student Club Management System with Budget and Venue Integration addresses this demand by delivering a modern platform adapted to the specific needs of student organisations.
 
 ### 1.1 Purpose
 The purpose of the "Student Club Management System with Budget and Venue Integration" is to provide a comprehensive digital solution that centralizes and simplifies the management of student clubs within the university. The goal of this system is to solve common problems that student organisations face, like inadequate communication, manual membership and financial tracking, and trouble organising event logistics and venue reservations. The software integrates with current university financial systems and space reservation tools, allowing clubs to manage their budgets, submit funding requests, and reserve spaces with minimal administrative friction. Along with offering a user-friendly interface for students to take part in club activities, attend events, and stay informed, it also promotes transparency in financial management and decision-making processes. Lastly, the system aims to promote a more active and organised student life environment, lessen administrative burdens for university staff and student leaders, and support the development and success of student-driven projects. 
@@ -297,15 +297,7 @@ The general characteristics of the intended groups of users are as follows:
 5. Mukthashree, B., Chinmayee K G, Manjuprasad, B., & Student. (n.d.). Campus Club Management System Application.
 
 ## 3. Requirements
-> This section specifies the software product's requirements. Specify all of the software requirements to a level of detail sufficient to enable designers to design a software system to satisfy those requirements, and to enable testers to test that the software system satisfies those requirements.
 
-> The specific requirements should:
-* Be uniquely identifiable.
-* State the subject of the requirement (e.g., system, software, etc.) and what shall be done.
-* Optionally state the conditions and constraints, if any.
-* Describe every input (stimulus) into the software system, every output (response) from the software system, and all functions performed by the software system in response to an input or in support of an output.
-* Be verifiable (e.g., the requirement realization can be proven to the customer's satisfaction)
-* Conform to agreed upon syntax, keywords, and terms.
 
 ### 3.1.1 Register User
 
