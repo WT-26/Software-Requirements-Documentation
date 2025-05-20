@@ -41,7 +41,7 @@ Table of Contents
      * 3.1.8 [Club Approval](#318-club-approval)
      * 3.1.9
      * 3.1.10
-     * 3.1.11
+     * 3.1.11 [Update Club Details](#3111-update-club-details)
      * 3.1.12
      * 3.1.13
      * 3.1.14
