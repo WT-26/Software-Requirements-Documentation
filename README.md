@@ -383,8 +383,26 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
+### 3.1.5 View Profile
 
-### 3.1.5 Profile Update
+| **Field**             |  **Details**                                                                                   |
+|---------------------|-----------------------------------------------------------------------------------------------|
+| **ID**              | UC-USER-05                                                                                          |
+| **Feature**         | User Profile View                                                                             |
+| **Purpose**         | Allow the user to view their profile information.                                             |
+| **Actors**          | User                                                                                          |
+| **Precondition**    | User is logged in and navigated to the profile section or dashboard.                           |
+| **Postcondition**   | User’s profile information is displayed on the screen.                                        |
+| **Main Flow**       | 1. User logs in and accesses the profile section.<br>2. System retrieves the user profile data from the database.<br>3. System displays the user profile information.<br>4. User views profile details. |
+| **Alternate Scenario** | 1. Profile data retrieval fails → System shows an error message.<br>2. User is not logged in → System redirects user to the login page. |
+
+![Image](https://github.com/user-attachments/assets/3d04d6eb-f971-449d-b2e9-b41174735b0a)<br>
+
+*Figure 3.1.5 View Profile *
+
+---
+
+### 3.1.6 Profile Update
 
 | **Field**           | **Details**                                                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -399,11 +417,11 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/90f72f9c-97f3-40fa-a981-01209ec1a3b1)<br>
 
-*Figure 3.1.5 Profile Update*
+*Figure 3.1.6 Profile Update*
 
 ---
 
-### 3.1.6 Request Create Club
+### 3.1.7 Request Create Club
 
 | **Field**            | **Details**                                                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -418,11 +436,11 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/fa94cc6c-20d4-48c8-9738-25ca276eae56)<br>
 
-*Figure 3.1.6 Request Create Club*
+*Figure 3.1.7 Request Create Club*
 
 ---
 
-### 3.1.7 Club Approval
+### 3.1.8 Club Approval
 
 | **Field**          | **Details**                                                                                            |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -437,11 +455,11 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/f06fad5f-9462-46cf-8e63-e5bf8722299c)<br>
 
-*Figure 3.1.7  Club Approval*
+*Figure 3.1.8  Club Approval*
 
 ---
 
-### 3.1.8 Request to Join Event Committee 
+### 3.1.9 Request to Join Event Committee 
 
 | **Field**            | **Details**                                                                                          |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -456,11 +474,11 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/4c34c86b-323e-4bf3-bda4-c02151f70a9b)<br>
 
-*Figure 3.1.8 Request to Join Event Committee *
+*Figure 3.1.9 Request to Join Event Committee *
 
 ---
 
-### 3.1.9 Approve Join Committee Request
+### 3.1.10 Approve Join Committee Request
 
 | **Field**              | **Details**                                                                                                     |
 |----------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -475,7 +493,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/bf4b92f7-6852-4765-be1d-d3eb801b6a63)<br>
 
-*Figure 3.1.9 Approve Join Committee Request*
+*Figure 3.1.10 Approve Join Committee Request*
 
 ---
 
