@@ -658,7 +658,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-#### 3.1.19 Approve Event Request
+#### 3.1.20 Approve Event Request
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -672,12 +672,12 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | If event details are incomplete, the admin may reject the request. |
 
 ![Screenshot 2025-05-18 172027](https://github.com/user-attachments/assets/3f570838-48c6-4ea9-a82b-bcecbee3cc07)<br>
-  *Figure 3.1.19 Approve Event Request* 
+  *Figure 3.1.20 Approve Event Request* 
 
 
 ---
 
-#### 3.1.20 Request Venue Booking
+#### 3.1.21 Request Venue Booking
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -691,11 +691,11 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | If the venue is already reserved, system notifies unavailability or suggests alternatives.        |
 
  ![Screenshot 2025-05-18 172324](https://github.com/user-attachments/assets/4bcea2d2-c0a3-40dc-83ba-60291f54891e)<br>
-*Figure 3.1.20 Request Venue Booking* 
+*Figure 3.1.21 Request Venue Booking* 
 
 ---
 
-#### 3.1.21 Approve Venue Request
+#### 3.1.22 Approve Venue Request
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -709,11 +709,11 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | 		If the schedule conflicts during final booking, system returns an error and status is set to rejected or marked for resubmission with a comment.              |
 
 <br>
-*Figure 3.1.21 Approve Venue Request* 
+*Figure 3.1.22 Approve Venue Request* 
 
 ---
 
-#### 3.1.22 View Event Calendar
+#### 3.1.23 View Event Calendar
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -727,12 +727,12 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | If no events are available, display "No events scheduled".               |
 
 ![Screenshot 2025-05-18 172655](https://github.com/user-attachments/assets/7c83d597-f5f7-4055-81e5-a714494c2819) <br>
-*Figure 3.1.22 View Event Calendar* 
+*Figure 3.1.23 View Event Calendar* 
 
 
 ---
 
-#### 3.1.23 Submit Budget Proposal
+#### 3.1.24 Submit Budget Proposal
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -746,12 +746,12 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | If required fields are missing, show error and prompt correction.         |
 
 ![Screenshot 2025-05-18 172835](https://github.com/user-attachments/assets/d0a1004d-f75f-423c-b81f-16edefc12e82) <br>
-*Figure 3.1.23 Submit Budget Proposal* 
+*Figure 3.1.24 Submit Budget Proposal* 
 
 
 ---
 
-#### 3.1.24 Approve Budget Proposal
+#### 3.1.25 Approve Budget Proposal
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -765,12 +765,12 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | If data is unclear, admin may request clarification from club.           |
 
 <br>
-*Figure 3.1.24 Approve Budget Proposal* 
+*Figure 3.1.25 Approve Budget Proposal* 
 
 
 ---
 
-#### 3.1.25 View Club Budget
+#### 3.1.26 View Club Budget
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -784,12 +784,12 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | If no data, show “No transactions available”.                            |
 
 ![Screenshot 2025-05-18 173647](https://github.com/user-attachments/assets/c99068af-9b75-45ea-8057-d9ce1764a43c)<br>
-*Figure 3.1.25 View Club Budget* 
+*Figure 3.1.26 View Club Budget* 
 
 
 ---
 
-#### 3.1.26 Generate Financial Report
+#### 3.1.27 Generate Financial Report
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -804,11 +804,11 @@ The general characteristics of the intended groups of users are as follows:
 
 
 ![generateFinancialReport](https://github.com/user-attachments/assets/6ae170be-7337-4a01-86d9-9f8ff0ff99e4) <br>
-*Figure 3.1.26 Generate Financial Report* 
+*Figure 3.1.27 Generate Financial Report* 
 
 ---
 
-#### 3.1.27 View Financial Report
+#### 3.1.28 View Financial Report
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -822,12 +822,12 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | 	If no report is available for the selected period, the system displays a "No reports found" message.|
 
 ![Screenshot 2025-05-18 173934](https://github.com/user-attachments/assets/0c2e965e-2f98-4682-8837-1562192e121a) <br>
-*Figure 3.1.27 View Financial Report* 
+*Figure 3.1.28 View Financial Report* 
 
 
 ---
 
-#### 3.1.28 Send Club Announcement
+#### 3.1.29 Send Club Announcement
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -841,12 +841,12 @@ The general characteristics of the intended groups of users are as follows:
 | **Alternate Scenario** | If no members exist, system warns “No recipients available”.              |
 
 ![image](https://github.com/user-attachments/assets/a399f191-b1a4-4d6c-8e13-873b4dee043a) <br>
-*Figure 3.1.28 Send Club Announcement* 
+*Figure 3.1.29 Send Club Announcement* 
 
 
 ---
 
-#### 3.1.29 Notify User
+#### 3.1.30 Notify User
 | **Field**          | **Description**                                                                                                                                       |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-COMM-02                                                                                                                                            |
@@ -862,7 +862,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-#### 3.1.30 View All Club
+#### 3.1.31 View All Club
 | **Field**          | **Description**                                                                                                                                             |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-CLUB-01                                                                                                                                                  |
@@ -876,7 +876,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-#### 3.1.31 Search Club
+#### 3.1.32 Search Club
 | **Field**          | **Description**                                                                                                                                                 |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-SEARCH-01                                                                                                                                                      |
@@ -890,7 +890,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-#### 3.1.32 Filter Event
+#### 3.1.33 Filter Event
 
 | **Field**          | **Description**                                                                                                                                                       |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -903,7 +903,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**      | 1. User selects filters: date, venue, or club<br>2. System calls `filter_events(date, venue, club)`<br>3. Events matching the criteria are retrieved<br>4. Results are displayed |
 | **Alternate Flow** | - A1: No events match criteria → Show message: “No events found”<br>- A2: Filtering input is invalid → Show validation error or fallback to default view              |
 
-#### 3.1.33 Filter Budget Request
+#### 3.1.34 Filter Budget Request
 | **Field**           | **Details**                                                                                                                                                   |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**              | UC-FIN-005                                                                                                                                                    |
@@ -915,7 +915,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**       | 1. Admin logs into the system. <br> 2. Navigates to the Budget Requests section. <br> 3. Selects "Filter by Price Range". <br> 4. Inputs or selects a range (e.g., $0–$500). <br> 5. System displays only the matching requests. |
 | **Alternate Scenario** | - **No Matching Requests**: System shows “No budget requests found within the selected range.” <br> - **Invalid Input**: User is prompted to enter a valid range. |
 
-#### 3.1.34 Log Activity
+#### 3.1.35 Log Activity
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
 | **ID**            | UC-AUDIT-01                                                                      |
@@ -927,7 +927,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**     | 1. User performs a key action in the system. <br> 2. System captures user ID and action. <br> 3. System records the activity in the audit log automatically. |
 | **Alternate Scenario** | If logging fails due to a system error, the system retries or reports the failure to the system admin. |
 
-#### 3.1.35 View Audit Log
+#### 3.1.36 View Audit Log
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
 | **ID**            | UC-AUDIT-02                                                                     |
@@ -939,7 +939,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**     | 1. Admin logs in to the system. <br> 2. Navigates to the audit log section. <br> 3. System retrieves and displays activity logs. |
 | **Alternate Scenario** | If no logs are available, a message is shown indicating “No audit logs found.” If access is unauthorized, an error message is displayed. |
 
-#### 3.1.36 Set Permission
+#### 3.1.37 Set Permission
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
 | **ID**            | UC-AUDIT-03                                                                        |
@@ -951,7 +951,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**     | 1. Admin logs in. <br> 2. Navigates to the role/permission settings. <br> 3. Selects a role. <br> 4. Assigns or updates permissions. <br> 5. System saves the changes. |
 | **Alternate Scenario** | If an invalid role is specified, an error message is shown. If no permissions are selected, the system prompts the admin to select at least one. |
 
-#### 3.1.37 Generate Venue Status Report
+#### 3.1.38 Generate Venue Status Report
 | **Field**           | **Details**                                                                                                                                                    |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**              | UC-VEN-004                                                                                                                                                     |
@@ -963,7 +963,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**       | 1. Admin logs in. <br> 2. Navigates to Venue Management. <br> 3. System sends a request to the Campus Space Reservation System. <br> 4. System receives and generates venue status overview. <br> 5. Admin reviews the venue statuses. |
 | **Alternate Scenario** | - **No Data**: If no venue data is returned, the system shows: "No venue information available." <br> - **System Failure**: If external API fails, an error message is displayed. |
 
-#### 3.1.38 View Venue Status
+#### 3.1.39 View Venue Status
 | **Field**           | **Details**                                                                                                                                                    |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**              | UC-VEN-005                                                                                                                                                     |
