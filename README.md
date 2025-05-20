@@ -136,13 +136,12 @@ II. **Budget Tracking & Financial Integration:** The platform also
 III. **Event Planning & Venue Booking:** The direct integration with the
      campus space reservation system provides instant venue availability
      checks and bookings. This provides efficient tracking on venue
-     users with logged requests and approvals on the platform database.
+     users with logged requests and approvals on the SCMS platform database.
 
 IV. **Unified Communication:** SCMS platform implemented with several
     networking features for strengthen students bonding. For examples,
-    announcement dashboards, email/SMS notifications, and discussion
-    forums for club members. These collaboration tools shall further
-    enhances the event planning and task delegation within the club.
+    announcement dashboards, club event committee team, and email or SMS notifications. These collaboration tools shall further
+    enhances the event planning and task delegation within the student club.
 
 #### Relationship to Existing Systems:
 
