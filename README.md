@@ -201,7 +201,7 @@ The hosted database acts as an intermediary for real-time data synchronization b
 
 SCMS bridges student organizations with institutional resources, enabling comprehensive club management including membership tracking, event planning, financial oversight, and facility reservations. It involves 7 actors such that Student, Member, Committee, Club President, Administrator, University's financial management system and Campus space reservation database. The use case diagram below illustrates all function and feature available in SCMS.
 
-![image](https://github.com/user-attachments/assets/77706e36-d63c-450d-9e4f-3ed47b5fc9b0)
+![image](https://github.com/user-attachments/assets/faca6104-1c76-4323-886c-868ac916ba69)
 ***Figure 2: Use Case Diagram of Student Management System***  
 
 #### 1.3.2 Product Functions
