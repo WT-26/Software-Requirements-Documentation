@@ -30,7 +30,7 @@ Table of Contents
   * 2.5 [Assumptions and Dependencies](#25-assumptions-and-dependencies)
   * 2.6 [Apportioning of Requirements](#26-apportioning-of-requirements)
 * 3 [Requirements](#3-requirements)
-  * 3.1 [Product Functions](#31-product-functions)
+  * 3.1 [Functions](#31-functions)
      * 3.1.1 [Register User](#311-register-user)
      * 3.1.2 [Login User](#312-login-user)
      * 3.1.3 [Log out User](#313-log-out-user)
@@ -297,9 +297,8 @@ The general characteristics of the intended groups of users are as follows:
 5. Mukthashree, B., Chinmayee K G, Manjuprasad, B., & Student. (n.d.). Campus Club Management System Application.
 
 ## 3. Requirements
-
-
-### 3.1.1 Register User
+### 3.1 Functions
+#### 3.1.1 Register User
 
  | **Field**             | **Details**                                                                                                                                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -316,9 +315,8 @@ The general characteristics of the intended groups of users are as follows:
 
 *Figure 3.1.01 User Registration with Role Selection* 
 
----
-
-### 3.1.2 Login User
+--- 
+#### 3.1.2 Login User
 
 | **Field**             | **Details**                                                                                                                                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -337,7 +335,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.3 Log out User
+#### 3.1.3 Log out User
 
 | **Field**             | **Details**                                                                                                                                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -356,7 +354,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.4 Password Recovery   
+#### 3.1.4 Password Recovery   
 | **Field**        |    **Details**                                                                                                                                                                                                                        |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**           | UC-USER-04                                                                                                                                                                                                                                                            |
@@ -375,7 +373,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.5 View Profile
+#### 3.1.5 View Profile
 
 | **Field**             |  **Details**                                                                                   |
 |---------------------|-----------------------------------------------------------------------------------------------|
@@ -394,7 +392,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.6 Profile Update
+#### 3.1.6 Profile Update
 
 | **Field**           | **Details**                                                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -413,7 +411,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.7 Request Create Club
+#### 3.1.7 Request Create Club
 
 | **Field**            | **Details**                                                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -432,7 +430,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.8 Club Approval
+#### 3.1.8 Club Approval
 
 | **Field**          | **Details**                                                                                            |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -451,7 +449,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.9 Request to Join Event Committee 
+#### 3.1.9 Request to Join Event Committee 
 
 | **Field**            | **Details**                                                                                          |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -470,7 +468,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.10 Approve Join Committee Request
+#### 3.1.10 Approve Join Committee Request
 
 | **Field**              | **Details**                                                                                                     |
 |----------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -489,7 +487,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.10. Update Club Details
+#### 3.1.10. Update Club Details
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
@@ -507,7 +505,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.11. Delete Club
+#### 3.1.11. Delete Club
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
@@ -525,7 +523,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.12. F-012 Join Club
+#### 3.1.12. F-012 Join Club
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
@@ -543,7 +541,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.13. View Club List
+#### 3.1.13. View Club List
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
@@ -561,7 +559,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.14. Request Create Event
+#### 3.1.14. Request Create Event
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
@@ -579,7 +577,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.15. Update Event Info
+#### 3.1.15. Update Event Info
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
@@ -597,7 +595,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.16. Cancel Event
+#### 3.1.16. Cancel Event
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
@@ -615,7 +613,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.17. Renew Membership
+#### 3.1.17. Renew Membership
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
@@ -633,7 +631,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.18. View Announcement
+#### 3.1.18. View Announcement
 
 | Field            | Details                                                                 |
 |------------------|-------------------------------------------------------------------------|
@@ -651,7 +649,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.19 Approve Event Request
+#### 3.1.19 Approve Event Request
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -670,7 +668,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.20 Request Venue Booking
+#### 3.1.20 Request Venue Booking
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -688,7 +686,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.21 Approve Venue Request
+#### 3.1.21 Approve Venue Request
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -706,7 +704,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.22 View Event Calendar
+#### 3.1.22 View Event Calendar
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -725,7 +723,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.23 Submit Budget Proposal
+#### 3.1.23 Submit Budget Proposal
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -744,7 +742,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.24 Approve Budget Proposal
+#### 3.1.24 Approve Budget Proposal
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -763,7 +761,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.25 View Club Budget
+#### 3.1.25 View Club Budget
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -782,7 +780,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.26 Generate Financial Report
+#### 3.1.26 Generate Financial Report
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -801,7 +799,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.27 View Financial Report
+#### 3.1.27 View Financial Report
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -820,7 +818,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.28 Send Club Announcement
+#### 3.1.28 Send Club Announcement
 
 | **Field**           | **Details**                                                                 |
 |---------------------|------------------------------------------------------------------------------|
@@ -839,7 +837,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.29 Notify User
+#### 3.1.29 Notify User
 | **Field**          | **Description**                                                                                                                                       |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-COMM-02                                                                                                                                            |
@@ -855,7 +853,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.30 View All Club
+#### 3.1.30 View All Club
 | **Field**          | **Description**                                                                                                                                             |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-CLUB-01                                                                                                                                                  |
@@ -869,7 +867,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.31 Search Club
+#### 3.1.31 Search Club
 | **Field**          | **Description**                                                                                                                                                 |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**             | UC-SEARCH-01                                                                                                                                                      |
@@ -883,7 +881,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-### 3.1.32 Filter Event
+#### 3.1.32 Filter Event
 
 | **Field**          | **Description**                                                                                                                                                       |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -896,7 +894,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**      | 1. User selects filters: date, venue, or club<br>2. System calls `filter_events(date, venue, club)`<br>3. Events matching the criteria are retrieved<br>4. Results are displayed |
 | **Alternate Flow** | - A1: No events match criteria → Show message: “No events found”<br>- A2: Filtering input is invalid → Show validation error or fallback to default view              |
 
-### 3.1.33 Filter Budget Request
+#### 3.1.33 Filter Budget Request
 | **Field**           | **Details**                                                                                                                                                   |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**              | UC-FIN-005                                                                                                                                                    |
@@ -908,7 +906,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**       | 1. Admin logs into the system. <br> 2. Navigates to the Budget Requests section. <br> 3. Selects "Filter by Price Range". <br> 4. Inputs or selects a range (e.g., $0–$500). <br> 5. System displays only the matching requests. |
 | **Alternate Scenario** | - **No Matching Requests**: System shows “No budget requests found within the selected range.” <br> - **Invalid Input**: User is prompted to enter a valid range. |
 
-### 3.1.34 Log Activity
+#### 3.1.34 Log Activity
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
 | **ID**            | UC-AUDIT-01                                                                      |
@@ -920,7 +918,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**     | 1. User performs a key action in the system. <br> 2. System captures user ID and action. <br> 3. System records the activity in the audit log automatically. |
 | **Alternate Scenario** | If logging fails due to a system error, the system retries or reports the failure to the system admin. |
 
-### 3.1.35 View Audit Log
+#### 3.1.35 View Audit Log
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
 | **ID**            | UC-AUDIT-02                                                                     |
@@ -932,7 +930,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**     | 1. Admin logs in to the system. <br> 2. Navigates to the audit log section. <br> 3. System retrieves and displays activity logs. |
 | **Alternate Scenario** | If no logs are available, a message is shown indicating “No audit logs found.” If access is unauthorized, an error message is displayed. |
 
-### 3.1.36 Set Permission
+#### 3.1.36 Set Permission
 | **Field**         | **Details**                                                                 |
 |-------------------|------------------------------------------------------------------------------|
 | **ID**            | UC-AUDIT-03                                                                        |
@@ -944,7 +942,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**     | 1. Admin logs in. <br> 2. Navigates to the role/permission settings. <br> 3. Selects a role. <br> 4. Assigns or updates permissions. <br> 5. System saves the changes. |
 | **Alternate Scenario** | If an invalid role is specified, an error message is shown. If no permissions are selected, the system prompts the admin to select at least one. |
 
-### 3.1.37 Generate Venue Status Report
+#### 3.1.37 Generate Venue Status Report
 | **Field**           | **Details**                                                                                                                                                    |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**              | UC-VEN-004                                                                                                                                                     |
@@ -956,7 +954,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**       | 1. Admin logs in. <br> 2. Navigates to Venue Management. <br> 3. System sends a request to the Campus Space Reservation System. <br> 4. System receives and generates venue status overview. <br> 5. Admin reviews the venue statuses. |
 | **Alternate Scenario** | - **No Data**: If no venue data is returned, the system shows: "No venue information available." <br> - **System Failure**: If external API fails, an error message is displayed. |
 
-### 3.1.38 View Venue Status
+#### 3.1.38 View Venue Status
 | **Field**           | **Details**                                                                                                                                                    |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**              | UC-VEN-005                                                                                                                                                     |
