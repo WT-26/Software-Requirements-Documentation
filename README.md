@@ -398,7 +398,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ![Image](https://github.com/user-attachments/assets/3d04d6eb-f971-449d-b2e9-b41174735b0a)<br>
 
-*Figure 3.1.5 View Profile *
+*Figure 3.1.5 View Profile*
 
 ---
 
