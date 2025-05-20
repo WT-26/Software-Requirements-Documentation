@@ -39,7 +39,16 @@ Table of Contents
      * 3.1.6 [Update Profile](#316-update-profile)
      * 3.1.7 [Request Create Club](#317-request-create-club)
      * 3.1.8 [Club Approval](#318-club-approval)
-     * 3.1.9 
+     * 3.1.9
+     * 3.1.10
+     * 3.1.11
+     * 3.1.12
+     * 3.1.13
+     * 3.1.14
+     * 3.1.15
+     * 3.1.16
+     * 3.1.17
+     * 3.1.18
      * 3.1.19 [Approve Event Request](#3119-approve-event-request)
      * 3.1.20 [Request Venue Booking](#3120-request-venue-booking)
      * 3.1.21 [Approve Venue Request](#3121-approve-venue-request)
@@ -60,6 +69,7 @@ Table of Contents
      * 3.1.36 [Set Permission](#3136-set-permission)
      * 3.1.37 [Generate Venue Status](#3137-generate-venue-status).
      * 3.1.38 [View Venue Status](#3138-view-venue-status).
+     * 3.1.39
   * 3.2 [Performance Requirements](#32-performance-requirements)
   * 3.3 [Usability Requirements](#33-usability-requirements)
     * 3.3.1 [Performance](#331-performance)
@@ -191,7 +201,7 @@ The hosted database acts as an intermediary for real-time data synchronization b
 
 SCMS bridges student organizations with institutional resources, enabling comprehensive club management including membership tracking, event planning, financial oversight, and facility reservations. It involves 7 actors such that Student, Member, Committee, Club President, Administrator, University's financial management system and Campus space reservation database. The use case diagram below illustrates all function and feature available in SCMS.
 
-![useCase](https://github.com/user-attachments/assets/1866f359-99ca-4b66-88ad-e25b736f596a)  
+![useCase](https://github.com/user-attachments/assets/0f549c87-f4e6-4261-9c8d-cb1a8568c2d5)  
 ***Figure 2: Use Case Diagram of Student Management System***  
 
 #### 1.3.2 Product Functions
