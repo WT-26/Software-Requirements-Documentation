@@ -199,7 +199,7 @@ As shown in Figure 1 above, the Student Club Management System (SCMS) is a centr
 
 The hosted database acts as an intermediary for real-time data synchronization between the web server and university's backend systems. By integrating with the university's financial management system, SCMS can rapidly retrieve oldest to latest budget data from system and summarizes a best view for administrator. On the other hand, campus space reservation database can store every venue reservation data for efficient tracking purposes.
 
-SCMS bridges student organizations with institutional resources, enabling comprehensive club management including membership tracking, event planning, financial oversight, and facility reservations. It involves 7 actors such that Student, Member, Committee, Club President, Administrator, University's financial management system and Campus space reservation database. The use case diagram below illustrates all function and feature available in SCMS.
+SCMS bridges student organizations with institutional resources, enabling comprehensive club management including membership tracking, event planning, financial oversight, and facility reservations. It involves 7 actors such that Student, Member, Committee, Club President, Administrator, university's financial management system and campus space reservation database. The use case diagram below illustrates all function and feature available in SCMS.
 
 ![image](https://github.com/user-attachments/assets/faca6104-1c76-4323-886c-868ac916ba69)
 ***Figure 2: Use Case Diagram of Student Management System***  
@@ -266,7 +266,7 @@ The general characteristics of the intended groups of users are as follows:
 
 2. Budget Constraints: The development is limited to open-source and free tools like Bootstrap/Tailwind CSS, Django, and PostgreSQL.  Funding is not available for enterprise services, premium plugins, or commercial APIs.  Options like premium alerting systems, powerful cloud services, or complex calendar integrations are thus not available.  This could restrict performance improvements, scalability, and some user conveniences.
 
-3. User Base Access: The application only supports authenticated users from the university domain. Students, club directors and administrators are all included in this. Even if they participate in club activities, guest users, alumni, and outside collaborators are unable to use the portal. This restricts collaborations and community outreach that could improve club involvement.
+3. User Base Access: The application only supports authenticated users from the university domain. Students, club president and administrators are all included in this. Even if they participate in club activities, guest users, and outside collaborators are unable to use the portal. This restricts collaborations and community outreach that could improve club involvement.
 
 4. Internet Dependency: Since the program is web-based and hosted on-campus or on a cloud server, users need to have a steady and reliable internet connection. As a result, tasks like creating an event, submitting a budget, or editing a profile cannot be completed without an offline connection. This might be problematic in isolated locations or when there are network failures.
 
@@ -276,7 +276,7 @@ The general characteristics of the intended groups of users are as follows:
 
 7. Resource Availability: The project is largely sustained and created by student, who may possess varying availability and technical abilities. This can cause delayed fixes of bugs, decreased testing coverage, and uneven development cycles. Feature requests or enhancements may be postponed due to school responsibilities.
 
-8. Hosting Environment: The deployment must take place on Linux-based servers from the institution or authorized cloud infrastructure.  This limits the use of some server technologies (like Windows hosting) and the potential for deployment automation.  Creating environments with restricted access or compliance requirements can also present administrative challenges for developers.
+8. Hosting Environment: The deployment must take place on Linux-based servers from the institution or authorized cloud infrastructure.  This limits the use of some server technologies like Windows hosting and the potential for deployment automation.  Creating environments with restricted access or compliance requirements can also present administrative challenges for developers.
 
 ### 1.4 Definitions
 | **Term**                  | **Definition**                                                                                                                                       |
@@ -311,7 +311,7 @@ The general characteristics of the intended groups of users are as follows:
 
  | **Field**             | **Details**                                                                                                                                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **ID**                | UC-USER-01                                                                                                                                                                                                  |
+| **ID**                | UC-01                                                                                                                                                                                                  |
 | **Feature**           | User Registration with Role Selection                                                                                                                                                                       |
 | **Purpose**           | To register a user and determine their role (Student or President), and ensure appropriate follow-up actions based on the selected role.                                                                    |
 | **Actors**            | User (Student/President), Admin, System                                                                                                                                                                     |
@@ -329,7 +329,7 @@ The general characteristics of the intended groups of users are as follows:
 
 | **Field**             | **Details**                                                                                                                                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **ID**                | UC-USER-02                                                                                                                                                                                                  |
+| **ID**                | UC-02                                                                                                                                                                                                  |
 | **Feature**           | Login User                                                                                                                                                                  |
 | **Purpose**           | To authenticate users and redirect them to the appropriate dashboard based on their role (Student, President, or Admin).                                                                                   |
 | **Actors**            | User (Student/President/Admin), System                                                                                                                                                                      |
@@ -859,7 +859,8 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**      | 1. System detects event requiring notification<br>2. Calls `notify_user(user_id, message, type)`<br>3. Validates user ID<br>4. Logs message<br>5. Sends via configured channel (dashboard/email/push) |
 | **Alternate Flow** | - A1: Invalid user ID → Log error, skip notification<br>- A2: Notification service down → Retry or store as unsent<br>- A3: Invalid type → Use default type (e.g., "info") |
 
-![My Image](Function_28.png)
+![My Image]![Function29](https://github.com/user-attachments/assets/1f276480-4f2c-4300-98ea-81a9f27cd77e)
+
 
 ---
 
@@ -888,6 +889,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Postcondition**  | - A filtered list of clubs matching the keyword is shown<br>- User can view details or take further action like join club               |
 | **Main Flow**      | 1. User enters a keyword into the search bar<br>2. System calls `search_clubs(keyword)`<br>3. Matches club name, category, and tags<br>4. Displays results list |
 | **Alternate Flow** | - A1: No matches found → Show message: “No clubs found for that keyword”<br>- A2: Search service down → Show error and log issue                                |
+![SRS function1-Search Club drawio](https://github.com/user-attachments/assets/f4d33569-1ca9-49ff-baf8-50752a7507f1)
 
 ---
 
@@ -904,6 +906,9 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**      | 1. User selects filters: date, venue, or club<br>2. System calls `filter_events(date, venue, club)`<br>3. Events matching the criteria are retrieved<br>4. Results are displayed |
 | **Alternate Flow** | - A1: No events match criteria → Show message: “No events found”<br>- A2: Filtering input is invalid → Show validation error or fallback to default view              |
 
+![SRS function1-Filter Events drawio](https://github.com/user-attachments/assets/35a55202-89c0-40b5-9d36-4f8dedfa2033)
+
+
 #### 3.1.34 Filter Budget Request
 | **Field**           | **Details**                                                                                                                                                   |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -914,7 +919,10 @@ The general characteristics of the intended groups of users are as follows:
 | **Precondition**    | The user must be logged in as an Admin and budget requests must exist in the system.                                                                    |
 | **Postcondition**   | Budget requests are displayed according to the selected price range, improving readability and enabling focused review.                                       |
 | **Main Flow**       | 1. Admin logs into the system. <br> 2. Navigates to the Budget Requests section. <br> 3. Selects "Filter by Price Range". <br> 4. Inputs or selects a range (e.g., $0–$500). <br> 5. System displays only the matching requests. |
-| **Alternate Scenario** | - **No Matching Requests**: System shows “No budget requests found within the selected range.” <br> - **Invalid Input**: User is prompted to enter a valid range. |
+| **Alternate Scenario** | - **No Matching Requests**: System shows “No budget requests found within the selected range.” <br> |
+
+![SRS function1-Filter Budget Request drawio](https://github.com/user-attachments/assets/0d86df1b-4d26-487c-b71f-ef7913245002)
+
 
 #### 3.1.35 Log Activity
 | **Field**         | **Details**                                                                 |
@@ -927,6 +935,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Postcondition** | A log entry is stored in the audit trail with the user ID, action details, and timestamp. |
 | **Main Flow**     | 1. User performs a key action in the system. <br> 2. System captures user ID and action. <br> 3. System records the activity in the audit log automatically. |
 | **Alternate Scenario** | If logging fails due to a system error, the system retries or reports the failure to the system admin. |
+
 
 #### 3.1.36 View Audit Log
 | **Field**         | **Details**                                                                 |
