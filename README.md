@@ -564,11 +564,11 @@ The general characteristics of the intended groups of users are as follows:
 | **Purpose**      | Allow the student to view existing club in the system.                 |
 | **Actor(s)**     | Student                                                                |
 | **Precondition** | Student is logged in the system.                                       |
-| **Postcondition**| Existing club showing in list is displayed.                            |
-| **Main Flow**    | 1. Navigate to view club list.<br>2. All existing club is displayed in list. |
+| **Postcondition**| All existing club matched with applied filter is displayed in the list. |
+| **Main Flow**    | 1. Navigate to view club list.<br>2. Click “Search” button.<br>3. All existing club matched with applied filter is displayed in the list. |
 | **Alternate Scenario** | No club match the applied filter, club list is empty.              |
 
-![viewClubList](https://github.com/user-attachments/assets/33e7013b-ce2c-4576-91eb-b6ffc792e086)  
+![viewClubList](https://github.com/user-attachments/assets/f9dec49d-5f24-4315-929a-2cbdd321f364)  
 ***Figure 3.1.14: View Club List Use Case Activity Diagram***  
 
 ---
