@@ -658,7 +658,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**    | 1. Select the club.<br>2. Navigate to announcement page.<br>3. All existing club announcement is displaying. |
 | **Alternate Scenario** | No announcement is made in the system, announcement page displaying "There is no announcement currently". |
 
-![viewAnnouncement](https://github.com/user-attachments/assets/890e2a99-9ef3-48fb-9251-333b6c57c2f3)  
+![viewAnnouncement](https://github.com/user-attachments/assets/73952c29-4d84-42d9-921d-db0dbd964c50)  
 ***Figure 3.1.19: View Announcement Use Case Activity Diagram***    
 
 ---
