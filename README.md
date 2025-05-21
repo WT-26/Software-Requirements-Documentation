@@ -318,7 +318,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Precondition**      | - User accesses the registration page.                                                                                                                                                                      |
 | **Postcondition**     | - User is registered as Student. <br> - Confirmation or notification is sent accordingly.                                                                                                      |
 | **Main Flow**         | 1. User accesses the registration page. <br> 2. User fills in details and selects role. <br> 3. If Student is selected: system registers user as Student and sends confirmation. <br> |
-| **Alternate Scenario**| - If user submits incomplete form, system prompts for correction. <br> - If confirmation or notification fails, user is registered but unaware until manually informed. |
+| **Alternate Scenario**| 1. If user submits incomplete form, system prompts for correction. <br> 2. If confirmation or notification fails, user is registered but unaware until manually informed. |
 
 ![Image](https://github.com/user-attachments/assets/af603794-2f33-4ac1-8d7c-22cd1a91f919)<br>
 
@@ -332,11 +332,11 @@ The general characteristics of the intended groups of users are as follows:
 | **ID**                | UC-02                                                                                                                                                                                                  |
 | **Feature**           | Login User                                                                                                                                                                  |
 | **Purpose**           | To authenticate users and redirect them to the appropriate dashboard based on their role (Student, President, or Admin).                                                                                   |
-| **Actors**            | User, System                                                                                                                                                                      |
+| **Actors**            | User, System                                                                                                                                                                     |
 | **Precondition**      | - User accesses the login page.                                                                                                                                                                             |
 | **Postcondition**     | - If login is successful and user role is valid, user is redirected to the correct dashboard. <br> - If invalid, user sees error or is logged out.                                                         |
 | **Main Flow**         | 1. User enters username and password. <br> 2. User submits credentials. <br> 3. System checks if credentials are valid. <br> 4. If valid: system retrieves user role. <br> 5. System checks if user role is student, president, or admin. <br> 6. If valid role, system redirects to respective dashboard. |
-| **Alternate Scenario**| - If credentials are invalid, show "Invalid Credentials" error message and prompt to try again. <br> - If user role is misconfigured or invalid, show "Invalid user role configuration" and log out user. |
+| **Alternate Scenario**| 1. If credentials are invalid, show "Invalid Credentials" error message and prompt to try again. <br> 2. If user role is misconfigured or invalid, show "Invalid user role configuration" and log out user. |
 
 ![Image](https://github.com/user-attachments/assets/af42b90b-dfee-413a-84b5-63490e043cd9) <br>
 
@@ -355,7 +355,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Precondition**      | - User is logged in.                                                                                                                                                                                         |
 | **Postcondition**     | - User session is invalidated. <br> - Session data is cleared. <br> - User is redirected to the login page.                                                                                                 |
 | **Main Flow**         | 1. User clicks "Logout" button. <br> 2. System triggers `logout_user()` function. <br> 3. System invalidates the user session. <br> 4. System clears session data. <br> 5. System redirects the user to the login page. |
-| **Alternate Scenario**| - If logout fails, show "Logout failed" error message and prompt the user to try again.                                                                                                                      |
+| **Alternate Scenario**| If logout fails, show "Logout failed" error message and prompt the user to try again.                                                                                                                      |
 
 ![Image](https://github.com/user-attachments/assets/2c51854b-46dc-4bd4-a65d-1ffabffaa777)<br>
 
@@ -373,7 +373,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Precondition** | User has a registered account and initiates a password reset request via the "Forgot Password?" link                                                                                                                                                          |
 | **Postcondition**| User either receives a reset link email and successfully resets the password, or is shown an appropriate error message                                                                                                                                         |
 | **Main Flow**    | 1. User clicks "Forgot Password?"<br>2. System prompts for registered email<br>3. User submits email<br>4. System verifies if email is registered<br>5. If valid, system generates reset token and sends email<br>6. User clicks reset link from email<br>7. System validates token<br>8. If valid, system prompts for new password<br>9. User submits new password<br>10. System validates and updates password<br>11. User is redirected to login with success message |
-| **Alternate Scenario** | 1. Email not found → System shows error message<br>2. Email service fails → System shows retry notice<br>3. Invalid or expired token → System shows error<br>4. Password doesn't meet criteria → System shows error and prompts re-entry<br>5. Database update failure → System shows internal error |
+| **Alternate Scenario** | 1. If email nout found, system shows error message<br>2. If email service fails, system shows retry notice<br>3. The token is expired or invalid, system shows error<br>4. The password doesn't meet criteria, system shows error and prompts re-entry<br>5. Database update failure, system shows internal error |
 
 
 ![Image](https://github.com/user-attachments/assets/6f554304-19e8-4cc3-9f49-0ce2c5724015) <br>
@@ -393,7 +393,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Precondition**    | User is logged in and navigated to the profile section or dashboard.                           |
 | **Postcondition**   | User’s profile information is displayed on the screen.                                        |
 | **Main Flow**       | 1. User logs in and accesses the profile section.<br>2. System retrieves the user profile data from the database.<br>3. System displays the user profile information.<br>4. User views profile details. |
-| **Alternate Scenario** | 1. Profile data retrieval fails → System shows an error message.<br>2. User is not logged in → System redirects user to the login page. |
+| **Alternate Scenario** | Profile data retrieval fails, system shows an error message. |
 
 ![Image](https://github.com/user-attachments/assets/3d04d6eb-f971-449d-b2e9-b41174735b0a)<br>
 
@@ -412,7 +412,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Precondition**     | User is logged in and on the profile page.                                                             |
 | **Postcondition**    | User’s profile information is updated in the database, or an error message is shown if invalid data.  |
 | **Main Flow**        | 1. User accesses the profile page.<br>2. User clicks "Edit Profile".<br>3. User modifies profile details.<br>4. User submits the updated data.<br>5. System validates the data.<br>6. If data is valid, it is updated in the database.<br>7. System shows a success message and redirects to the profile view page. |
-| **Alternate Scenario** | 1. Invalid data entered → System prompts user to correct data.<br>2. Data is valid but update fails → System shows an error message. |
+| **Alternate Scenario** | Invalid data entered, system prompts user to correct data.|
 
 ![Image](https://github.com/user-attachments/assets/90f72f9c-97f3-40fa-a981-01209ec1a3b1)<br>
 
@@ -431,7 +431,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Precondition**     | Student is logged in and navigates to the "Request Create Club" page.                                  |
 | **Postcondition**    | Club creation request is saved in the database, and the student is notified of the request status.     |
 | **Main Flow**        | 1. Student accesses the "Request Create Club" page.<br>2. Student fills in club name, description, and proposed leader.<br>3. Student submits the club creation request.<br>4. System validates the submitted data.<br>5. If data is valid, it is saved in the database and updated to "Pending Admin Approval".<br>6. System notifies the admin to review the request.<br>7. Student is shown a success message. |
-| **Alternate Scenario** | 1. Invalid data entered → System prompts student to correct and resubmit.<br>2. Data is valid, but saving fails → System shows an error message.<br>3. Club request is successfully submitted, but the system does not notify admin → System shows a notification error message. |
+| **Alternate Scenario** | 1. Invalid data entered, system prompts student to correct and resubmit.<br>2. Data is valid, but saving fails → System shows an error message.<br>3. Club request is successfully submitted, but the system does not notify admin → System shows a notification error message. |
 
 ![Image](https://github.com/user-attachments/assets/fa94cc6c-20d4-48c8-9738-25ca276eae56)<br>
 
