@@ -363,7 +363,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-#### 3.1.4 Password Recovery   
+#### 3.1.4 Reset Password
 | **Field**        |    **Details**                                                                                                                                                                                                                        |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ID**           | UC-04                                                                                                                                                                                                                                                            |
@@ -373,7 +373,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Precondition** | User has a registered account and initiates a password reset request via the "Forgot Password?" link                                                                                                                                                          |
 | **Postcondition**| User either receives a reset link email and successfully resets the password, or is shown an appropriate error message                                                                                                                                         |
 | **Main Flow**    | 1. User clicks "Forgot Password?"<br>2. System prompts for registered email<br>3. User submits email<br>4. System verifies if email is registered<br>5. If valid, system generates reset token and sends email<br>6. User clicks reset link from email<br>7. System validates token<br>8. If valid, system prompts for new password<br>9. User submits new password<br>10. System validates and updates password<br>11. User is redirected to login with success message |
-| **Alternate Scenario** | 1. If email nout found, system shows error message<br>2. If email service fails, system shows retry notice<br>3. The token is expired or invalid, system shows error<br>4. The password doesn't meet criteria, system shows error and prompts re-entry<br>5. Database update failure, system shows internal error |
+| **Alternate Scenario** | 1. If email nout found, system shows error message<br>2. If email service fails, system shows retry notice<br>3. The token is expired or invalid, system shows error<br>4. The password doesn't meet criteria, system shows error and prompts re-entry |
 
 
 ![Image](https://github.com/user-attachments/assets/6f554304-19e8-4cc3-9f49-0ce2c5724015) <br>
@@ -401,7 +401,7 @@ The general characteristics of the intended groups of users are as follows:
 
 ---
 
-#### 3.1.6 Profile Update
+#### 3.1.6 Update Profile
 
 | **Field**           | **Details**                                                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------|
@@ -431,7 +431,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Precondition**     | Student is logged in and navigates to the "Request Create Club" page.                                  |
 | **Postcondition**    | Club creation request is saved in the database, and the student is notified of the request status.     |
 | **Main Flow**        | 1. Student accesses the "Request Create Club" page.<br>2. Student fills in club name, description, and proposed leader.<br>3. Student submits the club creation request.<br>4. System validates the submitted data.<br>5. If data is valid, it is saved in the database and updated to "Pending Admin Approval".<br>6. System notifies the admin to review the request.<br>7. Student is shown a success message. |
-| **Alternate Scenario** | 1. Invalid data entered, system prompts student to correct and resubmit.<br>2. Data is valid, but saving fails → System shows an error message.<br>3. Club request is successfully submitted, but the system does not notify admin → System shows a notification error message. |
+| **Alternate Scenario** | Invalid data entered, system prompts student to correct and resubmit. |
 
 ![Image](https://github.com/user-attachments/assets/fa94cc6c-20d4-48c8-9738-25ca276eae56)<br>
 
@@ -450,7 +450,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Precondition**     | Admin is logged in and accesses the "Pending Club Requests" page.                                      |
 | **Postcondition**    | Club request is either approved or rejected, and the system notifies the user (president) accordingly. |
 | **Main Flow**        | 1. Admin accesses the "Pending Club Requests" page.<br>2. System displays a list of submitted club requests.<br>3. Admin selects a club request to review.<br>4. Admin reviews the club name, description, and proposed leader.<br>5. Admin validates the data of the club request.<br>6. Admin approves or rejects the club request.<br>7. If approved, the system creates the club in the database.<br>8. If approved, the leader is assigned as the club president.<br>9. System notifies the president of approval.<br>10. If rejected, system notifies the student of rejection. |
-| **Alternate Scenario** | 1. If data is invalid, admin rejects the club request, and the system notifies the student of rejection.<br>2. If the request fails to save, an error message is shown to the admin.<br>3. If the admin encounters any issues in validating the data, they can choose to re-review the request. |
+| **Alternate Scenario** | 1. If data is invalid, admin rejects the club request, and the system notifies the student of rejection. |
 
 ![Image](https://github.com/user-attachments/assets/f06fad5f-9462-46cf-8e63-e5bf8722299c)<br>
 
@@ -469,7 +469,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Precondition**     | The club member is logged in and is a valid member of the club hosting the event.                     |
 | **Postcondition**    | The request to join the committee is submitted and awaits approval by the event organizer or system.  |
 | **Main Flow**        | 1. Club member navigates to the event page.<br>2. Members click the "Join Committee" button.<br>3. System displays a confirmation dialog.<br>4. Member confirms the request.<br>5. System records the request and notifies the event organizer.<br>6. Request status is set to "Pending". |
-| **Alternate Scenario** | 1. If the member is not eligible (e.g. already part of the committee), the system blocks the request and shows an error.<br>2. If the system fails to save the request, an error message is shown.<br>3. Member cancels the request at the confirmation dialog. |
+| **Alternate Scenario** | 1. If the member is not eligible (e.g. already part of the committee), the system blocks the request and shows an error.<br>2. Member cancels the request at the confirmation dialog. |
 
 ![Image](https://github.com/user-attachments/assets/4c34c86b-323e-4bf3-bda4-c02151f70a9b)<br>
 
@@ -524,7 +524,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Actor(s)**     | Admin                                                                  |
 | **Precondition** | 1. Club exists.<br>2. Admin is authenticated.<br>3. Admin is logged in. |
 | **Postcondition**| The club is deleted from the system.                                   |
-| **Main Flow**    | 1. Selects the club.<br>2. Navigate to club info page.<br>3. Press delete club.<br>4. Confirm to delete club. |
+| **Main Flow**    | 1. Selects the club.<br>2. Navigate to club info page.<br>3. Press delete club.<br>4. Confirm to delete club.<br>5. System display success message |
 | **Alternate Scenario** | The club has active event ongoing, system displays event cancellation required to delete club. |
 
 ![deleteClub](https://github.com/user-attachments/assets/2210ccf4-7c6c-4be8-aa80-59202b349643)  
@@ -542,7 +542,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Actor(s)**     | Student                                                                |
 | **Precondition** | 1. Club exists.<br>2. The student is logged into the system.<br>3. The student never joined the club. |
 | **Postcondition**| The student join club successfully and promoted into club member.       |
-| **Main Flow**    | 1. Navigate to view club list.<br>2. Search the club.<br>3. Select the club.<br>4. Click "Join club".<br>5. Fill in personal student information.<br>6. Proceed with payment of joining fee.<br>7. Submit application. |
+| **Main Flow**    | 1. Navigate to view club list.<br>2. Search the club.<br>3. Select the club.<br>4. Click "Join club".<br>5. Fill in personal student information.<br>6. Proceed with payment of joining fee.<br>7. Submit application.<br>8. System display success message. |
 | **Alternate Scenario** | Student has duplicated application, system pop up notification window. |
 
 ![joinClub](https://github.com/user-attachments/assets/529d4074-e116-4895-8c9e-d3342ab0d2ed)  
