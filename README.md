@@ -314,13 +314,13 @@ The general characteristics of the intended groups of users are as follows:
 | **ID**                | UC-01                                                                                                                                                                                                  |
 | **Feature**           | User Registration with Role Selection                                                                                                                                                                       |
 | **Purpose**           | To register a user and determine their role (Student or President), and ensure appropriate follow-up actions based on the selected role.                                                                    |
-| **Actors**            | User (Student/President), Admin, System                                                                                                                                                                     |
+| **Actors**            | User, System                                                                                                                                                                     |
 | **Precondition**      | - User accesses the registration page.                                                                                                                                                                      |
 | **Postcondition**     | - User is registered as Student. <br> - Confirmation or notification is sent accordingly.                                                                                                      |
 | **Main Flow**         | 1. User accesses the registration page. <br> 2. User fills in details and selects role. <br> 3. If Student is selected: system registers user as Student and sends confirmation. <br> |
 | **Alternate Scenario**| - If user submits incomplete form, system prompts for correction. <br> - If confirmation or notification fails, user is registered but unaware until manually informed. |
 
-![Image](https://github.com/user-attachments/assets/daf29375-7313-4163-a6cd-63f0da989885)<br>
+![Image](https://github.com/user-attachments/assets/af603794-2f33-4ac1-8d7c-22cd1a91f919)<br>
 
 *Figure 3.1.01 User Registration with Role Selection* 
 
@@ -348,7 +348,7 @@ The general characteristics of the intended groups of users are as follows:
 
 | **Field**             | **Details**                                                                                                                                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **ID**                | UC-USER-03                                                                                                                                                                                                  |
+| **ID**                | UC-03                                                                                                                                                                                                  |
 | **Feature**           | User Logout                                                                                                                                                                                                 |
 | **Purpose**           | To log the user out of the system, invalidate the session, clear session data, and redirect them to the login page.                                                                                           |
 | **Actors**            | User, System                                                                                                                                                                                                |
@@ -357,7 +357,7 @@ The general characteristics of the intended groups of users are as follows:
 | **Main Flow**         | 1. User clicks "Logout" button. <br> 2. System triggers `logout_user()` function. <br> 3. System invalidates the user session. <br> 4. System clears session data. <br> 5. System redirects the user to the login page. |
 | **Alternate Scenario**| - If logout fails, show "Logout failed" error message and prompt the user to try again.                                                                                                                      |
 
-![Image](https://github.com/user-attachments/assets/67e11e9b-192c-49e8-aea7-c6bdf9c099c7) <br>
+![Image](https://github.com/user-attachments/assets/2c51854b-46dc-4bd4-a65d-1ffabffaa777)<br>
 
 *Figure 3.1.3 User Logout Process* 
 
@@ -366,7 +366,7 @@ The general characteristics of the intended groups of users are as follows:
 #### 3.1.4 Password Recovery   
 | **Field**        |    **Details**                                                                                                                                                                                                                        |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **ID**           | UC-USER-04                                                                                                                                                                                                                                                            |
+| **ID**           | UC-04                                                                                                                                                                                                                                                            |
 | **Feature**      | Password Recovery                                                                                                                                                                                                                                              |
 | **Purpose**      | To allow users to recover access to their account by securely resetting a forgotten password via a reset link sent to their registered email                                                                                                                  |
 | **Actors**       | User                                                                                                                                                                                                                                                           |
@@ -386,7 +386,7 @@ The general characteristics of the intended groups of users are as follows:
 
 | **Field**             |  **Details**                                                                                   |
 |---------------------|-----------------------------------------------------------------------------------------------|
-| **ID**              | UC-USER-05                                                                                          |
+| **ID**              | UC-05                                                                                          |
 | **Feature**         | User Profile View                                                                             |
 | **Purpose**         | Allow the user to view their profile information.                                             |
 | **Actors**          | User                                                                                          |
@@ -405,7 +405,7 @@ The general characteristics of the intended groups of users are as follows:
 
 | **Field**           | **Details**                                                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------|
-| **ID**               | UC-USER-06                                                                                                   |
+| **ID**               | UC-06                                                                                                   |
 | **Feature**          | User Profile Update                                                                                  |
 | **Purpose**          | Allow the user to access and update their profile information.                                        |
 | **Actors**           | User                                                                                                  |
@@ -424,7 +424,7 @@ The general characteristics of the intended groups of users are as follows:
 
 | **Field**            | **Details**                                                                                           |
 |----------------------|-------------------------------------------------------------------------------------------------------|
-| **ID**               | UC-USER-07                                                                                                  |
+| **ID**               | UC-07                                                                                                  |
 | **Feature**          | Request Create Club                                                                                  |
 | **Purpose**          | Allow students to request the creation of a new club.                                                  |
 | **Actors**           | Student, System, Admin                                                                                 |
@@ -443,7 +443,7 @@ The general characteristics of the intended groups of users are as follows:
 
 | **Field**          | **Details**                                                                                            |
 |----------------------|-------------------------------------------------------------------------------------------------------|
-| **ID**               | UC-Admin-01                                                                                                  |
+| **ID**               | UC-08                                                                                                  |
 | **Feature**          | Club Approval by Admin                                                                                 |
 | **Purpose**          | Allow the admin to review and approve or reject club creation requests submitted by the president.     |
 | **Actors**           | Admin, President, System                                                                         |
@@ -462,7 +462,7 @@ The general characteristics of the intended groups of users are as follows:
 
 | **Field**            | **Details**                                                                                          |
 |----------------------|-------------------------------------------------------------------------------------------------------|
-| **ID**               | UC-Member-01                                                                                                 |
+| **ID**               | UC-09                                                                                                 |
 | **Feature**          | Request to Join Event Committee                                                                       |
 | **Purpose**          | Allow a club member to request participation in an event's organizing committee.                      |
 | **Actors**           | Club Member, System, Event Organizer                                                                  |
@@ -481,7 +481,7 @@ The general characteristics of the intended groups of users are as follows:
 
 | **Field**              | **Details**                                                                                                     |
 |----------------------|-----------------------------------------------------------------------------------------------------------------|
-| **ID**               | UC05                                                                                                            |
+| **ID**               | UC-10                                                                                                           |
 | **Feature**          | Approve Join Committee Request                                                                                  |
 | **Purpose**          | Allow the president to approve a club member’s request to join an event’s organizing committee.                |
 | **Actors**           | President, System                                                                                               |
