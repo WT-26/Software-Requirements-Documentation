@@ -202,9 +202,14 @@ The hosted database acts as an intermediary for real-time data synchronization b
 ![contextDiagram (1)](https://github.com/user-attachments/assets/94b708c7-dbed-4333-a358-e286a7f1f84b)  
 ***Figure 2: Context Diagram of Student Club Management System***  
 
-As shown in Figure 2 above, it is a context diagram illustrating the interactions between the Student Club Management System (SCMS) and its key external entities: Student, Administrator, the University's financial management system, and the Campus space reservation database. Student can submit any available activity requests and receive corresponding response. Administrator act as a system overviewer by approving student’s activity requests, with the student club info provided by SCMS. On the other hand, SCMS exchanges data with the university's financial system for budget tracking and with the  campus space reservation database for venue availability checks.
+As shown in Figure 2 above, the context diagram illustrates the interactions between the Student Club Management System (SCMS) and its key external entities: Student, Administrator, the University's Financial Management System, and the Campus Space Reservation Database.
 
-SCMS bridges student organizations with institutional resources, enabling comprehensive club management including membership tracking, event planning, financial oversight, and facility reservations. It involves 7 actors such that Student, Member, Committee, Club President, Administrator, university's financial management system and campus space reservation database. The use case diagram below illustrates all function and feature available in SCMS.
+Students can submit various activity requests (such as club creation, event proposals, venue bookings, and budget submissions) and receive corresponding responses. Administrators act as system overseers by reviewing and approving these requests, supported by the student club information provided through SCMS.
+
+Additionally, SCMS integrates with the University’s Financial Management System to handle budget tracking, expense reporting, and approval workflows. It also connects to the Campus Space Reservation Database to check venue availability and manage event space bookings in real time.
+
+
+SCMS serves as a bridge between student organizations and institutional resources, enabling comprehensive management of student clubs. Its core functionalities include membership tracking, event planning, financial oversight, and facility reservation management. The system involves seven primary actors: Student, Member, Committee Member, Club President, Administrator, the University’s Financial Management System, and the Campus Space Reservation Database. The use case diagram below illustrates all function and feature available in SCMS.
 
 ![image](https://github.com/user-attachments/assets/faca6104-1c76-4323-886c-868ac916ba69)
 ***Figure 3: Use Case Diagram of Student Management System***  
