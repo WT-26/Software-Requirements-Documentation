@@ -289,24 +289,39 @@ The general characteristics of the intended groups of users are as follows:
 8. Hosting Environment: The deployment must take place on Linux-based servers from the institution or authorized cloud infrastructure.  This limits the use of some server technologies like Windows hosting and the potential for deployment automation.  Creating environments with restricted access or compliance requirements can also present administrative challenges for developers.
 
 ### 1.4 Definitions
-| **Term**                  | **Definition**                                                                                                                                       |
-|---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Application**           | The web-based Club and Event Management System designed to support university students and staff in organizing, managing, and approving club events. |
-| **User**                  | Any individual interacting with the system, including students, club leaders, faculty advisors, and administrators.                                 |
-| **Club Leader**           | A student with administrative rights over a club, responsible for event planning, budget submission, and activity management.                        |
-| **Administrator**         | A university staff user with full access to manage clubs, events, budgets, and system-wide settings.                                                 |
-| **Event Proposal**        | A structured digital request submitted by a club leader to organize an event, including logistics and financial needs.                              |
-| **Budget Approval Workflow** | A step-by-step process for reviewing and approving club-submitted budgets before funds are allocated.                                                 |
-| **Single Sign-On (SSO)**  | A secure login method allowing users to access the system using existing university credentials.                                                     |
-| **Dashboard**             | The main interface displaying a summary of club activities, pending tasks, and budget status for the user.                                           |
-| **Responsive Design**     | UI/UX design approach ensuring the application functions well on desktops, tablets, and smartphones.                                                 |
-| **Django**                | A high-level, open-source Python web framework used to build the backend of the application.                                                         |
-| **PostgreSQL**            | An open-source relational database management system used to store and retrieve the application's data.                                              |
-| **API (Application Programming Interface)** | A set of protocols that allow software components to communicate, such as with Google Calendar or email notifications.                      |
-| **Open Source**           | Software with publicly accessible code that can be freely used, modified, and distributed.                                                           |
-| **Authentication**        | The process of verifying a user’s identity through credentials like usernames and passwords.                                                         |
-| **Authorization**         | The process of granting a user specific system permissions based on their role (e.g., student, advisor, admin).                                     |
-| **Hosting Server**        | The server environment where the system is deployed, typically a Linux-based or cloud infrastructure approved by the university.                     |
+| **Term**                    | **Definition**                                                                                                                                           |
+|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Application**             | The web-based Club and Event Management System designed to support university students and staff in organizing, managing, and approving club events.     |
+| **User**                    | Any individual interacting with the system, including students, club leaders, faculty advisors, and administrators.                                     |
+| **Club Leader**             | A student with administrative rights over a club, responsible for event planning, budget submission, and activity management.                           |
+| **Administrator**           | A university staff user with full access to manage clubs, events, budgets, and system-wide settings.                                                    |
+| **Event Proposal**          | A structured digital request submitted by a club leader to organize an event, including logistics and financial needs.                                 |
+| **Budget Approval Workflow**| A step-by-step process for reviewing and approving club-submitted budgets before funds are allocated.                                                   |
+| **Single Sign-On (SSO)**    | A secure login method allowing users to access the system using existing university credentials.                                                        |
+| **Dashboard**               | The main interface displaying a summary of club activities, pending tasks, and budget status for the user.                                              |
+| **Responsive Design**       | UI/UX design approach ensuring the application functions well on desktops, tablets, and smartphones.                                                    |
+| **Django**                  | A high-level, open-source Python web framework used to build the backend of the application.                                                            |
+| **PostgreSQL**              | An open-source relational database management system used to store and retrieve the application's data.                                                 |
+| **API (Application Programming Interface)** | A set of protocols that allow software components to communicate, such as with Google Calendar or email notifications.        |
+| **Open Source**             | Software with publicly accessible code that can be freely used, modified, and distributed.                                                              |
+| **Authentication**          | The process of verifying a user’s identity through credentials like usernames and passwords.                                                            |
+| **Authorization**           | The process of granting a user specific system permissions based on their role (e.g., student, advisor, admin).                                        |
+| **Hosting Server**          | The server environment where the system is deployed, typically a Linux-based or cloud infrastructure approved by the university.                        |
+| **Kano Model**              | A method for prioritizing system features by categorizing them as Must-be, Performance, or Delighter based on user satisfaction and expectations.       |
+| **Must-be Feature**         | A basic feature that users expect; its absence causes dissatisfaction, but its presence does not increase satisfaction.                                  |
+| **Performance Feature**     | A feature where user satisfaction increases or decreases proportionally with the level of functionality or quality.                                     |
+| **Delighter Feature**       | An unexpected feature that pleasantly surprises users and increases satisfaction, though its absence is not typically noticed.                          |
+| **Use Case**                | A specific interaction or scenario describing how a user performs a task using the system to achieve a goal.                                            |
+| **Functional Requirement**  | A requirement that defines what the system should do, such as features, workflows, and data handling.                                                   |
+| **Non-Functional Requirement** | A requirement that defines how the system performs tasks, covering aspects like performance, reliability, and usability.                          |
+| **Interview Transcript**    | A documented conversation between project members and stakeholders, used to gather insights, preferences, and requirements.                             |
+| **Stakeholder**             | Any individual or group with an interest or influence in the system, including students, staff, club leaders, and administrators.                       |
+| **Feedback System**         | A feature that allows users to provide ratings or comments on events to support continuous improvement and reporting.                                   |
+| **Role-Based Access Control (RBAC)** | A security approach that limits access to features and data based on user roles (e.g., student, president, admin).                          |
+| **Event Calendar**          | A visual tool in the system displaying upcoming club events and bookings, often integrated with external calendars.                                     |
+| **Progressive Web App (PWA)** | A web application that behaves like a native mobile app, offering offline access, push notifications, and mobile responsiveness.                     |
+| **ORM (Object-Relational Mapping)** | A programming technique that connects database tables to application code, used for easier data management in Django or other frameworks. |
+
 
 ## 2 References
 1. Chenjeri, A., Sai, Satya, T., Santhan Mourya, K., Murali, K., Muddada, & Student. (2024). Issue 3 www.jetir.org (ISSN-2349-5162). JETIR2403033 Journal of Emerging Technologies and Innovative Research, 11.
